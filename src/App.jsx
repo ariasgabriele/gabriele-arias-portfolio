@@ -113,41 +113,183 @@ function WhatIDo() {
 }
 
 /* ---- Cards indice (resta semplice) ---- */
-function Card({ to, eyebrow, title, desc, badge }) {
+function Card({
+  to = "/",
+  logoSrc,
+  title,
+  desc,
+  imageSrc,
+  stats = [], // es: [{icon:"🛒", label:"10.2% C.R."}, ...]
+  bg = "bg-[#f9ccbf]", // peach desktop
+  ctaLabel = "Read more",
+}) {
   return (
-    <Link to={to} className="block">
-      <div className="grid md:grid-cols-[1.1fr,1fr] gap-6 p-5 rounded-2xl ring-1 ring-neutral-200 bg-white hover:shadow-md transition">
-        <div>
-          <div className="text-xs font-medium text-neutral-600">{eyebrow}</div>
-          <h3 className="text-xl md:text-2xl font-semibold mt-1">{title}</h3>
-          <p className="mt-3 text-neutral-600">{desc}</p>
-          <div className="mt-4 flex items-center gap-3 text-xs text-neutral-500">
-            {badge && <span className="px-2 py-1 rounded-full bg-neutral-100">{badge}</span>}
-            <span>Read more →</span>
+    <Link to={to} className="block group">
+      {/* MOBILE/TABLET: stile competitor */}
+      <div className="md:hidden">
+        <div className="rounded-3xl bg-white shadow-sm ring-1 ring-neutral-200 p-6 mx-auto">
+          {logoSrc && (
+            <img src={`${import.meta.env.BASE_URL}${logoSrc}`} alt="" className="h-6 w-auto mb-3" />
+          )}
+          <div className="text-center">
+            <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
+            {desc && <p className="mt-3 text-neutral-600 leading-relaxed">{desc}</p>}
+          </div>
+
+          {imageSrc && (
+            <div className="mt-6">
+              <img
+                src={`${import.meta.env.BASE_URL}${imageSrc}`}
+                alt=""
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          )}
+
+          {/* highlights mobile */}
+          {stats?.length > 0 && (
+            <div className="mt-6 grid grid-cols-1 gap-3">
+              {stats.map((s, i) => (
+                <div key={i} className="flex items-center gap-3 rounded-2xl ring-1 ring-neutral-200 p-3">
+                  <span className="text-xl">{s.icon || "•"}</span>
+                  <span className="text-sm text-neutral-700">{s.label}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* CTA nera centrale */}
+          <div className="mt-6">
+            <div className="w-full rounded-full bg-black text-white text-center py-3 font-medium">
+              {ctaLabel} <span className="inline-block translate-x-0 group-hover:translate-x-0.5 transition">→</span>
+            </div>
           </div>
         </div>
-        <div className="rounded-xl bg-neutral-100 aspect-[16/10]" />
+      </div>
+
+      {/* DESKTOP: layout a due colonne con barra highlights */}
+      <div className={`hidden md:grid grid-cols-[1.15fr,0.85fr] gap-8 p-8 rounded-3xl ${bg}`}>
+        <div className="flex flex-col">
+          {/* logo piccolo */}
+          {logoSrc && <img src={`${import.meta.env.BASE_URL}${logoSrc}`} alt="" className="h-7 w-auto mb-4" />}
+
+          {/* heading + sub */}
+          <h3 className="text-4xl font-extrabold leading-tight">{title}</h3>
+          {desc && <p className="mt-4 text-neutral-800/90 leading-relaxed">{desc}</p>}
+
+          {/* barra highlights + CTA */}
+          {(stats?.length > 0) && (
+            <div className="mt-auto">
+              <div className="mt-8 rounded-2xl bg-white/80 ring-1 ring-neutral-200 p-4">
+                <div className="grid grid-cols-3 gap-4">
+                  {stats.slice(0,3).map((s, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <span className="text-2xl">{s.icon || "•"}</span>
+                      <div className="text-sm text-neutral-800">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="mt-4 flex justify-end">
+                <div
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-white font-medium shadow-sm"
+                  style={{ backgroundColor: "#FF723E" }}
+                >
+                  {ctaLabel} <span>→</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* immagine a destra */}
+        <div className="relative">
+          <div className="rounded-2xl bg-white/60 ring-1 ring-neutral-200 h-full w-full grid place-items-center p-4">
+            {imageSrc ? (
+              <img
+                src={`${import.meta.env.BASE_URL}${imageSrc}`}
+                alt=""
+                className="w-full h-auto object-contain"
+              />
+            ) : (
+              <div className="text-neutral-400">image</div>
+            )}
+          </div>
+        </div>
       </div>
     </Link>
   );
 }
 
+
 function CaseIndex() {
   return (
     <Container>
-      <div className="py-12 space-y-6">
-        <Card to="/case/pod-memes" eyebrow="POD / UGC" title="From viral memes to POD sales"
-              desc="How meme-driven content turned attention into conversions." badge="e-commerce" />
-        <Card to="/case/among-locals" eyebrow="Travel · Community" title="Among Locals"
-              desc="Authentic travel brand with a lead-gen-first strategy." badge="lead gen" />
-        <Card to="/case/zampapazza" eyebrow="Pet brand · DTC" title="From pet memes to products"
-              desc="Positioning and growth engine for Zampapazza." badge="DTC" />
-        <Card to="/case/branding-ep" eyebrow="Music · Branding" title="EP ‘patto di sangue’"
-              desc="Concept, visuals and GTM plan for a music release." badge="branding" />
+      <div className="py-12 space-y-8">
+        <Card
+          to="/case/pod-memes"
+          logoSrc="logos/heart-logo.svg"
+          title="From Viral Memes to POD Sales"
+          desc="From relatable memes to brand-based products, we turned viral content into real sales. See the content loop that generated 150+ orders at 10%+ CVR."
+          imageSrc="images/pod-memes-phones.png"
+          stats={[
+            { icon: "🛍️", label: "10.2% C.R. on Shopify" },
+            { icon: "👀", label: "20M+ organic views" },
+            { icon: "🧾", label: "150+ orders" },
+          ]}
+          ctaLabel="Read more"
+          bg="bg-[#f9ccbf]"
+        />
+
+        <Card
+          to="/case/among-locals"
+          logoSrc="logos/among-locals.svg"
+          title="Among Locals — bridge between cultures"
+          desc="A lead-gen-first launch for authentic experiences in Sardinia."
+          imageSrc="images/among-locals-hero.png"
+          stats={[
+            { icon: "📞", label: "48 calls" },
+            { icon: "💶", label: "CPL €2.10" },
+            { icon: "📅", label: "10+ bookings" },
+          ]}
+          ctaLabel="Read more"
+          bg="bg-[#dbeafe]" /* light blue, cambia come vuoi */
+        />
+
+        <Card
+          to="/case/zampapazza"
+          logoSrc="logos/zampapazza.svg"
+          title="From pet memes to problem-solving products"
+          desc="Positioning + growth engine for DTC brand Zampapazza."
+          imageSrc="images/zampapazza-fountain.png"
+          stats={[
+            { icon: "💧", label: "Flagship: smart fountain" },
+            { icon: "📈", label: "AOV €62" },
+            { icon: "🎯", label: "CPA €14" },
+          ]}
+          ctaLabel="Read more"
+          bg="bg-[#fde68a]" /* warm yellow */
+        />
+
+        <Card
+          to="/case/branding-ep"
+          logoSrc="logos/ep.svg"
+          title="Branding & campaign for EP ‘patto di sangue’"
+          desc="Concept, visuals and lightweight paid plan for growth."
+          imageSrc="images/ep-covers.png"
+          stats={[
+            { icon: "🎵", label: "100k+ views" },
+            { icon: "🎬", label: "40+ assets" },
+            { icon: "💸", label: "Budget €1–1.5k" },
+          ]}
+          ctaLabel="Read more"
+          bg="bg-[#111827]" /* dark card */
+        />
       </div>
     </Container>
   );
 }
+
 
 /* ---- Case layout minimo ---- */
 function CaseLayout({ title, eyebrow, children }) {
