@@ -32,7 +32,7 @@ function Hero() {
   return (
     <section className="bg-white text-neutral-900">
       <Container>
-        <div className="py-14 md:py-20 text-center">
+        <div className="py-14 md:py-20 pb-0 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
