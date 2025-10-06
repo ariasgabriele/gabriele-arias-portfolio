@@ -49,8 +49,8 @@ function Hero() {
           <div className="mt-10 md:mt-14 flex justify-center">
             <div className="w-full max-w-3xl">
               <img
-                src="/hero-mannequin.png"
-                alt="Details make the difference mannequin"
+               src="/hero-photo.png"
+                alt="Gabriele Arias"
                 className="w-full h-auto object-contain select-none"
               />
             </div>
