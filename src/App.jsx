@@ -62,7 +62,8 @@ function Hero() {
             <img
               src={`${import.meta.env.BASE_URL}hero-photo.png`}
               alt="Gabriele Arias"
-              className="w-full max-w-3xl h-auto object-contain select-none bg-white text-neutral-900 drop-shadow-xl"
+              className="w-full h-auto object-contain select-none"
+
             />
           </div>
         </div>
