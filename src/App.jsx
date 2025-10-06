@@ -3,31 +3,21 @@ import { motion } from "framer-motion";
 
 // ---------- Shared UI ----------
 /* --- APP ROOT --- */
+function Container({ children }) {
+  return <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>;
+}
+import Nav from "./components/Nav";
+
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-white text-neutral-900">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cases" element={<CaseIndex />} />
-          <Route path="/case/pod-memes" element={<CasePOD />} />
-          <Route path="/case/among-locals" element={<CaseAmongLocals />} />
-          <Route path="/case/zampapazza" element={<CaseZampapazza />} />
-          <Route path="/case/branding-ep" element={<CaseBrandingEP />} />
-        </Routes>
-        <footer className="border-t py-8">
-          <Container>
-            <div className="text-sm text-neutral-500">
-              © {new Date().getFullYear()} Gabriele Arias — Details make the difference.
-            </div>
-          </Container>
-        </footer>
-      </div>
-    </BrowserRouter>
+    <>
+      <Nav />
+      {/* il resto del tuo sito */}
+    </>
   );
 }
 
+export default App;
 export default App;
 
 
@@ -306,4 +296,28 @@ function Contact() {
     </section>
   );
 }
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-white text-neutral-900">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cases" element={<CaseIndex />} />
+          <Route path="/case/pod-memes" element={<CasePOD />} />
+          <Route path="/case/among-locals" element={<CaseAmongLocals />} />
+          <Route path="/case/zampapazza" element={<CaseZampapazza />} />
+          <Route path="/case/branding-ep" element={<CaseBrandingEP />} />
+        </Routes>
+        <footer className="border-t py-8">
+          <Container>
+            <div className="text-sm text-neutral-500">© {new Date().getFullYear()} Gabriele Arias — Details make the difference.</div>
+          </Container>
+        </footer>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+
 
