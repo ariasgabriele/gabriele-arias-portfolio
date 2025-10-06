@@ -37,27 +37,24 @@ function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
-            className="font-extrabold leading-[1.05] text-4xl sm:text-6xl md:text-7xl"
-          >
-            Gabriele Arias
-            <br />
-            Digital Marketing Specialist
-          </motion.h1>
-          <p className="mt-4 text-lg md:text-xl text-neutral-700">
-            Analysis · Creativity · Strategy & Growth · Repeat
-          </p>
-          <div className="mt-10 md:mt-14 flex justify-center">
-            <div className="w-full max-w-3xl">
-              <img
-               src="/hero-photo.png"
-                alt="Gabriele Arias"
-                className="w-full h-auto object-contain select-none"
-              />
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
+           <section className="relative flex flex-col items-center justify-center text-center py-24 md:py-32 bg-black text-white">
+  <div className="max-w-3xl px-6">
+    <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+      Gabriele Arias <br /> Digital Marketing Specialist
+    </h1>
+    <p className="mt-4 text-lg text-white/70">
+      Analysis · Creativity · Strategy & Growth · Repeat
+    </p>
+  </div>
+
+  {/* immagine hero */}
+  <img
+    src="/hero-photo.png"
+    alt="Gabriele Arias"
+    className="mt-12 w-64 sm:w-72 md:w-80 lg:w-96 object-contain select-none"
+  />
+</section>
+
   );
 }
 
