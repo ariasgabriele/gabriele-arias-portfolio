@@ -1,4 +1,4 @@
-import { HashRouter as BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
+import { HashRouter as BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 /* ---- Utility: container ---- */
@@ -7,8 +7,6 @@ function Container({ children }) {
 }
 
 /* ---- Nav semplice (niente file esterni) ---- */
-import { useNavigate, useLocation, Link } from "react-router-dom";
-
 function Nav() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -18,12 +16,9 @@ function Nav() {
       const el = document.getElementById("contact");
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     };
-
-    // se siamo già in Home
     if (location.pathname === "/") {
       scrollToContact();
     } else {
-      // vai in Home e poi scrolla
       navigate("/");
       setTimeout(scrollToContact, 60);
     }
@@ -61,11 +56,10 @@ function Nav() {
   );
 }
 
-
 /* ---- Hero: bianca, testi neutral, immagine proporzionata ---- */
 function Hero() {
   return (
-    <section className="bg-white text-neutral-900 pt-12 md:pt-20 pb-0">  {/* pt ridotta su mobile */}
+    <section className="bg-white text-neutral-900 pt-12 md:pt-20 pb-0">
       <Container>
         <div className="text-center">
           <motion.h1
@@ -79,12 +73,12 @@ function Hero() {
             Digital Marketing Specialist
           </motion.h1>
 
-          {/* subheading nascosto su mobile come prima (se lo avevi visibile, lascia pure) */}
+          {/* subheading nascosto su mobile */}
           <p className="hidden md:block mt-3 text-xl text-neutral-700">
             Analysis · Creativity · Strategy & Growth · Repeat
           </p>
 
-          <div className="mt-6 md:mt-10 flex justify-center">   {/* immagine leggermente più su su mobile */}
+          <div className="mt-6 md:mt-10 flex justify-center">
             <img
               src={`${import.meta.env.BASE_URL}hero-photo.png`}
               alt="Gabriele Arias"
@@ -96,7 +90,6 @@ function Hero() {
     </section>
   );
 }
-
 
 /* ---- Sezione nera subito sotto, senza gap ---- */
 function WhatIDo() {
