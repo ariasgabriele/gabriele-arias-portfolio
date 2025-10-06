@@ -5,7 +5,18 @@ import { motion } from "framer-motion";
 function Container({ children }) {
   return <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>;
 }
-function Nav() { return ( <header className="sticky top-0 z-40 backdrop-blur bg-white/75 border-b"> <Container> <div className="grid grid-cols-3 items-center py-3"> <div className="justify-self-start"> <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-7 h-7 rounded-full ring-1 ring-neutral-300 text-xs font-semibold">in</a> </div> <nav className="justify-self-center flex items-center gap-6 text-sm"> <Link to="/" className="hover:opacity-70">Gabriele Arias</Link> <Link to="/cases" className="hover:opacity-70">Case Studies</Link> </nav> <div className="justify-self-end"> <a href="#contact" className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm shadow-sm hover:opacity-90">Contact</a> </div> </div> </Container> </header> ); }
+import Nav from "./components/Nav";
+
+function App() {
+  return (
+    <>
+      <Nav />
+      {/* il resto del tuo sito */}
+    </>
+  );
+}
+
+export default App;
 
 
 function Hero() {
