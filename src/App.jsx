@@ -11,26 +11,32 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-neutral-200">
       <Container>
-        <div className="grid grid-cols-3 items-center py-3">
-          <div className="justify-self-start">
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center w-7 h-7 rounded-full ring-1 ring-neutral-300 text-xs font-semibold"
-            >
-              in
-            </a>
-          </div>
-          <nav className="justify-self-center hidden md:flex items-center gap-6 text-sm">
+        {/* flex = sinistra → centro (solo desktop) → destra */}
+        <div className="flex items-center justify-between py-3">
+          {/* sinistra: LinkedIn */}
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center w-7 h-7 rounded-full ring-1 ring-neutral-300 text-xs font-semibold"
+          >
+            in
+          </a>
+
+          {/* centro: link visibili solo da md+ */}
+          <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link to="/" className="hover:opacity-70">Gabriele Arias</Link>
             <Link to="/cases" className="hover:opacity-70">Case Studies</Link>
           </nav>
-          <div className="justify-self-end">
-            <a href="#contact" className="inline-flex items-center px-3 py-1.5 rounded-full bg-neutral-900 text-white text-sm shadow-sm">
-              Contact
-            </a>
-          </div>
+
+          {/* destra: CTA contact (mobile e desktop) */}
+          <a
+            href="#contact"
+            className="inline-flex items-center px-3 py-1.5 rounded-full text-white text-sm shadow-sm"
+            style={{ backgroundColor: '#FF723E' }}     // ← colore CTA #FF723E
+          >
+            Contact
+          </a>
         </div>
       </Container>
     </header>
@@ -40,7 +46,7 @@ function Nav() {
 /* ---- Hero: bianca, testi neutral, immagine proporzionata ---- */
 function Hero() {
   return (
-    <section className="bg-white text-neutral-900 pt-16 md:pt-20 pb-0">
+    <section className="bg-white text-neutral-900 pt-12 md:pt-20 pb-0">  {/* pt ridotta su mobile */}
       <Container>
         <div className="text-center">
           <motion.h1
@@ -54,16 +60,16 @@ function Hero() {
             Digital Marketing Specialist
           </motion.h1>
 
+          {/* subheading nascosto su mobile come prima (se lo avevi visibile, lascia pure) */}
           <p className="hidden md:block mt-3 text-xl text-neutral-700">
             Analysis · Creativity · Strategy & Growth · Repeat
           </p>
 
-          <div className="mt-8 md:mt-10 flex justify-center">
+          <div className="mt-6 md:mt-10 flex justify-center">   {/* immagine leggermente più su su mobile */}
             <img
               src={`${import.meta.env.BASE_URL}hero-photo.png`}
               alt="Gabriele Arias"
-              className="w-full h-auto object-contain select-none"
-
+              className="w-full max-w-3xl h-auto object-contain select-none bg-white text-neutral-900 drop-shadow-xl"
             />
           </div>
         </div>
@@ -71,6 +77,7 @@ function Hero() {
     </section>
   );
 }
+
 
 /* ---- Sezione nera subito sotto, senza gap ---- */
 function WhatIDo() {
