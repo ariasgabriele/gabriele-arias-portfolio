@@ -30,34 +30,35 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="bg-white text-neutral-900">
-      <Container>
-        <div className="py-14 md:py-20 pb-0 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-          className="font-extrabold leading-[1.05] text-4xl sm:text-6xl md:text-7xl"
-          >
-            
-            <br />
-            Digital Marketing Specialist
-          </motion.h1>
-          <p className="mt-4 text-lg md:text-xl text-neutral-700">
-            Analysis · Creativity · Strategy & Growth · Repeat
-          </p>
-          <div className="mt-10 md:mt-14 flex justify-center">
-            <div className="w-full max-w-3xl">
-              <img
-                src={`${import.meta.env.BASE_URL}hero-photo.png`}
-                alt="Gabriele Arias"
-                className="w-full h-auto object-contain select-none"
-              />
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
+    <section className="bg-white text-neutral-900 pt-16 md:pt-20 pb-0 md:pb-0">
+  <Container>
+    <div className="text-center">
+      <motion.h1
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45 }}
+        className="font-extrabold leading-[1.05] text-4xl sm:text-6xl md:text-7xl mt-0 md:mt-2"
+      >
+        Gabriele Arias
+        <br />
+        Digital Marketing Specialist
+      </motion.h1>
+
+      <p className="mt-2 md:mt-3 text-lg md:text-xl text-neutral-700">
+        Analysis · Creativity · Strategy & Growth · Repeat
+      </p>
+
+      <div className="mt-8 md:mt-10 flex justify-center">
+        <img
+          src={`${import.meta.env.BASE_URL}hero-photo.png`}
+          alt="Gabriele Arias"
+          className="w-full max-w-3xl h-auto object-contain select-none bg-white text-neutral-900 drop-shadow-xl"
+        />
+      </div>
+    </div>
+  </Container>
+</section>
+
   );
 }
 
