@@ -134,9 +134,12 @@ function Home() {
         <div className="py-12">
           <SectionTitle eyebrow="Overview" title="What I do" />
           <p className="mt-4 text-neutral-700 leading-relaxed">
-            I connect content, creators and communities to business goals. I run fast, test
-            and iterate, and keep decisions grounded in data. Below are a few representative
-            projects. Each card opens its dedicated page with goals, process and results.
+            I mix social-first content with analysis-first strategy. 
+            From memes and reels to audience research and testing, I connect content, creators, and
+            communities to deliver results: community growth, qualified leads, and purchase intent.
+            I’ve shipped end-to-end projects in e-commerce, travel, and music, balancing speed with
+            data-driven decisions. 
+            I’m constantly trying new AI workflows to boost ideation, editing, and distribution.
           </p>
         </div>
       </Container>
