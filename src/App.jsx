@@ -7,13 +7,32 @@ function Container({ children }) {
 }
 
 /* ---- Nav semplice (niente file esterni) ---- */
+import { useNavigate, useLocation, Link } from "react-router-dom";
+
 function Nav() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goContact = () => {
+    const scrollToContact = () => {
+      const el = document.getElementById("contact");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    // se siamo già in Home
+    if (location.pathname === "/") {
+      scrollToContact();
+    } else {
+      // vai in Home e poi scrolla
+      navigate("/");
+      setTimeout(scrollToContact, 60);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-neutral-200">
       <Container>
-        {/* flex = sinistra → centro (solo desktop) → destra */}
         <div className="flex items-center justify-between py-3">
-          {/* sinistra: LinkedIn */}
           <a
             href="https://www.linkedin.com"
             target="_blank"
@@ -23,25 +42,25 @@ function Nav() {
             in
           </a>
 
-          {/* centro: link visibili solo da md+ */}
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <Link to="/" className="hover:opacity-70">Gabriele Arias</Link>
             <Link to="/cases" className="hover:opacity-70">Case Studies</Link>
           </nav>
 
-          {/* destra: CTA contact (mobile e desktop) */}
-          <a
-            href="#contact"
+          {/* CTA arancione + click handler che scrolla sempre al contact */}
+          <button
+            onClick={goContact}
             className="inline-flex items-center px-3 py-1.5 rounded-full text-white text-sm shadow-sm"
-            style={{ backgroundColor: '#FF723E' }}     // ← colore CTA #FF723E
+            style={{ backgroundColor: "#FF723E" }}
           >
             Contact
-          </a>
+          </button>
         </div>
       </Container>
     </header>
   );
 }
+
 
 /* ---- Hero: bianca, testi neutral, immagine proporzionata ---- */
 function Hero() {
@@ -178,7 +197,7 @@ function Home() {
       <Hero />
       <WhatIDo />
       <section className="bg-neutral-50 border-y"><CaseIndex /></section>
-      <section id="contact" className="py-16">
+      <section id="contact" className="py-16 scroll-mt-24">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-2xl md:text-3xl font-bold">Want to get in touch?</h2>
