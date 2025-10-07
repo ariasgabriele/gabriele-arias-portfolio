@@ -141,188 +141,20 @@ function Card({
   textOnDark = false,
   ctaColor,
   bgImage,
-  // nuovi
-  variant = "default",          // "default" | "split"
-  splitTopColor = "#82B8F4",    // usato solo se variant === "split"
 }) {
   const baseUrl = import.meta.env.BASE_URL || "/";
 
   const textMain = textOnDark ? "text-white" : "text-neutral-900";
-  const textSub  = textOnDark ? "text-white/80" : "text-neutral-700";
+  const textSub = textOnDark ? "text-white/80" : "text-neutral-700";
   const borderCol = textOnDark ? "border-white/10" : "border-neutral-200";
   const highlightText = textOnDark ? "text-white" : "text-neutral-800";
 
-  const renderMobileCTA = () => (
-    <div className="mt-6">
-      <div
-        className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
-        style={{
-          backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000"),
-        }}
-      >
-        {ctaLabel} <span className="inline-block">→</span>
-      </div>
-    </div>
-  );
-
   return (
     <Link to={to} className="block group">
-      {/* ========== MOBILE ========== */}
+      {/* MOBILE */}
       <div className="md:hidden">
-        {variant === "split" ? (
-          <div className="rounded-3xl overflow-hidden bg-white">
-            {/* header colorato */}
-            <div
-              className="px-6 py-10 text-center text-white"
-              style={{ backgroundColor: splitTopColor }}
-            >
-              {logoSrc && (
-                <div className="flex justify-center mb-3">
-                  <img
-                    src={`${baseUrl}${logoSrc}`}
-                    alt=""
-                    className="max-h-8 w-auto h-auto object-contain"
-                    style={{ maxWidth: "unset" }}
-                  />
-                </div>
-              )}
-              <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
-              {desc && (
-                <p className="mt-3 text-white/90 leading-relaxed">{desc}</p>
-              )}
-            </div>
-
-            {/* immagine sotto */}
-            {imageSrc && (
-              <div className="h-[220px] w-full overflow-hidden">
-                <img
-                  src={`${baseUrl}${imageSrc}`}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-
-            {/* CTA mobile */}
-            <div className="px-6 pb-6 pt-4">{renderMobileCTA()}</div>
-          </div>
-        ) : (
-          // variant === default
-          <div
-            className="relative rounded-3xl overflow-hidden p-6 mx-auto"
-            style={{ backgroundColor: bgColor }}
-          >
-            {bgImage && (
-              <img
-                src={`${baseUrl}${bgImage}`}
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover -z-10"
-              />
-            )}
-
-            {logoSrc && (
-              <div className="flex justify-center mb-3">
-                <img
-                  src={`${baseUrl}${logoSrc}`}
-                  alt=""
-                  className="max-h-8 w-auto object-contain"
-                />
-              </div>
-            )}
-
-            <div className={`text-center ${textMain}`}>
-              <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
-              {desc && <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>}
-            </div>
-
-            {imageSrc && (
-              <div className="mt-6">
-                <img
-                  src={`${baseUrl}${imageSrc}`}
-                  alt=""
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            )}
-
-            {renderMobileCTA()}
-          </div>
-        )}
-      </div>
-
-      {/* ========== DESKTOP ========== */}
-      {variant === "split" ? (
-        <>
-          {/* card principale: header + immagine */}
-          <div className="hidden md:block rounded-3xl overflow-hidden bg-white">
-            {/* header colorato */}
-            <div
-              className="px-10 lg:px-14 py-14 text-center text-white"
-              style={{ backgroundColor: splitTopColor }}
-            >
-              {logoSrc && (
-                <div className="flex justify-center">
-                  <img
-                    src={`${baseUrl}${logoSrc}`}
-                    alt=""
-                    className="max-h-10 w-auto h-auto object-contain"
-                    style={{ maxWidth: "unset" }}
-                  />
-                </div>
-              )}
-              <h3 className="mt-4 text-4xl font-extrabold leading-tight">
-                {title}
-              </h3>
-              {desc && (
-                <p className="mt-4 max-w-3xl mx-auto text-white/90 text-lg leading-relaxed">
-                  {desc}
-                </p>
-              )}
-            </div>
-
-            {/* immagine sotto */}
-            {imageSrc && (
-              <div className="h-[360px] lg:h-[420px] w-full overflow-hidden">
-                <img
-                  src={`${baseUrl}${imageSrc}`}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </div>
-
-          {/* highlights + CTA attaccati (solo desktop) */}
-          {stats?.length > 0 && (
-            <div className="hidden md:flex items-center justify-between p-6 border-t border-neutral-200 rounded-b-3xl bg-white relative z-10">
-              <div className="grid grid-cols-3 gap-8 flex-1">
-                {stats.slice(0, 3).map((s, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className="text-3xl text-neutral-900">
-                      {s.icon || "•"}
-                    </span>
-                    <div className="text-sm font-medium text-neutral-800">
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="ml-8">
-                <div
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
-                  style={{ backgroundColor: ctaColor || "#FF723E" }}
-                >
-                  {ctaLabel} <span>→</span>
-                </div>
-              </div>
-            </div>
-          )}
-        </>
-      ) : (
-        // variant === default
         <div
-          className="hidden md:flex flex-col rounded-3xl overflow-hidden relative"
+          className={`relative rounded-3xl overflow-hidden p-6 mx-auto`}
           style={{ backgroundColor: bgColor }}
         >
           {bgImage && (
@@ -333,64 +165,115 @@ function Card({
             />
           )}
 
-          <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
-            <div className="flex flex-col justify-center">
-              {logoSrc && (
-                <div className="flex items-center mb-5">
-                  <img
-                    src={`${baseUrl}${logoSrc}`}
-                    alt=""
-                    className="max-h-10 w-auto object-contain"
-                  />
-                </div>
-              )}
-              <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
-                {title}
-              </h3>
-              {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
+          {logoSrc && (
+            <div className="flex justify-center mb-3">
+              <img
+                src={`${baseUrl}${logoSrc}`}
+                alt=""
+                className="max-h-8 w-auto object-contain"
+              />
             </div>
+          )}
 
-            {imageSrc && (
-              <div className="flex items-center justify-center">
+          <div className={`text-center ${textMain}`}>
+            <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
+            {desc && <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>}
+          </div>
+
+          {imageSrc && (
+            <div className="mt-6">
+              <img
+                src={`${baseUrl}${imageSrc}`}
+                alt=""
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          )}
+
+          <div className="mt-6">
+            <div
+              className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
+              style={{
+                backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000"),
+              }}
+            >
+              {ctaLabel} <span className="inline-block">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* DESKTOP */}
+      <div
+        className={`hidden md:flex flex-col rounded-3xl overflow-hidden relative`}
+        style={{ backgroundColor: bgColor }}
+      >
+        {bgImage && (
+          <img
+            src={`${baseUrl}${bgImage}`}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover -z-10"
+          />
+        )}
+
+        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
+          <div className="flex flex-col justify-center">
+            {logoSrc && (
+              <div className="flex items-center mb-5">
                 <img
-                  src={`${baseUrl}${imageSrc}`}
+                  src={`${baseUrl}${logoSrc}`}
                   alt=""
-                  className="w-full h-auto object-contain"
+                  className="max-h-10 w-auto object-contain"
                 />
               </div>
             )}
+            <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
+              {title}
+            </h3>
+            {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
           </div>
 
-          {stats?.length > 0 && (
-            <div
-              className={`flex items-center justify-between p-6 border-t ${borderCol} relative z-10`}
-            >
-              <div className="grid grid-cols-3 gap-8 flex-1">
-                {stats.map((s, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className={`text-3xl ${textMain}`}>{s.icon || "•"}</span>
-                    <div className={`text-sm font-medium ${highlightText}`}>
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="ml-8">
-                <div
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
-                  style={{ backgroundColor: ctaColor || "#FF723E" }}
-                >
-                  {ctaLabel} <span>→</span>
-                </div>
-              </div>
+          {imageSrc && (
+            <div className="flex items-center justify-center">
+              <img
+                src={`${baseUrl}${imageSrc}`}
+                alt=""
+                className="w-full h-auto object-contain"
+              />
             </div>
           )}
         </div>
-      )}
+
+        {stats?.length > 0 && (
+          <div
+            className={`flex items-center justify-between p-6 border-t ${borderCol} relative z-10`}
+          >
+            <div className="grid grid-cols-3 gap-8 flex-1">
+              {stats.map((s, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span className={`text-3xl ${textMain}`}>{s.icon || "•"}</span>
+                  <div className={`text-sm font-medium ${highlightText}`}>
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="ml-8">
+              <div
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
+                style={{ backgroundColor: ctaColor || "#FF723E" }}
+              >
+                {ctaLabel} <span>→</span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </Link>
   );
 }
+
 
 
 
@@ -422,13 +305,11 @@ function CaseIndex() {
 
         {/* 2) Among Locals – background image su tutta la card */}
      <Card
-  variant="split"
-  splitTopColor="#82B8F4"
   to="/case/among-locals"
   logoSrc="amonglocals-logo.png"
   title="Among Locals — bridging cultures"
   desc="Lead-gen-first launch for authentic local experiences in Sardinia."
-  imageSrc="among-locals-hero.png"
+  imageSrc="among-locals-hero.png"  // immagine a destra su desktop
   stats={[
     { icon: "📈", label: "17.6% C.R. to the call" },
     { icon: "🌍", label: "40+ leads in 1 month" },
@@ -437,6 +318,7 @@ function CaseIndex() {
   ctaLabel="Read more"
   ctaColor="#FF723E"
 />
+
 
 
 
