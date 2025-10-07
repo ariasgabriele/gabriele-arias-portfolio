@@ -150,138 +150,134 @@ function Card({
   const highlightText = textOnDark ? "text-white" : "text-neutral-800";
 
   return (
-   <Link to={to} className="block group">
-  <div
-    className="rounded-3xl overflow-hidden bg-white transition-all duration-500 ease-out
-               group-hover:scale-[1.02] group-hover:-translate-y-1
-               group-hover:shadow-[0_16px_40px_rgba(0,0,0,0.15)]"
-  >
-    {/* Tutto il contenuto della card (mobile + desktop) va qui dentro */}
-  </div>
-</Link>
+    <Link to={to} className="block group">
+      <div
+        className="rounded-3xl overflow-hidden bg-white transition-all duration-500 ease-out
+                   group-hover:scale-[1.02] group-hover:-translate-y-1
+                   group-hover:shadow-[0_16px_40px_rgba(0,0,0,0.15)]"
+      >
+        {/* MOBILE */}
+        <div className="md:hidden">
+          <div className="relative p-6 mx-auto" style={{ backgroundColor: bgColor }}>
+            {bgImage && (
+              <img
+                src={`${baseUrl}${bgImage}`}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover -z-10"
+              />
+            )}
 
-      {/* MOBILE */}
-      <div className="md:hidden">
+            {logoSrc && (
+              <div className="flex justify-center mb-3">
+                <img
+                  src={`${baseUrl}${logoSrc}`}
+                  alt=""
+                  className="max-h-8 w-auto object-contain"
+                />
+              </div>
+            )}
+
+            <div className={`text-center ${textMain}`}>
+              <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
+              {desc && <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>}
+            </div>
+
+            {imageSrc && (
+              <div className="mt-6">
+                <img
+                  src={`${baseUrl}${imageSrc}`}
+                  alt=""
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
+
+            {/* CTA mobile */}
+            <div className="mt-6">
+              <div
+                className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
+                style={{
+                  backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000"),
+                }}
+              >
+                {ctaLabel} <span className="inline-block">→</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* DESKTOP */}
         <div
-          className={`relative rounded-3xl overflow-hidden p-6 mx-auto`}
+          className="hidden md:flex flex-col relative"
           style={{ backgroundColor: bgColor }}
         >
           {bgImage && (
             <img
               src={`${baseUrl}${bgImage}`}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 ease-out group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-cover -z-10"
             />
           )}
 
-          {logoSrc && (
-            <div className="flex justify-center mb-3">
-              <img
-                src={`${baseUrl}${logoSrc}`}
-                alt=""
-                className="max-h-8 w-auto object-contain"
-              />
+          <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
+            <div className="flex flex-col justify-center">
+              {logoSrc && (
+                <div className="flex items-center mb-5">
+                  <img
+                    src={`${baseUrl}${logoSrc}`}
+                    alt=""
+                    className="max-h-10 w-auto object-contain"
+                  />
+                </div>
+              )}
+              <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
+                {title}
+              </h3>
+              {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
             </div>
-          )}
 
-          <div className={`text-center ${textMain}`}>
-            <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
-            {desc && <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>}
-          </div>
-
-          {imageSrc && (
-            <div className="mt-6 overflow-hidden rounded-2xl">
-              <img
-                src={`${baseUrl}${imageSrc}`}
-                alt=""
-                className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-110"
-              />
-            </div>
-          )}
-
-          <div className="mt-6">
-            <div
-              className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
-              style={{
-                backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000"),
-              }}
-            >
-              {ctaLabel} <span className="inline-block">→</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* DESKTOP */}
-      <div
-        className={`hidden md:flex flex-col rounded-3xl overflow-hidden relative bg-white`}
-        style={{ backgroundColor: bgColor }}
-      >
-        {bgImage && (
-          <img
-            src={`${baseUrl}${bgImage}`}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 ease-out group-hover:scale-110"
-          />
-        )}
-
-        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
-          <div className="flex flex-col justify-center">
-            {logoSrc && (
-              <div className="flex items-center mb-5">
+            {imageSrc && (
+              <div className="flex items-center justify-center">
                 <img
-                  src={`${baseUrl}${logoSrc}`}
+                  src={`${baseUrl}${imageSrc}`}
                   alt=""
-                  className="max-h-10 w-auto object-contain"
+                  className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
             )}
-            <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
-              {title}
-            </h3>
-            {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
           </div>
 
-          {imageSrc && (
-            <div className="flex items-center justify-center overflow-hidden rounded-3xl">
-              <img
-                src={`${baseUrl}${imageSrc}`}
-                alt=""
-                className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-110"
-              />
+          {stats?.length > 0 && (
+            <div
+              className={`flex items-center justify-between p-6 border-t ${borderCol} relative z-10`}
+            >
+              <div className="grid grid-cols-3 gap-8 flex-1">
+                {stats.map((s, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className={`text-3xl ${textMain}`}>{s.icon || "•"}</span>
+                    <div className={`text-sm font-medium ${highlightText}`}>
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="ml-8">
+                <div
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
+                  style={{ backgroundColor: ctaColor || "#FF723E" }}
+                >
+                  {ctaLabel} <span>→</span>
+                </div>
+              </div>
             </div>
           )}
         </div>
-
-        {stats?.length > 0 && (
-          <div
-            className={`flex items-center justify-between p-6 border-t ${borderCol} relative z-10`}
-          >
-            <div className="grid grid-cols-3 gap-8 flex-1">
-              {stats.map((s, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <span className={`text-3xl ${textMain}`}>{s.icon || "•"}</span>
-                  <div className={`text-sm font-medium ${highlightText}`}>
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="ml-8">
-              <div
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
-                style={{ backgroundColor: ctaColor || "#FF723E" }}
-              >
-                {ctaLabel} <span>→</span>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </Link>
   );
 }
+
 
 
 
