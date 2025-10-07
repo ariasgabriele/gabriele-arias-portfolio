@@ -141,8 +141,7 @@ function Card({
   textOnDark = false,
   ctaColor,
   bgImage,
-
-  // 👉 nuovi prop
+  // nuovi
   variant = "default",          // "default" | "split"
   splitTopColor = "#82B8F4",    // usato solo se variant === "split"
 }) {
@@ -170,7 +169,6 @@ function Card({
     <Link to={to} className="block group">
       {/* ========== MOBILE ========== */}
       <div className="md:hidden">
-        {/* variant === split */}
         {variant === "split" ? (
           <div className="rounded-3xl overflow-hidden bg-white">
             {/* header colorato */}
@@ -205,13 +203,13 @@ function Card({
               </div>
             )}
 
-            {/* CTA mobile (resta) */}
+            {/* CTA mobile */}
             <div className="px-6 pb-6 pt-4">{renderMobileCTA()}</div>
           </div>
         ) : (
-          // variant === default (il tuo layout attuale)
+          // variant === default
           <div
-            className={`relative rounded-3xl overflow-hidden p-6 mx-auto`}
+            className="relative rounded-3xl overflow-hidden p-6 mx-auto"
             style={{ backgroundColor: bgColor }}
           >
             {bgImage && (
@@ -234,9 +232,7 @@ function Card({
 
             <div className={`text-center ${textMain}`}>
               <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
-              {desc && (
-                <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>
-              )}
+              {desc && <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>}
             </div>
 
             {imageSrc && (
@@ -296,36 +292,37 @@ function Card({
             )}
           </div>
 
-          {/* highlights + CTA (staccati sotto, e solo desktop) */}
-         {stats?.length > 0 && (
-  <div className="hidden md:flex items-center justify-between p-6 border-t border-neutral-200 rounded-b-3xl bg-white relative z-10">
-    <div className="grid grid-cols-3 gap-8 flex-1">
-      {stats.slice(0, 3).map((s, i) => (
-        <div key={i} className="flex items-center gap-3">
-          <span className="text-3xl text-neutral-900">{s.icon || "•"}</span>
-          <div className="text-sm font-medium text-neutral-800">
-            {s.label}
-          </div>
-        </div>
-      ))}
-    </div>
+          {/* highlights + CTA attaccati (solo desktop) */}
+          {stats?.length > 0 && (
+            <div className="hidden md:flex items-center justify-between p-6 border-t border-neutral-200 rounded-b-3xl bg-white relative z-10">
+              <div className="grid grid-cols-3 gap-8 flex-1">
+                {stats.slice(0, 3).map((s, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-3xl text-neutral-900">
+                      {s.icon || "•"}
+                    </span>
+                    <div className="text-sm font-medium text-neutral-800">
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
 
-    <div className="ml-8">
-      <div
-        className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
-        style={{ backgroundColor: ctaColor || "#FF723E" }}
-      >
-        {ctaLabel} <span>→</span>
-      </div>
-    </div>
-  </div>
-)}
-
-             
+              <div className="ml-8">
+                <div
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
+                  style={{ backgroundColor: ctaColor || "#FF723E" }}
+                >
+                  {ctaLabel} <span>→</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       ) : (
-        // variant === default (il tuo layout attuale)
+        // variant === default
         <div
-          className={`hidden md:flex flex-col rounded-3xl overflow-hidden relative`}
+          className="hidden md:flex flex-col rounded-3xl overflow-hidden relative"
           style={{ backgroundColor: bgColor }}
         >
           {bgImage && (
@@ -350,9 +347,7 @@ function Card({
               <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
                 {title}
               </h3>
-              {desc && (
-                <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>
-              )}
+              {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
             </div>
 
             {imageSrc && (
