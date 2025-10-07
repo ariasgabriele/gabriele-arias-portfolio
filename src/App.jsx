@@ -273,47 +273,36 @@ function Card({
     </Link>
   );
 }
-function CardHeroBg({
+function CardSplitTopBottom({
   to = "/",
-  logoSrc,          // es: "amonglocals-logo.png" (senza slash iniziale)
+  topColor = "#82B8F4",
+  logoSrc,           // es: "amonglocals-logo.png"
   title,
   desc,
-  bgImage,          // es: "among-locals-hero.png"
-  stats = [],
+  imageSrc,          // es: "among-locals-hero.png" (va nella parte bassa)
+  stats = [],        // [{icon:"📈", label:"..."}, ...]
   ctaLabel = "Read more",
   ctaColor = "#FF723E",
 }) {
-  const prefix = (import.meta.env.BASE_URL || "").replace(/\/+$/, ""); // "/repo" su Pages, "" in dev
+  const prefix = (import.meta.env.BASE_URL || "").replace(/\/+$/, "");
   const src = (f) => `${prefix}/${f}`;
 
   return (
     <Link to={to} className="block group">
-      <div className="relative rounded-3xl overflow-hidden">
-        {/* BG full-card */}
-        <img
-          src={src(bgImage)}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-          onError={(e) => { e.currentTarget.style.opacity = "0.1"; }} // fallback visivo
-        />
-
-        {/* Scrim per leggibilità (top + bottom) */}
-        <div className="pointer-events-none absolute inset-0 -z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/12 to-transparent" />
-        </div>
-
-        {/* Contenuto */}
-        <div className="relative z-10 px-6 md:px-10 pt-14 md:pt-20 text-center text-white">
-          {/* Logo centrato */}
+      {/* CARD principale: top testo / bottom immagine */}
+      <div className="rounded-3xl overflow-hidden bg-white shadow-sm">
+        {/* TOP: colore + testo */}
+        <div
+          className="px-6 md:px-10 py-10 md:py-14 text-center text-white"
+          style={{ backgroundColor: topColor }}
+        >
           {logoSrc && (
             <div className="flex justify-center">
               <img
                 src={src(logoSrc)}
-                alt="Among Locals"
+                alt=""
                 className="max-h-10 md:max-h-12 w-auto h-auto object-contain"
                 style={{ maxWidth: "unset" }}
-                onError={(e) => { e.currentTarget.style.display = "none"; }}
               />
             </div>
           )}
@@ -323,48 +312,53 @@ function CardHeroBg({
           </h3>
 
           {desc && (
-            <p className="mt-4 max-w-3xl mx-auto text-white/90 text-base md:text-lg leading-relaxed">
+            <p className="mt-3 md:mt-4 max-w-3xl mx-auto text-white/90 text-base md:text-lg leading-relaxed">
               {desc}
             </p>
           )}
-
-          {/* spazio per la barra */}
-          <div className="h-24 md:h-28" />
         </div>
 
-        {/* Barra highlights + CTA */}
-        {stats?.length > 0 && (
-          <div className="absolute left-4 right-4 md:left-8 md:right-8 bottom-4 md:bottom-6 z-20">
-            <div className="rounded-2xl bg-white p-4 md:p-6 shadow-[0_12px_28px_rgba(0,0,0,0.18)] flex flex-col md:flex-row md:items-center gap-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
-                {stats.slice(0, 3).map((s, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className="text-2xl md:text-3xl">{s.icon || "•"}</span>
-                    <div className="text-sm md:text-base font-medium text-neutral-800">
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
+        {/* BOTTOM: immagine */}
+        <div className="relative">
+          <div className="h-[220px] md:h-[360px] lg:h-[420px] w-full overflow-hidden">
+            <img
+              src={src(imageSrc)}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
 
-              <div className="md:ml-6">
-                <div
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm w-full md:w-auto justify-center"
-                  style={{ backgroundColor: ctaColor }}
-                >
-                  {ctaLabel} <span>→</span>
+      {/* CARD staccata con highlights + CTA */}
+      {stats?.length > 0 && (
+        <div className="mt-4">
+          <div className="rounded-2xl bg-white p-4 md:p-6 shadow-[0_12px_28px_rgba(0,0,0,0.12)] flex flex-col md:flex-row md:items-center gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+              {stats.slice(0, 3).map((s, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span className="text-2xl md:text-3xl">{s.icon || "•"}</span>
+                  <div className="text-sm md:text-base font-medium text-neutral-800">
+                    {s.label}
+                  </div>
                 </div>
+              ))}
+            </div>
+            <div className="md:ml-6">
+              <div
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium w-full md:w-auto justify-center transition-transform hover:scale-[1.03]"
+                style={{ backgroundColor: ctaColor }}
+              >
+                {ctaLabel} <span>→</span>
               </div>
             </div>
           </div>
-        )}
-
-        {/* min-height per presenza visiva */}
-        <div className="opacity-0 select-none min-h-[360px] md:min-h-[520px]" />
-      </div>
+        </div>
+      )}
     </Link>
   );
 }
+
 
 
 
@@ -391,12 +385,13 @@ function CaseIndex() {
         />
 
         {/* 2) Among Locals – background image su tutta la card */}
-       <CardHeroBg
+      <CardSplitTopBottom
   to="/case/among-locals"
+  topColor="#82B8F4"
   logoSrc="amonglocals-logo.png"
   title="Among Locals — bridging cultures"
   desc="Lead-gen-first launch for authentic local experiences in Sardinia."
-  bgImage="among-locals-hero.png"
+  imageSrc="among-locals-hero.png"
   stats={[
     { icon: "📈", label: "17.6% C.R. to the call" },
     { icon: "🌍", label: "40+ leads in 1 month" },
@@ -405,6 +400,7 @@ function CaseIndex() {
   ctaLabel="Read more"
   ctaColor="#FF723E"
 />
+
 
 
         {/* 3) Zampapazza – light */}
