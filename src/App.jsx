@@ -58,14 +58,26 @@ function Nav() {
 
 /* ---- Hero: bianca, testi neutral, immagine proporzionata ---- */
 function Hero() {
+  // stessa animazione per tutti: fade + up
+  const fadeUp = {
+    hidden: { opacity: 0, y: 12 },
+    show: (i = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.45, delay: i * 0.12 }
+    }),
+  };
+
   return (
     <section className="bg-white text-neutral-900 pt-12 md:pt-20 pb-0">
       <Container>
         <div className="text-center">
+          {/* Titolo */}
           <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
+            custom={0}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
             className="font-extrabold leading-[1.05] text-4xl sm:text-6xl md:text-7xl mt-0 md:mt-2"
           >
             Gabriele Arias
@@ -73,23 +85,37 @@ function Hero() {
             Digital Marketing Specialist
           </motion.h1>
 
-          {/* subheading nascosto su mobile */}
-          <p className="hidden md:block mt-3 text-xl text-neutral-700">
-            Analysis · Creativity · Strategy & Growth · Repeat
-          </p>
+          {/* Sottotitolo (stessa animazione, leggermente dopo) */}
+          <motion.p
+            custom={1}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="hidden md:block mt-3 text-xl text-neutral-700"
+          >
+            Analysis · Creativity · Strategy &amp; Growth · Repeat
+          </motion.p>
 
-          <div className="mt-6 md:mt-10 flex justify-center">
+          {/* Immagine (stessa animazione, ultimo step) */}
+          <motion.div
+            custom={2}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="mt-6 md:mt-10 flex justify-center"
+          >
             <img
               src={`${import.meta.env.BASE_URL}hero-photo.png`}
               alt="Gabriele Arias"
               className="w-full max-w-3xl h-auto object-contain select-none"
             />
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>
   );
 }
+
 
 /* ---- Sezione nera subito sotto, senza gap ---- */
 function WhatIDo() {
