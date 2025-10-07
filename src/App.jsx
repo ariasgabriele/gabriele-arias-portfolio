@@ -262,7 +262,8 @@ function Card({
 function CaseIndex() {
   return (
     <Container>
-      <div className="py-12 space-y-6">
+      <div className="py-12 space-y-8">
+        {/* 1) POD sales */}
         <Card
           to="/case/pod-memes"
           logoSrc="heart-logo.png"
@@ -274,36 +275,59 @@ function CaseIndex() {
             { icon: "👀", label: "20M+ organic views" },
             { icon: "🧾", label: "150+ orders" },
           ]}
-          bg="bg-[#f9ccbf]" // peach background
           ctaLabel="Read more"
         />
 
-        {/* le altre cards sotto rimangono come prima */}
+        {/* 2) Among Locals */}
         <Card
           to="/case/among-locals"
-          eyebrow="Travel · Community"
-          title="Among Locals"
-          desc="Authentic travel brand with a lead-gen-first strategy."
-          badge="lead gen"
+          // se hai rinominato il file: "amonglocals-logo.png"
+          logoSrc="amonglocals-logo.png" 
+          title="Among Locals — bridging cultures"
+          desc="Lead-gen-first launch for authentic local experiences in Sardinia."
+          imageSrc="among-locals-hero.png"
+          stats={[
+            { icon: "📞", label: "48 qualified calls" },
+            { icon: "💶", label: "CPL ~€2.10" },
+            { icon: "📅", label: "10+ bookings" },
+          ]}
+          ctaLabel="Read more"
         />
+
+        {/* 3) Zampapazza */}
         <Card
           to="/case/zampapazza"
-          eyebrow="Pet brand · DTC"
-          title="From pet memes to products"
-          desc="Positioning and growth engine for Zampapazza."
-          badge="DTC"
+          logoSrc="zampapazza-logo.png"
+          title="From pet memes to problem-solving products"
+          desc="Positioning and a growth engine for DTC brand Zampapazza."
+          imageSrc="zampapazza-fountain.png"
+          stats={[
+            { icon: "💧", label: "Smart fountain as flagship" },
+            { icon: "📈", label: "AOV ~€62" },
+            { icon: "🎯", label: "CPA ~€14" },
+          ]}
+          ctaLabel="Read more"
         />
+
+        {/* 4) Branding EP */}
         <Card
           to="/case/branding-ep"
-          eyebrow="Music · Branding"
-          title="EP ‘patto di sangue’"
-          desc="Concept, visuals and GTM plan for a music release."
-          badge="branding"
+          // nessun logo specifico: lasciamo solo l’immagine
+          title="Branding & campaign for EP ‘patto di sangue’"
+          desc="Concept, visuals and a lightweight paid plan for growth."
+          imageSrc="ep-covers.png"
+          stats={[
+            { icon: "🎵", label: "100k+ views" },
+            { icon: "🎬", label: "40+ assets" },
+            { icon: "💸", label: "Budget €1–1.5k" },
+          ]}
+          ctaLabel="Read more"
         />
       </div>
     </Container>
   );
 }
+
 
 
 
