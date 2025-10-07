@@ -134,49 +134,43 @@ function Card({
   logoSrc,
   title,
   desc,
-  imageSrc,          // immagine foreground (colonna destra su desktop)
+  imageSrc,
   stats = [],
   ctaLabel = "Read more",
-
-  // ➜ nuovi prop
-  bgColor = "#ffffff", // colore sfondo card (es. EP = "#000000")
-  textOnDark = false,  // se true: testi bianchi, bordi soft
-  ctaColor,            // colore CTA (es. "#C60A09" per EP)
-  bgImage,             // se presente: immagine di sfondo full-card (Among Locals)
+  bgColor = "#ffffff",
+  textOnDark = false,
+  ctaColor,
+  bgImage,
 }) {
   const baseUrl = import.meta.env.BASE_URL || "/";
 
   const textMain = textOnDark ? "text-white" : "text-neutral-900";
-  const textSub  = textOnDark ? "text-white/80" : "text-neutral-700";
+  const textSub = textOnDark ? "text-white/80" : "text-neutral-700";
   const borderCol = textOnDark ? "border-white/10" : "border-neutral-200";
   const highlightText = textOnDark ? "text-white" : "text-neutral-800";
 
   return (
     <Link to={to} className="block group">
-      {/* MOBILE / TABLET */}
+      {/* MOBILE */}
       <div className="md:hidden">
         <div
-          className={`relative rounded-3xl shadow-sm ring-1 ${borderCol} p-6 mx-auto overflow-hidden`}
+          className={`relative rounded-3xl overflow-hidden p-6 mx-auto`}
           style={{ backgroundColor: bgColor }}
         >
-          {/* bg image full card */}
           {bgImage && (
             <img
               src={`${baseUrl}${bgImage}`}
               alt=""
-              aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover -z-10"
             />
           )}
 
-          {/* logo centrato */}
           {logoSrc && (
             <div className="flex justify-center mb-3">
               <img
                 src={`${baseUrl}${logoSrc}`}
                 alt=""
-                className="max-h-8 h-auto w-auto object-contain"
-                style={{ maxWidth: "unset" }}
+                className="max-h-8 w-auto object-contain"
               />
             </div>
           )}
@@ -186,7 +180,6 @@ function Card({
             {desc && <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>}
           </div>
 
-          {/* foreground image */}
           {imageSrc && (
             <div className="mt-6">
               <img
@@ -197,11 +190,12 @@ function Card({
             </div>
           )}
 
-          {/* CTA mobile */}
           <div className="mt-6">
             <div
               className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
-              style={{ backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000") }}
+              style={{
+                backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000"),
+              }}
             >
               {ctaLabel} <span className="inline-block">→</span>
             </div>
@@ -211,39 +205,34 @@ function Card({
 
       {/* DESKTOP */}
       <div
-        className={`hidden md:flex flex-col rounded-3xl overflow-hidden ring-1 ${borderCol} shadow-sm relative`}
+        className={`hidden md:flex flex-col rounded-3xl overflow-hidden relative`}
         style={{ backgroundColor: bgColor }}
       >
-        {/* bg image full card */}
         {bgImage && (
           <img
             src={`${baseUrl}${bgImage}`}
             alt=""
-            aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover -z-10"
           />
         )}
 
-        {/* Contenuto principale */}
-        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14">
-          {/* Testo */}
+        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
           <div className="flex flex-col justify-center">
             {logoSrc && (
               <div className="flex items-center mb-5">
                 <img
                   src={`${baseUrl}${logoSrc}`}
                   alt=""
-                  className="max-h-10 h-auto w-auto object-contain"
-                  style={{ maxWidth: "unset" }}
+                  className="max-h-10 w-auto object-contain"
                 />
               </div>
             )}
-
-            <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>{title}</h3>
+            <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
+              {title}
+            </h3>
             {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
           </div>
 
-          {/* Immagine colonna destra (se serve oltre al bg) */}
           {imageSrc && (
             <div className="flex items-center justify-center">
               <img
@@ -255,21 +244,24 @@ function Card({
           )}
         </div>
 
-        {/* Highlights + CTA full width */}
         {stats?.length > 0 && (
-          <div className={`flex items-center justify-between p-6 rounded-b-3xl border-t ${borderCol}`}>
+          <div
+            className={`flex items-center justify-between p-6 border-t ${borderCol} relative z-10`}
+          >
             <div className="grid grid-cols-3 gap-8 flex-1">
-              {stats.slice(0, 3).map((s, i) => (
+              {stats.map((s, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className={`text-3xl ${textMain}`}>{s.icon || "•"}</span>
-                  <div className={`text-sm font-medium ${highlightText}`}>{s.label}</div>
+                  <div className={`text-sm font-medium ${highlightText}`}>
+                    {s.label}
+                  </div>
                 </div>
               ))}
             </div>
 
             <div className="ml-8">
               <div
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm transition-transform hover:scale-[1.03]"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
                 style={{ backgroundColor: ctaColor || "#FF723E" }}
               >
                 {ctaLabel} <span>→</span>
@@ -281,6 +273,7 @@ function Card({
     </Link>
   );
 }
+
 
 
 
@@ -308,12 +301,12 @@ function CaseIndex() {
           to="/case/among-locals"
           logoSrc="amonglocals-logo.png"
           title="Among Locals — bridging cultures"
-          desc="Lead-gen-first launch for authentic local experiences in Sardinia."
+          desc="Built an experiential travel brand from the start to te launch. Check out how a fresh identity, a lean funnel and authentic storytelling generated over 40 qualified leads at £14.76 CPL."
           bgImage="among-locals-hero.png"  // ← immagine di sfondo su tutta la card (mobile + desktop)
           stats={[
-            { icon: "📞", label: "48 qualified calls" },
-            { icon: "💶", label: "CPL ~€2.10" },
-            { icon: "📅", label: "10+ bookings" },
+            { icon: "📞", label: "40 qualified calls" },
+            { icon: "📈", label: "CR Call 17.6%" },
+            { icon: "☑️", label: "5 booked call" },
           ]}
           // mantiene testi scuri su foto; se la foto risultasse troppo chiara, ti aggiungo una scrim
         />
@@ -323,10 +316,10 @@ function CaseIndex() {
           to="/case/zampapazza"
           logoSrc="zampapazza-logo.png"
           title="From pet memes to problem-solving products"
-          desc="Positioning and a growth engine for DTC brand Zampapazza."
+          desc="Starting with viral reels and memes, Zampapazza grew to 10k followers in just 30 days. By applying the “Pain Framework” and community insights, the project validated a premium pet product that converted from day one."
           imageSrc="zampapazza-fountain.png"
           stats={[
-            { icon: "💧", label: "Smart fountain as flagship" },
+            { icon: "📲", label: "+10k follower In 30 days" },
             { icon: "📈", label: "AOV ~€62" },
             { icon: "🎯", label: "CPA ~€14" },
           ]}
@@ -336,12 +329,12 @@ function CaseIndex() {
         <Card
           to="/case/branding-ep"
           title="Branding & campaign for EP ‘patto di sangue’"
-          desc="Concept, visuals and a lightweight paid plan for growth."
+          desc="From concept to release, I led the full creative and marketing process for Dia8lo’s EP Patto di Sangue."
           imageSrc="ep-covers.png"
           stats={[
-            { icon: "🎵", label: "100k+ views" },
+            { icon: "👀", label: "100k+ views" },
             { icon: "🎬", label: "40+ assets" },
-            { icon: "💸", label: "Budget €1–1.5k" },
+            { icon: "🎵", label: "10k+ streams" },
           ]}
           bgColor="#000000"     // ← card nera
           textOnDark            // ← testi chiari
