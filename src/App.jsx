@@ -275,11 +275,11 @@ function Card({
 }
 function CardHeroBg({
   to = "/",
-  logoSrc,               // es: "amonglocals-logo.png"
+  logoSrc,            // "amonglocals-logo.png"
   title,
   desc,
-  bgImage,               // es: "among-locals-hero.png"
-  stats = [],            // [{icon:"📞", label:"48 qualified calls"}, ...]
+  bgImage,            // "among-locals-hero.png"
+  stats = [],
   ctaLabel = "Read more",
   ctaColor = "#FF723E",
 }) {
@@ -288,18 +288,21 @@ function CardHeroBg({
   return (
     <Link to={to} className="block group">
       <div className="relative rounded-3xl overflow-hidden">
-        {/* Background immagine full card */}
+        {/* BG full-card */}
         <img
           src={`${baseUrl}${bgImage}`}
           alt=""
           className="absolute inset-0 w-full h-full object-cover -z-10"
         />
 
-        {/* Scrim/gradient per leggibilità testo (top fade) */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent -z-0" />
+        {/* Scrim per leggibilità (top più forte, bottom leggero) */}
+        <div className="pointer-events-none absolute inset-0 -z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/10 to-transparent" />
+        </div>
 
-        {/* Contenuto centrale */}
-        <div className="relative z-10 px-6 md:px-10 py-14 md:py-20 text-center text-white">
+        {/* Contenuto */}
+        <div className="relative z-10 px-6 md:px-10 pt-14 md:pt-20">
           {/* Logo centrato */}
           {logoSrc && (
             <div className="flex justify-center">
@@ -312,54 +315,53 @@ function CardHeroBg({
             </div>
           )}
 
-          {/* Titolo */}
-          <h3 className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
+          {/* Testi bianchi centrati */}
+          <h3 className="mt-4 text-center text-3xl md:text-5xl font-extrabold leading-tight text-white">
             {title}
           </h3>
-
-          {/* Descrizione */}
           {desc && (
-            <p className="mt-4 max-w-3xl mx-auto text-white/90 text-base md:text-lg leading-relaxed">
+            <p className="mt-4 text-center max-w-3xl mx-auto text-white/90 text-base md:text-lg leading-relaxed">
               {desc}
             </p>
           )}
 
-          {/* Barra highlights + CTA sovrapposta al fondo */}
-          {stats?.length > 0 && (
-            <div className="absolute left-4 right-4 md:left-8 md:right-8 bottom-4 md:bottom-6">
-              <div className="rounded-2xl bg-white p-4 md:p-6 shadow-[0_12px_28px_rgba(0,0,0,0.18)] flex flex-col md:flex-row md:items-center gap-6">
-                {/* Highlights */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
-                  {stats.slice(0, 3).map((s, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <span className="text-2xl md:text-3xl">{s.icon || "•"}</span>
-                      <div className="text-sm md:text-base font-medium text-neutral-800">
-                        {s.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+          {/* Spazio per la barra */}
+          <div className="h-24 md:h-28" />
+        </div>
 
-                {/* CTA */}
-                <div className="md:ml-6">
-                  <div
-                    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm w-full md:w-auto justify-center"
-                    style={{ backgroundColor: ctaColor }}
-                  >
-                    {ctaLabel} <span>→</span>
+        {/* Barra highlights + CTA sospesa sopra lo sfondo */}
+        {stats?.length > 0 && (
+          <div className="absolute left-4 right-4 md:left-8 md:right-8 bottom-4 md:bottom-6 z-20">
+            <div className="rounded-2xl bg-white p-4 md:p-6 shadow-[0_12px_28px_rgba(0,0,0,0.18)] flex flex-col md:flex-row md:items-center gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+                {stats.slice(0, 3).map((s, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-2xl md:text-3xl">{s.icon || "•"}</span>
+                    <div className="text-sm md:text-base font-medium text-neutral-800">
+                      {s.label}
+                    </div>
                   </div>
+                ))}
+              </div>
+              <div className="md:ml-6">
+                <div
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm w-full md:w-auto justify-center"
+                  style={{ backgroundColor: ctaColor }}
+                >
+                  {ctaLabel} <span>→</span>
                 </div>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
-        {/* Spazio di respiro sotto la barra (solo per non tagliare l’ombra) */}
-        <div className="pb-24 md:pb-24" />
+        {/* Min-height per dare presenza visiva anche senza contenuto extra */}
+        <div className="opacity-0 select-none min-h-[360px] md:min-h-[520px]" />
       </div>
     </Link>
   );
 }
+
 
 
 
@@ -384,7 +386,7 @@ function CaseIndex() {
         />
 
         {/* 2) Among Locals – background image su tutta la card */}
-        <CardHeroBg
+       <CardHeroBg
   to="/case/among-locals"
   logoSrc="amonglocals-logo.png"
   title="Among Locals — bridging cultures"
@@ -398,8 +400,7 @@ function CaseIndex() {
   ctaLabel="Read more"
   ctaColor="#FF723E"
 />
-          // mantiene testi scuri su foto; se la foto risultasse troppo chiara, ti aggiungo una scrim
-        />
+
 
         {/* 3) Zampapazza – light */}
         <Card
