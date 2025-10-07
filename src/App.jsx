@@ -29,7 +29,7 @@ function Nav() {
       <Container>
         <div className="flex items-center justify-between py-3">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/gabrielearias/"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center w-7 h-7 rounded-full ring-1 ring-neutral-300 text-xs font-semibold"
