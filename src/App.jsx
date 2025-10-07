@@ -150,10 +150,16 @@ function Card({
   const highlightText = textOnDark ? "text-white" : "text-neutral-800";
 
   return (
-    <Link
-      to={to}
-      className="block group transition-all duration-500 ease-out hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.15)]"
-    >
+   <Link to={to} className="block group">
+  <div
+    className="rounded-3xl overflow-hidden bg-white transition-all duration-500 ease-out
+               group-hover:scale-[1.02] group-hover:-translate-y-1
+               group-hover:shadow-[0_16px_40px_rgba(0,0,0,0.15)]"
+  >
+    {/* Tutto il contenuto della card (mobile + desktop) va qui dentro */}
+  </div>
+</Link>
+
       {/* MOBILE */}
       <div className="md:hidden">
         <div
