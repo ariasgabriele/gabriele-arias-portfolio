@@ -119,16 +119,15 @@ function Card({
   title,
   desc,
   imageSrc,
-  stats = [], // highlights (desktop only)
-  bg = "bg-[#f9ccbf]", // peach desktop
+  stats = [],
+  bg = "bg-[#f9ccbf]",
   ctaLabel = "Read more",
 }) {
   return (
     <Link to={to} className="block group">
-      {/* MOBILE/TABLET: clean version */}
+      {/* MOBILE / TABLET: pulita */}
       <div className="md:hidden">
         <div className="rounded-3xl bg-white shadow-sm ring-1 ring-neutral-200 p-6 mx-auto">
-          {/* Logo */}
           {logoSrc && (
             <img
               src={`${import.meta.env.BASE_URL}${logoSrc}`}
@@ -137,19 +136,13 @@ function Card({
             />
           )}
 
-          {/* Title + Description */}
           <div className="text-center">
-            <h3 className="text-2xl font-extrabold tracking-tight">
-              {title}
-            </h3>
+            <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
             {desc && (
-              <p className="mt-3 text-neutral-600 leading-relaxed">
-                {desc}
-              </p>
+              <p className="mt-3 text-neutral-600 leading-relaxed">{desc}</p>
             )}
           </div>
 
-          {/* Image */}
           {imageSrc && (
             <div className="mt-6">
               <img
@@ -160,7 +153,7 @@ function Card({
             </div>
           )}
 
-          {/* CTA only */}
+          {/* CTA solo mobile */}
           <div className="mt-6">
             <div className="w-full rounded-full bg-black text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]">
               {ctaLabel}{" "}
@@ -172,75 +165,69 @@ function Card({
         </div>
       </div>
 
-      {/* DESKTOP: layout with highlights and image */}
-      <div
-        className={`hidden md:grid grid-cols-[1.15fr,0.85fr] gap-8 p-8 rounded-3xl ${bg}`}
-      >
-        <div className="flex flex-col">
-          {/* Logo */}
-          {logoSrc && (
-            <img
-              src={`${import.meta.env.BASE_URL}${logoSrc}`}
-              alt=""
-              className="h-7 w-auto mb-4"
-            />
-          )}
-
-          {/* Heading + Sub */}
-          <h3 className="text-4xl font-extrabold leading-tight">
-            {title}
-          </h3>
-          {desc && (
-            <p className="mt-4 text-neutral-800/90 leading-relaxed">
-              {desc}
-            </p>
-          )}
-
-          {/* Highlights + CTA (desktop only) */}
-          {stats?.length > 0 && (
-            <div className="mt-auto">
-              <div className="mt-8 rounded-2xl bg-white/80 ring-1 ring-neutral-200 p-4">
-                <div className="grid grid-cols-3 gap-4">
-                  {stats.slice(0, 3).map((s, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3"
-                    >
-                      <span className="text-2xl">{s.icon || "•"}</span>
-                      <div className="text-sm text-neutral-800">
-                        {s.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4 flex justify-end">
-                <div
-                  className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-white font-medium shadow-sm transition-transform hover:scale-[1.03]"
-                  style={{ backgroundColor: "#FF723E" }}
-                >
-                  {ctaLabel} <span>→</span>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Image (desktop only) */}
-        <div className="relative">
-          <div className="rounded-2xl bg-white/60 ring-1 ring-neutral-200 h-full w-full grid place-items-center p-4">
-            {imageSrc ? (
+      {/* DESKTOP */}
+      <div className={`hidden md:flex flex-col rounded-3xl overflow-hidden ${bg}`}>
+        {/* Sezione principale (testo + immagine) */}
+        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-8">
+          <div className="flex flex-col">
+            {/* logo */}
+            {logoSrc && (
               <img
-                src={`${import.meta.env.BASE_URL}${imageSrc}`}
+                src={`${import.meta.env.BASE_URL}${logoSrc}`}
                 alt=""
-                className="w-full h-auto object-contain"
+                className="h-7 w-auto mb-4"
               />
-            ) : (
-              <div className="text-neutral-400">image</div>
+            )}
+
+            {/* titolo + descrizione */}
+            <h3 className="text-4xl font-extrabold leading-tight">{title}</h3>
+            {desc && (
+              <p className="mt-4 text-neutral-800/90 leading-relaxed">{desc}</p>
             )}
           </div>
+
+          {/* immagine */}
+          <div className="relative">
+            <div className="rounded-2xl bg-white/60 ring-1 ring-neutral-200 h-full w-full grid place-items-center p-4">
+              {imageSrc ? (
+                <img
+                  src={`${import.meta.env.BASE_URL}${imageSrc}`}
+                  alt=""
+                  className="w-full h-auto object-contain"
+                />
+              ) : (
+                <div className="text-neutral-400">image</div>
+              )}
+            </div>
+          </div>
         </div>
+
+        {/* Barra full-width con highlights + CTA */}
+        {stats?.length > 0 && (
+          <div className="flex items-center justify-between bg-white rounded-t-3xl ring-1 ring-neutral-200 mx-6 mb-6 p-6">
+            {/* Highlights */}
+            <div className="grid grid-cols-3 gap-8 flex-1">
+              {stats.slice(0, 3).map((s, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span className="text-3xl">{s.icon || "•"}</span>
+                  <div className="text-sm font-medium text-neutral-800">
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="ml-8">
+              <div
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm transition-transform hover:scale-[1.03]"
+                style={{ backgroundColor: "#FF723E" }}
+              >
+                {ctaLabel} <span>→</span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </Link>
   );
