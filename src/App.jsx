@@ -297,33 +297,31 @@ function Card({
           </div>
 
           {/* highlights + CTA (staccati sotto, e solo desktop) */}
-          {stats?.length > 0 && (
-            <div className="hidden md:block mt-4">
-              <div className="rounded-2xl bg-white p-6 shadow-[0_8px_18px_rgba(0,0,0,0.10)] flex items-center gap-6">
-                <div className="grid grid-cols-3 gap-8 flex-1">
-                  {stats.slice(0, 3).map((s, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <span className="text-3xl text-neutral-900">
-                        {s.icon || "•"}
-                      </span>
-                      <div className="text-sm font-medium text-neutral-800">
-                        {s.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="ml-8">
-                  <div
-                    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
-                    style={{ backgroundColor: ctaColor || "#FF723E" }}
-                  >
-                    {ctaLabel} <span>→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </>
+         {stats?.length > 0 && (
+  <div className="hidden md:flex items-center justify-between p-6 border-t border-neutral-200 rounded-b-3xl bg-white relative z-10">
+    <div className="grid grid-cols-3 gap-8 flex-1">
+      {stats.slice(0, 3).map((s, i) => (
+        <div key={i} className="flex items-center gap-3">
+          <span className="text-3xl text-neutral-900">{s.icon || "•"}</span>
+          <div className="text-sm font-medium text-neutral-800">
+            {s.label}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div className="ml-8">
+      <div
+        className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
+        style={{ backgroundColor: ctaColor || "#FF723E" }}
+      >
+        {ctaLabel} <span>→</span>
+      </div>
+    </div>
+  </div>
+)}
+
+             
       ) : (
         // variant === default (il tuo layout attuale)
         <div
