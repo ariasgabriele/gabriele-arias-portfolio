@@ -284,13 +284,13 @@ function CardSplitTopBottom({
   ctaLabel = "Read more",
   ctaColor = "#FF723E",
 }) {
-  const prefix = (import.meta.env.BASE_URL || "").replace(/\/+$/, "");
-  const src = (f) => `${prefix}/${f}`;
+  const baseUrl = import.meta.env.BASE_URL || "/";
 
   return (
     <Link to={to} className="block group">
-      <div className="rounded-3xl overflow-hidden bg-white shadow-sm">
-        {/* TOP: header color + testo */}
+      {/* CARD principale: header color + image sotto */}
+      <div className="rounded-3xl overflow-hidden relative" style={{ backgroundColor: "#ffffff" }}>
+        {/* TOP: colore + testi (same sizes of normal card) */}
         <div
           className="px-6 md:px-10 py-10 md:py-14 text-center text-white"
           style={{ backgroundColor: topColor }}
@@ -298,14 +298,14 @@ function CardSplitTopBottom({
           {logoSrc && (
             <div className="flex justify-center">
               <img
-                src={src(logoSrc)}
+                src={`${baseUrl}${logoSrc}`}
                 alt=""
-                className="max-h-10 md:max-h-12 w-auto h-auto object-contain"
+                className="max-h-8 md:max-h-10 w-auto h-auto object-contain"
               />
             </div>
           )}
 
-          <h3 className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight">
+          <h3 className="mt-4 text-2xl md:text-4xl font-extrabold leading-tight">
             {title}
           </h3>
 
@@ -316,35 +316,45 @@ function CardSplitTopBottom({
           )}
         </div>
 
-        {/* BOTTOM: immagine */}
-        <div className="relative">
-          <div className="h-[220px] md:h-[360px] lg:h-[420px] w-full overflow-hidden">
+        {/* BOTTOM: immagine sotto (cover) */}
+        <div className="h-[220px] md:h-[360px] lg:h-[420px] w-full overflow-hidden">
+          {imageSrc && (
             <img
-              src={src(imageSrc)}
+              src={`${baseUrl}${imageSrc}`}
               alt=""
               className="w-full h-full object-cover"
             />
+          )}
+        </div>
+
+        {/* CTA MOBILE (resta come nella card normale) */}
+        <div className="md:hidden px-6 pb-6 pt-4">
+          <div
+            className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
+            style={{ backgroundColor: ctaColor || "#000000" }}
+          >
+            {ctaLabel} <span className="inline-block">→</span>
           </div>
         </div>
       </div>
 
-      {/* CARD SEPARATA: highlights + CTA */}
+      {/* HIGHLIGHTS + CTA (solo desktop), staccati come barra sotto */}
       {stats?.length > 0 && (
-        <div className="mt-4 hidden md:block"> {/* 👈 nascosta su mobile */}
-          <div className="rounded-2xl bg-white p-5 md:p-6 shadow-[0_8px_18px_rgba(0,0,0,0.1)] flex flex-col md:flex-row md:items-center gap-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+        <div className="hidden md:block mt-4">
+          <div className="rounded-2xl bg-white p-6 shadow-[0_8px_18px_rgba(0,0,0,0.10)] flex items-center gap-6">
+            <div className="grid grid-cols-3 gap-8 flex-1">
               {stats.slice(0, 3).map((s, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <span className="text-xl md:text-2xl">{s.icon || "•"}</span>
-                  <div className="text-sm md:text-base font-medium text-neutral-800">
+                  <span className="text-3xl text-neutral-900">{s.icon || "•"}</span>
+                  <div className="text-sm font-medium text-neutral-800">
                     {s.label}
                   </div>
                 </div>
               ))}
             </div>
-            <div className="md:ml-6">
+            <div className="ml-8">
               <div
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium w-full md:w-auto justify-center transition-transform hover:scale-[1.03]"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium transition-transform hover:scale-[1.03]"
                 style={{ backgroundColor: ctaColor }}
               >
                 {ctaLabel} <span>→</span>
@@ -384,7 +394,7 @@ function CaseIndex() {
         />
 
         {/* 2) Among Locals – background image su tutta la card */}
-      <CardSplitTopBottom
+     <CardSplitTopBottom
   to="/case/among-locals"
   topColor="#82B8F4"
   logoSrc="amonglocals-logo.png"
@@ -399,6 +409,7 @@ function CaseIndex() {
   ctaLabel="Read more"
   ctaColor="#FF723E"
 />
+
 
 
 
