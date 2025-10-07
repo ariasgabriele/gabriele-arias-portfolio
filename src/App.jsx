@@ -124,21 +124,22 @@ function Card({
 }) {
   return (
     <Link to={to} className="block group">
-      {/* MOBILE / TABLET */}
+      {/* MOBILE / TABLET (no hover animations) */}
       <div className="md:hidden">
         <div className="rounded-3xl bg-white shadow-sm ring-1 ring-neutral-200 p-6 mx-auto">
           {logoSrc && (
-            <img
-              src={`${import.meta.env.BASE_URL}${logoSrc}`}
-              alt=""
-              className="h-auto w-auto max-h-8 mb-3 mx-auto"
-            />
+            <div className="flex items-center mb-3">
+              <img
+                src={`${import.meta.env.BASE_URL}${logoSrc}`}
+                alt=""
+                className="max-h-8 h-auto w-auto object-contain"
+                style={{ maxWidth: "unset" }}
+              />
+            </div>
           )}
           <div className="text-center">
             <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
-            {desc && (
-              <p className="mt-3 text-neutral-600 leading-relaxed">{desc}</p>
-            )}
+            {desc && <p className="mt-3 text-neutral-600 leading-relaxed">{desc}</p>}
           </div>
           {imageSrc && (
             <div className="mt-6">
@@ -150,34 +151,38 @@ function Card({
             </div>
           )}
           <div className="mt-6">
-            <div className="w-full rounded-full bg-black text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]">
-              {ctaLabel}{" "}
-              <span className="inline-block translate-x-0 group-hover:translate-x-0.5 transition">
-                →
-              </span>
+            <div className="w-full rounded-full bg-black text-white text-center py-3 font-medium">
+              {ctaLabel} <span className="inline-block">→</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* DESKTOP */}
-      <div className="hidden md:flex flex-col rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-neutral-200">
-        {/* Contenuto principale */}
-        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 md:p-14">
-          {/* Testo a sinistra */}
+      {/* DESKTOP with motion */}
+      <motion.div
+        className="hidden md:flex flex-col rounded-3xl overflow-hidden bg-white ring-1 ring-neutral-200 shadow-sm"
+        initial={false}
+        whileHover={{
+          y: -6,
+          boxShadow:
+            "0 12px 30px -12px rgba(0,0,0,0.18), 0 6px 14px -8px rgba(0,0,0,0.10)",
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 24, mass: 0.6 }}
+      >
+        {/* Top: text + image */}
+        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14">
+          {/* Left: text */}
           <div className="flex flex-col justify-center">
-           {logoSrc && (
-  <div className="flex items-center mb-5">
-    <img
-      src={`${import.meta.env.BASE_URL}${logoSrc}`}
-      alt=""
-      className="max-h-10 h-auto w-auto object-contain"
-      style={{ maxWidth: "unset" }}
-    />
-  </div>
-)}
-
-
+            {logoSrc && (
+              <div className="flex items-center mb-5">
+                <img
+                  src={`${import.meta.env.BASE_URL}${logoSrc}`}
+                  alt=""
+                  className="max-h-10 h-auto w-auto object-contain"
+                  style={{ maxWidth: "unset" }}
+                />
+              </div>
+            )}
             <h3 className="text-4xl font-extrabold leading-tight text-neutral-900">
               {title}
             </h3>
@@ -186,47 +191,53 @@ function Card({
             )}
           </div>
 
-          {/* Immagine a destra */}
+          {/* Right: image (float + subtle tilt on hover) */}
           {imageSrc && (
-            <div className="flex items-center justify-center">
+            <motion.div
+              className="flex items-center justify-center"
+              whileHover={{ y: -8, rotate: -0.7 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            >
               <img
                 src={`${import.meta.env.BASE_URL}${imageSrc}`}
                 alt=""
                 className="w-full h-auto object-contain"
               />
-            </div>
+            </motion.div>
           )}
         </div>
 
-        {/* Barra highlights full width */}
+        {/* Bottom: highlights + CTA full width */}
         {stats?.length > 0 && (
           <div className="flex items-center justify-between bg-white border-t border-neutral-200 p-6 rounded-b-3xl">
             <div className="grid grid-cols-3 gap-8 flex-1">
               {stats.slice(0, 3).map((s, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="text-3xl">{s.icon || "•"}</span>
-                  <div className="text-sm font-medium text-neutral-800">
-                    {s.label}
-                  </div>
+                  <div className="text-sm font-medium text-neutral-800">{s.label}</div>
                 </div>
               ))}
             </div>
 
-            {/* CTA */}
-            <div className="ml-8">
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 400, damping: 18 }}
+              className="ml-8"
+            >
               <div
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm transition-transform hover:scale-[1.03]"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm"
                 style={{ backgroundColor: "#FF723E" }}
               >
                 {ctaLabel} <span>→</span>
               </div>
-            </div>
+            </motion.div>
           </div>
         )}
-      </div>
+      </motion.div>
     </Link>
   );
 }
+
 
 
 
