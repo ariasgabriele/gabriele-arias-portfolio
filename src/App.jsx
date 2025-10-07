@@ -150,7 +150,10 @@ function Card({
   const highlightText = textOnDark ? "text-white" : "text-neutral-800";
 
   return (
-    <Link to={to} className="block group">
+    <Link
+      to={to}
+      className="block group transition-all duration-500 ease-out hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.15)]"
+    >
       {/* MOBILE */}
       <div className="md:hidden">
         <div
@@ -161,7 +164,7 @@ function Card({
             <img
               src={`${baseUrl}${bgImage}`}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover -z-10"
+              className="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 ease-out group-hover:scale-110"
             />
           )}
 
@@ -181,11 +184,11 @@ function Card({
           </div>
 
           {imageSrc && (
-            <div className="mt-6">
+            <div className="mt-6 overflow-hidden rounded-2xl">
               <img
                 src={`${baseUrl}${imageSrc}`}
                 alt=""
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-110"
               />
             </div>
           )}
@@ -205,14 +208,14 @@ function Card({
 
       {/* DESKTOP */}
       <div
-        className={`hidden md:flex flex-col rounded-3xl overflow-hidden relative`}
+        className={`hidden md:flex flex-col rounded-3xl overflow-hidden relative bg-white`}
         style={{ backgroundColor: bgColor }}
       >
         {bgImage && (
           <img
             src={`${baseUrl}${bgImage}`}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover -z-10"
+            className="absolute inset-0 w-full h-full object-cover -z-10 transition-transform duration-700 ease-out group-hover:scale-110"
           />
         )}
 
@@ -234,11 +237,11 @@ function Card({
           </div>
 
           {imageSrc && (
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center overflow-hidden rounded-3xl">
               <img
                 src={`${baseUrl}${imageSrc}`}
                 alt=""
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-110"
               />
             </div>
           )}
@@ -273,6 +276,7 @@ function Card({
     </Link>
   );
 }
+
 
 
 
