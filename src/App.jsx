@@ -232,70 +232,49 @@ function Card({
 function CaseIndex() {
   return (
     <Container>
-      <div className="py-12 space-y-8">
+      <div className="py-12 space-y-6">
         <Card
           to="/case/pod-memes"
-          logoSrc="logos/heart-logo.svg"
+          logoSrc="heart-logo.png"
           title="From Viral Memes to POD Sales"
           desc="From relatable memes to brand-based products, we turned viral content into real sales. See the content loop that generated 150+ orders at 10%+ CVR."
-          imageSrc="images/pod-memes-phones.png"
+          imageSrc="pod-memes-phones.png"
           stats={[
             { icon: "🛍️", label: "10.2% C.R. on Shopify" },
             { icon: "👀", label: "20M+ organic views" },
             { icon: "🧾", label: "150+ orders" },
           ]}
+          bg="bg-[#f9ccbf]" // peach background
           ctaLabel="Read more"
-          bg="bg-[#f9ccbf]"
         />
 
+        {/* le altre cards sotto rimangono come prima */}
         <Card
           to="/case/among-locals"
-          logoSrc="logos/among-locals.svg"
-          title="Among Locals — bridge between cultures"
-          desc="A lead-gen-first launch for authentic experiences in Sardinia."
-          imageSrc="images/among-locals-hero.png"
-          stats={[
-            { icon: "📞", label: "48 calls" },
-            { icon: "💶", label: "CPL €2.10" },
-            { icon: "📅", label: "10+ bookings" },
-          ]}
-          ctaLabel="Read more"
-          bg="bg-[#dbeafe]" /* light blue, cambia come vuoi */
+          eyebrow="Travel · Community"
+          title="Among Locals"
+          desc="Authentic travel brand with a lead-gen-first strategy."
+          badge="lead gen"
         />
-
         <Card
           to="/case/zampapazza"
-          logoSrc="logos/zampapazza.svg"
-          title="From pet memes to problem-solving products"
-          desc="Positioning + growth engine for DTC brand Zampapazza."
-          imageSrc="images/zampapazza-fountain.png"
-          stats={[
-            { icon: "💧", label: "Flagship: smart fountain" },
-            { icon: "📈", label: "AOV €62" },
-            { icon: "🎯", label: "CPA €14" },
-          ]}
-          ctaLabel="Read more"
-          bg="bg-[#fde68a]" /* warm yellow */
+          eyebrow="Pet brand · DTC"
+          title="From pet memes to products"
+          desc="Positioning and growth engine for Zampapazza."
+          badge="DTC"
         />
-
         <Card
           to="/case/branding-ep"
-          logoSrc="logos/ep.svg"
-          title="Branding & campaign for EP ‘patto di sangue’"
-          desc="Concept, visuals and lightweight paid plan for growth."
-          imageSrc="images/ep-covers.png"
-          stats={[
-            { icon: "🎵", label: "100k+ views" },
-            { icon: "🎬", label: "40+ assets" },
-            { icon: "💸", label: "Budget €1–1.5k" },
-          ]}
-          ctaLabel="Read more"
-          bg="bg-[#111827]" /* dark card */
+          eyebrow="Music · Branding"
+          title="EP ‘patto di sangue’"
+          desc="Concept, visuals and GTM plan for a music release."
+          badge="branding"
         />
       </div>
     </Container>
   );
 }
+
 
 
 /* ---- Case layout minimo ---- */
