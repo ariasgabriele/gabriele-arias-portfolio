@@ -275,61 +275,64 @@ function Card({
 }
 function CardHeroBg({
   to = "/",
-  logoSrc,            // "amonglocals-logo.png"
+  logoSrc,          // es: "amonglocals-logo.png" (senza slash iniziale)
   title,
   desc,
-  bgImage,            // "among-locals-hero.png"
+  bgImage,          // es: "among-locals-hero.png"
   stats = [],
   ctaLabel = "Read more",
   ctaColor = "#FF723E",
 }) {
-  const baseUrl = import.meta.env.BASE_URL || "/";
+  const prefix = (import.meta.env.BASE_URL || "").replace(/\/+$/, ""); // "/repo" su Pages, "" in dev
+  const src = (f) => `${prefix}/${f}`;
 
   return (
     <Link to={to} className="block group">
       <div className="relative rounded-3xl overflow-hidden">
         {/* BG full-card */}
         <img
-          src={`${baseUrl}${bgImage}`}
+          src={src(bgImage)}
           alt=""
           className="absolute inset-0 w-full h-full object-cover -z-10"
+          onError={(e) => { e.currentTarget.style.opacity = "0.1"; }} // fallback visivo
         />
 
-        {/* Scrim per leggibilità (top più forte, bottom leggero) */}
+        {/* Scrim per leggibilità (top + bottom) */}
         <div className="pointer-events-none absolute inset-0 -z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/10 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/12 to-transparent" />
         </div>
 
         {/* Contenuto */}
-        <div className="relative z-10 px-6 md:px-10 pt-14 md:pt-20">
+        <div className="relative z-10 px-6 md:px-10 pt-14 md:pt-20 text-center text-white">
           {/* Logo centrato */}
           {logoSrc && (
             <div className="flex justify-center">
               <img
-                src={`${baseUrl}${logoSrc}`}
+                src={src(logoSrc)}
                 alt="Among Locals"
                 className="max-h-10 md:max-h-12 w-auto h-auto object-contain"
                 style={{ maxWidth: "unset" }}
+                onError={(e) => { e.currentTarget.style.display = "none"; }}
               />
             </div>
           )}
 
-          {/* Testi bianchi centrati */}
-          <h3 className="mt-4 text-center text-3xl md:text-5xl font-extrabold leading-tight text-white">
+          <h3 className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
             {title}
           </h3>
+
           {desc && (
-            <p className="mt-4 text-center max-w-3xl mx-auto text-white/90 text-base md:text-lg leading-relaxed">
+            <p className="mt-4 max-w-3xl mx-auto text-white/90 text-base md:text-lg leading-relaxed">
               {desc}
             </p>
           )}
 
-          {/* Spazio per la barra */}
+          {/* spazio per la barra */}
           <div className="h-24 md:h-28" />
         </div>
 
-        {/* Barra highlights + CTA sospesa sopra lo sfondo */}
+        {/* Barra highlights + CTA */}
         {stats?.length > 0 && (
           <div className="absolute left-4 right-4 md:left-8 md:right-8 bottom-4 md:bottom-6 z-20">
             <div className="rounded-2xl bg-white p-4 md:p-6 shadow-[0_12px_28px_rgba(0,0,0,0.18)] flex flex-col md:flex-row md:items-center gap-6">
@@ -343,6 +346,7 @@ function CardHeroBg({
                   </div>
                 ))}
               </div>
+
               <div className="md:ml-6">
                 <div
                   className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm w-full md:w-auto justify-center"
@@ -355,12 +359,13 @@ function CardHeroBg({
           </div>
         )}
 
-        {/* Min-height per dare presenza visiva anche senza contenuto extra */}
+        {/* min-height per presenza visiva */}
         <div className="opacity-0 select-none min-h-[360px] md:min-h-[520px]" />
       </div>
     </Link>
   );
 }
+
 
 
 
