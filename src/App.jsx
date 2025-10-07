@@ -125,7 +125,7 @@ function Card({
 }) {
   return (
     <Link to={to} className="block group">
-      {/* MOBILE / TABLET: pulita */}
+      {/* MOBILE / TABLET */}
       <div className="md:hidden">
         <div className="rounded-3xl bg-white shadow-sm ring-1 ring-neutral-200 p-6 mx-auto">
           {logoSrc && (
@@ -135,14 +135,12 @@ function Card({
               className="h-6 w-auto mb-3"
             />
           )}
-
           <div className="text-center">
             <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
             {desc && (
               <p className="mt-3 text-neutral-600 leading-relaxed">{desc}</p>
             )}
           </div>
-
           {imageSrc && (
             <div className="mt-6">
               <img
@@ -152,8 +150,6 @@ function Card({
               />
             </div>
           )}
-
-          {/* CTA solo mobile */}
           <div className="mt-6">
             <div className="w-full rounded-full bg-black text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]">
               {ctaLabel}{" "}
@@ -167,10 +163,9 @@ function Card({
 
       {/* DESKTOP */}
       <div className={`hidden md:flex flex-col rounded-3xl overflow-hidden ${bg}`}>
-        {/* Sezione principale (testo + immagine) */}
+        {/* Contenuto principale */}
         <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-8">
           <div className="flex flex-col">
-            {/* logo */}
             {logoSrc && (
               <img
                 src={`${import.meta.env.BASE_URL}${logoSrc}`}
@@ -178,8 +173,6 @@ function Card({
                 className="h-7 w-auto mb-4"
               />
             )}
-
-            {/* titolo + descrizione */}
             <h3 className="text-4xl font-extrabold leading-tight">{title}</h3>
             {desc && (
               <p className="mt-4 text-neutral-800/90 leading-relaxed">{desc}</p>
@@ -202,9 +195,9 @@ function Card({
           </div>
         </div>
 
-        {/* Barra full-width con highlights + CTA */}
+        {/* Barra full-width integrata */}
         {stats?.length > 0 && (
-          <div className="flex items-center justify-between bg-white rounded-t-3xl ring-1 ring-neutral-200 mx-6 mb-6 p-6">
+          <div className="flex items-center justify-between bg-white p-6 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] rounded-b-3xl">
             {/* Highlights */}
             <div className="grid grid-cols-3 gap-8 flex-1">
               {stats.slice(0, 3).map((s, i) => (
@@ -232,6 +225,7 @@ function Card({
     </Link>
   );
 }
+
 
 
 
