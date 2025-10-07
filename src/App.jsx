@@ -276,11 +276,11 @@ function Card({
 function CardSplitTopBottom({
   to = "/",
   topColor = "#82B8F4",
-  logoSrc,           // es: "amonglocals-logo.png"
+  logoSrc,
   title,
   desc,
-  imageSrc,          // es: "among-locals-hero.png" (va nella parte bassa)
-  stats = [],        // [{icon:"📈", label:"..."}, ...]
+  imageSrc,
+  stats = [],
   ctaLabel = "Read more",
   ctaColor = "#FF723E",
 }) {
@@ -289,9 +289,8 @@ function CardSplitTopBottom({
 
   return (
     <Link to={to} className="block group">
-      {/* CARD principale: top testo / bottom immagine */}
       <div className="rounded-3xl overflow-hidden bg-white shadow-sm">
-        {/* TOP: colore + testo */}
+        {/* TOP: header color + testo */}
         <div
           className="px-6 md:px-10 py-10 md:py-14 text-center text-white"
           style={{ backgroundColor: topColor }}
@@ -302,12 +301,11 @@ function CardSplitTopBottom({
                 src={src(logoSrc)}
                 alt=""
                 className="max-h-10 md:max-h-12 w-auto h-auto object-contain"
-                style={{ maxWidth: "unset" }}
               />
             </div>
           )}
 
-          <h3 className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
+          <h3 className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight">
             {title}
           </h3>
 
@@ -330,14 +328,14 @@ function CardSplitTopBottom({
         </div>
       </div>
 
-      {/* CARD staccata con highlights + CTA */}
+      {/* CARD SEPARATA: highlights + CTA */}
       {stats?.length > 0 && (
-        <div className="mt-4">
-          <div className="rounded-2xl bg-white p-4 md:p-6 shadow-[0_12px_28px_rgba(0,0,0,0.12)] flex flex-col md:flex-row md:items-center gap-6">
+        <div className="mt-4 hidden md:block"> {/* 👈 nascosta su mobile */}
+          <div className="rounded-2xl bg-white p-5 md:p-6 shadow-[0_8px_18px_rgba(0,0,0,0.1)] flex flex-col md:flex-row md:items-center gap-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
               {stats.slice(0, 3).map((s, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <span className="text-2xl md:text-3xl">{s.icon || "•"}</span>
+                  <span className="text-xl md:text-2xl">{s.icon || "•"}</span>
                   <div className="text-sm md:text-base font-medium text-neutral-800">
                     {s.label}
                   </div>
@@ -358,6 +356,7 @@ function CardSplitTopBottom({
     </Link>
   );
 }
+
 
 
 
@@ -400,6 +399,7 @@ function CaseIndex() {
   ctaLabel="Read more"
   ctaColor="#FF723E"
 />
+
 
 
 
