@@ -120,7 +120,6 @@ function Card({
   desc,
   imageSrc,
   stats = [],
-  bg = "bg-[#f9ccbf]",
   ctaLabel = "Read more",
 }) {
   return (
@@ -162,26 +161,28 @@ function Card({
       </div>
 
       {/* DESKTOP */}
-      <div className={`hidden md:flex flex-col rounded-3xl overflow-hidden ${bg}`}>
+      <div className="hidden md:flex flex-col rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-neutral-200">
         {/* Contenuto principale */}
-        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-8">
+        <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 md:p-14">
+          {/* Testo a sinistra */}
           <div className="flex flex-col justify-center">
-            {/* Logo - dimensione reale */}
             {logoSrc && (
               <img
                 src={`${import.meta.env.BASE_URL}${logoSrc}`}
                 alt=""
-                className="h-auto w-auto max-h-9 mb-5"
+                className="h-auto w-auto max-h-10 mb-5"
               />
             )}
 
-            <h3 className="text-4xl font-extrabold leading-tight">{title}</h3>
+            <h3 className="text-4xl font-extrabold leading-tight text-neutral-900">
+              {title}
+            </h3>
             {desc && (
-              <p className="mt-4 text-neutral-800/90 leading-relaxed">{desc}</p>
+              <p className="mt-4 text-neutral-700 leading-relaxed">{desc}</p>
             )}
           </div>
 
-          {/* Immagine a destra - nessun background */}
+          {/* Immagine a destra */}
           {imageSrc && (
             <div className="flex items-center justify-center">
               <img
@@ -195,7 +196,7 @@ function Card({
 
         {/* Barra highlights full width */}
         {stats?.length > 0 && (
-          <div className="flex items-center justify-between bg-white p-6 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] rounded-b-3xl">
+          <div className="flex items-center justify-between bg-white border-t border-neutral-200 p-6 rounded-b-3xl">
             <div className="grid grid-cols-3 gap-8 flex-1">
               {stats.slice(0, 3).map((s, i) => (
                 <div key={i} className="flex items-center gap-3">
