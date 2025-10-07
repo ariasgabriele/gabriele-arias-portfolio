@@ -132,7 +132,7 @@ function Card({
             <img
               src={`${import.meta.env.BASE_URL}${logoSrc}`}
               alt=""
-              className="h-6 w-auto mb-3"
+              className="h-auto w-auto max-h-8 mb-3 mx-auto"
             />
           )}
           <div className="text-center">
@@ -165,40 +165,37 @@ function Card({
       <div className={`hidden md:flex flex-col rounded-3xl overflow-hidden ${bg}`}>
         {/* Contenuto principale */}
         <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-8">
-          <div className="flex flex-col">
+          <div className="flex flex-col justify-center">
+            {/* Logo - dimensione reale */}
             {logoSrc && (
               <img
                 src={`${import.meta.env.BASE_URL}${logoSrc}`}
                 alt=""
-                className="h-7 w-auto mb-4"
+                className="h-auto w-auto max-h-9 mb-5"
               />
             )}
+
             <h3 className="text-4xl font-extrabold leading-tight">{title}</h3>
             {desc && (
               <p className="mt-4 text-neutral-800/90 leading-relaxed">{desc}</p>
             )}
           </div>
 
-          {/* immagine */}
-          <div className="relative">
-            <div className="rounded-2xl bg-white/60 ring-1 ring-neutral-200 h-full w-full grid place-items-center p-4">
-              {imageSrc ? (
-                <img
-                  src={`${import.meta.env.BASE_URL}${imageSrc}`}
-                  alt=""
-                  className="w-full h-auto object-contain"
-                />
-              ) : (
-                <div className="text-neutral-400">image</div>
-              )}
+          {/* Immagine a destra - nessun background */}
+          {imageSrc && (
+            <div className="flex items-center justify-center">
+              <img
+                src={`${import.meta.env.BASE_URL}${imageSrc}`}
+                alt=""
+                className="w-full h-auto object-contain"
+              />
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Barra full-width integrata */}
+        {/* Barra highlights full width */}
         {stats?.length > 0 && (
           <div className="flex items-center justify-between bg-white p-6 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] rounded-b-3xl">
-            {/* Highlights */}
             <div className="grid grid-cols-3 gap-8 flex-1">
               {stats.slice(0, 3).map((s, i) => (
                 <div key={i} className="flex items-center gap-3">
@@ -225,6 +222,7 @@ function Card({
     </Link>
   );
 }
+
 
 
 
