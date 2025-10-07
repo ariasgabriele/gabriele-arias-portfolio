@@ -134,128 +134,153 @@ function Card({
   logoSrc,
   title,
   desc,
-  imageSrc,
+  imageSrc,          // immagine foreground (colonna destra su desktop)
   stats = [],
   ctaLabel = "Read more",
+
+  // ➜ nuovi prop
+  bgColor = "#ffffff", // colore sfondo card (es. EP = "#000000")
+  textOnDark = false,  // se true: testi bianchi, bordi soft
+  ctaColor,            // colore CTA (es. "#C60A09" per EP)
+  bgImage,             // se presente: immagine di sfondo full-card (Among Locals)
 }) {
+  const baseUrl = import.meta.env.BASE_URL || "/";
+
+  const textMain = textOnDark ? "text-white" : "text-neutral-900";
+  const textSub  = textOnDark ? "text-white/80" : "text-neutral-700";
+  const borderCol = textOnDark ? "border-white/10" : "border-neutral-200";
+  const highlightText = textOnDark ? "text-white" : "text-neutral-800";
+
   return (
     <Link to={to} className="block group">
-      {/* MOBILE / TABLET (no hover animations) */}
+      {/* MOBILE / TABLET */}
       <div className="md:hidden">
-        <div className="rounded-3xl bg-white shadow-sm ring-1 ring-neutral-200 p-6 mx-auto">
+        <div
+          className={`relative rounded-3xl shadow-sm ring-1 ${borderCol} p-6 mx-auto overflow-hidden`}
+          style={{ backgroundColor: bgColor }}
+        >
+          {/* bg image full card */}
+          {bgImage && (
+            <img
+              src={`${baseUrl}${bgImage}`}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover -z-10"
+            />
+          )}
+
+          {/* logo centrato */}
           {logoSrc && (
-            <div className="flex items-center mb-3">
+            <div className="flex justify-center mb-3">
               <img
-                src={`${import.meta.env.BASE_URL}${logoSrc}`}
+                src={`${baseUrl}${logoSrc}`}
                 alt=""
                 className="max-h-8 h-auto w-auto object-contain"
                 style={{ maxWidth: "unset" }}
               />
             </div>
           )}
-          <div className="text-center">
+
+          <div className={`text-center ${textMain}`}>
             <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
-            {desc && <p className="mt-3 text-neutral-600 leading-relaxed">{desc}</p>}
+            {desc && <p className={`mt-3 ${textSub} leading-relaxed`}>{desc}</p>}
           </div>
+
+          {/* foreground image */}
           {imageSrc && (
             <div className="mt-6">
               <img
-                src={`${import.meta.env.BASE_URL}${imageSrc}`}
+                src={`${baseUrl}${imageSrc}`}
                 alt=""
                 className="w-full h-auto object-contain"
               />
             </div>
           )}
+
+          {/* CTA mobile */}
           <div className="mt-6">
-            <div className="w-full rounded-full bg-black text-white text-center py-3 font-medium">
+            <div
+              className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
+              style={{ backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000") }}
+            >
               {ctaLabel} <span className="inline-block">→</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* DESKTOP with motion */}
-      <motion.div
-        className="hidden md:flex flex-col rounded-3xl overflow-hidden bg-white ring-1 ring-neutral-200 shadow-sm"
-        initial={false}
-        whileHover={{
-          y: -6,
-          boxShadow:
-            "0 12px 30px -12px rgba(0,0,0,0.18), 0 6px 14px -8px rgba(0,0,0,0.10)",
-        }}
-        transition={{ type: "spring", stiffness: 300, damping: 24, mass: 0.6 }}
+      {/* DESKTOP */}
+      <div
+        className={`hidden md:flex flex-col rounded-3xl overflow-hidden ring-1 ${borderCol} shadow-sm relative`}
+        style={{ backgroundColor: bgColor }}
       >
-        {/* Top: text + image */}
+        {/* bg image full card */}
+        {bgImage && (
+          <img
+            src={`${baseUrl}${bgImage}`}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover -z-10"
+          />
+        )}
+
+        {/* Contenuto principale */}
         <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14">
-          {/* Left: text */}
+          {/* Testo */}
           <div className="flex flex-col justify-center">
             {logoSrc && (
               <div className="flex items-center mb-5">
                 <img
-                  src={`${import.meta.env.BASE_URL}${logoSrc}`}
+                  src={`${baseUrl}${logoSrc}`}
                   alt=""
                   className="max-h-10 h-auto w-auto object-contain"
                   style={{ maxWidth: "unset" }}
                 />
               </div>
             )}
-            <h3 className="text-4xl font-extrabold leading-tight text-neutral-900">
-              {title}
-            </h3>
-            {desc && (
-              <p className="mt-4 text-neutral-700 leading-relaxed">{desc}</p>
-            )}
+
+            <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>{title}</h3>
+            {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
           </div>
 
-          {/* Right: image (float + subtle tilt on hover) */}
+          {/* Immagine colonna destra (se serve oltre al bg) */}
           {imageSrc && (
-            <motion.div
-              className="flex items-center justify-center"
-              whileHover={{ y: -8, rotate: -0.7 }}
-              transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            >
+            <div className="flex items-center justify-center">
               <img
-                src={`${import.meta.env.BASE_URL}${imageSrc}`}
+                src={`${baseUrl}${imageSrc}`}
                 alt=""
                 className="w-full h-auto object-contain"
               />
-            </motion.div>
+            </div>
           )}
         </div>
 
-        {/* Bottom: highlights + CTA full width */}
+        {/* Highlights + CTA full width */}
         {stats?.length > 0 && (
-          <div className="flex items-center justify-between bg-white border-t border-neutral-200 p-6 rounded-b-3xl">
+          <div className={`flex items-center justify-between p-6 rounded-b-3xl border-t ${borderCol}`}>
             <div className="grid grid-cols-3 gap-8 flex-1">
               {stats.slice(0, 3).map((s, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <span className="text-3xl">{s.icon || "•"}</span>
-                  <div className="text-sm font-medium text-neutral-800">{s.label}</div>
+                  <span className={`text-3xl ${textMain}`}>{s.icon || "•"}</span>
+                  <div className={`text-sm font-medium ${highlightText}`}>{s.label}</div>
                 </div>
               ))}
             </div>
 
-            <motion.div
-              whileHover={{ scale: 1.04 }}
-              transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="ml-8"
-            >
+            <div className="ml-8">
               <div
-                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm"
-                style={{ backgroundColor: "#FF723E" }}
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium shadow-sm transition-transform hover:scale-[1.03]"
+                style={{ backgroundColor: ctaColor || "#FF723E" }}
               >
                 {ctaLabel} <span>→</span>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
-      </motion.div>
+      </div>
     </Link>
   );
 }
-
-
-
 
 
 
@@ -263,7 +288,7 @@ function CaseIndex() {
   return (
     <Container>
       <div className="py-12 space-y-8">
-        {/* 1) POD sales */}
+        {/* 1) POD sales – light */}
         <Card
           to="/case/pod-memes"
           logoSrc="heart-logo.png"
@@ -275,26 +300,25 @@ function CaseIndex() {
             { icon: "👀", label: "20M+ organic views" },
             { icon: "🧾", label: "150+ orders" },
           ]}
-          ctaLabel="Read more"
+          // sfondo bianco, CTA arancione di default
         />
 
-        {/* 2) Among Locals */}
+        {/* 2) Among Locals – background image su tutta la card */}
         <Card
           to="/case/among-locals"
-          // se hai rinominato il file: "amonglocals-logo.png"
-          logoSrc="amonglocals-logo.png" 
+          logoSrc="amonglocals-logo.png"
           title="Among Locals — bridging cultures"
           desc="Lead-gen-first launch for authentic local experiences in Sardinia."
-          imageSrc="among-locals-hero.png"
+          bgImage="among-locals-hero.png"  // ← immagine di sfondo su tutta la card (mobile + desktop)
           stats={[
             { icon: "📞", label: "48 qualified calls" },
             { icon: "💶", label: "CPL ~€2.10" },
             { icon: "📅", label: "10+ bookings" },
           ]}
-          ctaLabel="Read more"
+          // mantiene testi scuri su foto; se la foto risultasse troppo chiara, ti aggiungo una scrim
         />
 
-        {/* 3) Zampapazza */}
+        {/* 3) Zampapazza – light */}
         <Card
           to="/case/zampapazza"
           logoSrc="zampapazza-logo.png"
@@ -306,13 +330,11 @@ function CaseIndex() {
             { icon: "📈", label: "AOV ~€62" },
             { icon: "🎯", label: "CPA ~€14" },
           ]}
-          ctaLabel="Read more"
         />
 
-        {/* 4) Branding EP */}
+        {/* 4) EP – dark card, testi bianchi, CTA rossa */}
         <Card
           to="/case/branding-ep"
-          // nessun logo specifico: lasciamo solo l’immagine
           title="Branding & campaign for EP ‘patto di sangue’"
           desc="Concept, visuals and a lightweight paid plan for growth."
           imageSrc="ep-covers.png"
@@ -321,7 +343,9 @@ function CaseIndex() {
             { icon: "🎬", label: "40+ assets" },
             { icon: "💸", label: "Budget €1–1.5k" },
           ]}
-          ctaLabel="Read more"
+          bgColor="#000000"     // ← card nera
+          textOnDark            // ← testi chiari
+          ctaColor="#C60A09"    // ← CTA rossa
         />
       </div>
     </Container>
