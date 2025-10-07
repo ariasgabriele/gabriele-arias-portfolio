@@ -166,13 +166,17 @@ function Card({
         <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 md:p-14">
           {/* Testo a sinistra */}
           <div className="flex flex-col justify-center">
-            {logoSrc && (
-              <img
-                src={`${import.meta.env.BASE_URL}${logoSrc}`}
-                alt=""
-                className="h-auto w-auto max-h-10 mb-5"
-              />
-            )}
+           {logoSrc && (
+  <div className="flex items-center mb-5">
+    <img
+      src={`${import.meta.env.BASE_URL}${logoSrc}`}
+      alt=""
+      className="max-h-10 h-auto w-auto object-contain"
+      style={{ maxWidth: "unset" }}
+    />
+  </div>
+)}
+
 
             <h3 className="text-4xl font-extrabold leading-tight text-neutral-900">
               {title}
