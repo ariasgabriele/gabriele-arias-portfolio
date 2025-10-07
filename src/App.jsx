@@ -313,8 +313,8 @@ function CaseIndex() {
      <Card
   to="/case/among-locals"
   logoSrc="amonglocals-logo.png"
-  title="Among Locals — bridging cultures"
-  desc="Lead-gen-first launch for authentic local experiences in Sardinia."
+  title="Among Locals  bridging cultures"
+  desc="Built an experiential travel brand from the start to te launch. Check out how a fresh identity, a lean funnel and authentic storytelling generated over 40 qualified leads at £14.76 CPL."
   imageSrc="among-locals-hero.png"  // immagine a destra su desktop
   stats={[
     { icon: "📈", label: "17.6% C.R. to the call" },
