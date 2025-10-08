@@ -167,15 +167,18 @@ function Card({
               />
             )}
 
-            {logoSrc && (
-              <div className="flex justify-center mb-3">
-                <img
-                  src={`${baseUrl}${logoSrc}`}
-                  alt=""
-                  className="max-h-8 w-auto object-contain"
-                />
-              </div>
-            )}
+           {logoSrc && (
+  <div className="flex justify-center mb-3">
+    <img
+      src={`${baseUrl}${logoSrc}`}
+      alt=""
+      className={`w-auto object-contain ${
+        title.toLowerCase().includes("among locals") ? "max-h-4" : "max-h-8"
+      }`}
+    />
+  </div>
+)}
+
 
             <div className={`text-center ${textMain}`}>
               <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
@@ -221,15 +224,18 @@ function Card({
 
           <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
             <div className="flex flex-col justify-center">
-              {logoSrc && (
-                <div className="flex items-center mb-5">
-                  <img
-                    src={`${baseUrl}${logoSrc}`}
-                    alt=""
-                    className="max-h-10 w-auto object-contain"
-                  />
-                </div>
-              )}
+            {logoSrc && (
+  <div className="flex items-center mb-5">
+    <img
+      src={`${baseUrl}${logoSrc}`}
+      alt=""
+      className={`w-auto object-contain ${
+        title.toLowerCase().includes("among locals") ? "max-h-5" : "max-h-10"
+      }`}
+    />
+  </div>
+)}
+
               <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
                 {title}
               </h3>
