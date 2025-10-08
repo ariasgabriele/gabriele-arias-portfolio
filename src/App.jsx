@@ -312,7 +312,7 @@ function CaseIndex() {
         {/* 2) Among Locals – background image su tutta la card */}
      <Card
   to="/case/among-locals"
-  logoSrc="amonglocals-logo.png"
+  logoSrc="amonglocals-logo.svg"
   title="Among Locals  bridging cultures"
   desc="Built an experiential travel brand from the start to te launch. Check out how a fresh identity, a lean funnel and authentic storytelling generated over 40 qualified leads at £14.76 CPL."
   imageSrc="among-locals-hero.png"  // immagine a destra su desktop
