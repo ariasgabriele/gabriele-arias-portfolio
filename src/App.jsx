@@ -722,9 +722,11 @@ function Home() {
     </main>
   );
 }
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+/* ---- Scroll to top on route change ---- */
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
@@ -749,7 +751,7 @@ function App() {
       <div className="min-h-screen bg-white text-neutral-900">
         <Nav />
 
-        {/* 👇 Aggiungi questa riga qui */}
+        {/* 👇 Scroll automatico in cima */}
         <ScrollToTop />
 
         <Routes>
