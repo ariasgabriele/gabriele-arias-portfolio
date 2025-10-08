@@ -1,5 +1,25 @@
+// ===== IMPORTS (UNA SOLA VOLTA, IN CIMA) =====
 import { HashRouter as BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
+
+// ===== SCROLL TO TOP ON ROUTE CHANGE =====
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto", block: "start" });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname, hash]);
+
+  return null;
+}
 
 /* ---- Utility: container ---- */
 function Container({ children }) {
@@ -65,7 +85,7 @@ function Hero() {
       y: 0,
       transition: {
         duration: 1.1,
-        ease: [0.25, 0.1, 0.25, 1], // easing "ease-in-out" smooth
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };
@@ -74,7 +94,6 @@ function Hero() {
     <section className="bg-white text-neutral-900 pt-12 md:pt-20 pb-0">
       <Container>
         <div className="text-center">
-          {/* Tutti insieme, stessa animazione */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -105,8 +124,6 @@ function Hero() {
   );
 }
 
-
-
 /* ---- Sezione nera subito sotto, senza gap ---- */
 function WhatIDo() {
   return (
@@ -128,7 +145,7 @@ function WhatIDo() {
   );
 }
 
-/* ---- Cards indice (resta semplice) ---- */
+/* ---- Card ---- */
 function Card({
   to = "/",
   logoSrc,
@@ -149,9 +166,7 @@ function Card({
   const borderCol = textOnDark ? "border-white/10" : "border-neutral-200";
   const highlightText = textOnDark ? "text-white" : "text-neutral-800";
   const isAmongLocalsLogo =
-  typeof logoSrc === "string" &&
-  logoSrc.toLowerCase().includes("amonglocals-logo");
-
+    typeof logoSrc === "string" && logoSrc.toLowerCase().includes("amonglocals-logo");
 
   return (
     <Link to={to} className="block group">
@@ -171,19 +186,15 @@ function Card({
               />
             )}
 
-          {logoSrc && (
-  <div className="flex justify-center mb-3">
-    <img
-      src={`${baseUrl}${logoSrc}`}
-      alt=""
-      className={`w-auto object-contain ${
-        isAmongLocalsLogo ? "max-h-4" : "max-h-8"
-      }`}
-    />
-  </div>
-)}
-
-
+            {logoSrc && (
+              <div className="flex justify-center mb-3">
+                <img
+                  src={`${baseUrl}${logoSrc}`}
+                  alt=""
+                  className={`w-auto object-contain ${isAmongLocalsLogo ? "max-h-4" : "max-h-8"}`}
+                />
+              </div>
+            )}
 
             <div className={`text-center ${textMain}`}>
               <h3 className="text-2xl font-extrabold tracking-tight">{title}</h3>
@@ -204,9 +215,7 @@ function Card({
             <div className="mt-6">
               <div
                 className="w-full rounded-full text-white text-center py-3 font-medium transition-transform hover:scale-[1.02]"
-                style={{
-                  backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000"),
-                }}
+                style={{ backgroundColor: ctaColor || (textOnDark ? "#C60A09" : "#000000") }}
               >
                 {ctaLabel} <span className="inline-block">→</span>
               </div>
@@ -215,10 +224,7 @@ function Card({
         </div>
 
         {/* DESKTOP */}
-        <div
-          className="hidden md:flex flex-col relative"
-          style={{ backgroundColor: bgColor }}
-        >
+        <div className="hidden md:flex flex-col relative" style={{ backgroundColor: bgColor }}>
           {bgImage && (
             <img
               src={`${baseUrl}${bgImage}`}
@@ -229,22 +235,16 @@ function Card({
 
           <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
             <div className="flex flex-col justify-center">
-           {logoSrc && (
-  <div className="flex items-center mb-5">
-    <img
-      src={`${baseUrl}${logoSrc}`}
-      alt=""
-      className={`w-auto object-contain ${
-        isAmongLocalsLogo ? "max-h-5" : "max-h-10"
-      }`}
-    />
-  </div>
-)}
-
-
-              <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
-                {title}
-              </h3>
+              {logoSrc && (
+                <div className="flex items-center mb-5">
+                  <img
+                    src={`${baseUrl}${logoSrc}`}
+                    alt=""
+                    className={`w-auto object-contain ${isAmongLocalsLogo ? "max-h-5" : "max-h-10"}`}
+                  />
+                </div>
+              )}
+              <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>{title}</h3>
               {desc && <p className={`mt-4 ${textSub} leading-relaxed`}>{desc}</p>}
             </div>
 
@@ -260,16 +260,12 @@ function Card({
           </div>
 
           {stats?.length > 0 && (
-            <div
-              className={`flex items-center justify-between p-6 border-t ${borderCol} relative z-10`}
-            >
+            <div className={`flex items-center justify-between p-6 border-t ${borderCol} relative z-10`}>
               <div className="grid grid-cols-3 gap-8 flex-1">
                 {stats.map((s, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className={`text-3xl ${textMain}`}>{s.icon || "•"}</span>
-                    <div className={`text-sm font-medium ${highlightText}`}>
-                      {s.label}
-                    </div>
+                    <div className={`text-sm font-medium ${highlightText}`}>{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -290,18 +286,6 @@ function Card({
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 function CaseIndex() {
   return (
     <Container>
@@ -318,30 +302,23 @@ function CaseIndex() {
             { icon: "👀", label: "20M+ organic views" },
             { icon: "🧾", label: "150+ orders" },
           ]}
-          // sfondo bianco, CTA arancione di default
         />
 
-        {/* 2) Among Locals – background image su tutta la card */}
-     <Card
-  to="/case/among-locals"
-  logoSrc="amonglocals-logo.svg"
-  title="A bridge between cultures, people, and hidden traditions"
-  desc="Built an experiential travel brand from the start to te launch. Check out how a fresh identity, a lean funnel and authentic storytelling generated over 40 qualified leads at £14.76 CPL."
-  imageSrc="amonglocals-web-ad.png"  // immagine a destra su desktop
-  stats={[
-    { icon: "📈", label: "17.6% C.R. to the call" },
-    { icon: "🌍", label: "40+ leads in 1 month" },
-    { icon: "📞", label: "5 calls booked" },
-  ]}
-  ctaLabel="Read more"
-  ctaColor="#FF723E"
-/>
-
-
-
-
-
-
+        {/* 2) Among Locals – standard card */}
+        <Card
+          to="/case/among-locals"
+          logoSrc="amonglocals-logo.svg"
+          title="A bridge between cultures, people, and hidden traditions"
+          desc="Built an experiential travel brand from the start to the launch. Check how a fresh identity, a lean funnel and authentic storytelling generated 40+ qualified leads at £14.76 CPL."
+          imageSrc="amonglocals-web-ad.png"
+          stats={[
+            { icon: "📈", label: "17.6% C.R. to the call" },
+            { icon: "🌍", label: "40+ leads in 1 month" },
+            { icon: "📞", label: "5 calls booked" },
+          ]}
+          ctaLabel="Read more"
+          ctaColor="#FF723E"
+        />
 
         {/* 3) Zampapazza – light */}
         <Card
@@ -351,7 +328,7 @@ function CaseIndex() {
           desc="Starting with viral reels and memes, Zampapazza grew to 10k followers in just 30 days. By applying the “Pain Framework” and community insights, the project validated a premium pet product that converted from day one."
           imageSrc="zampapazza-fountain.png"
           stats={[
-            { icon: "📲", label: "+10k follower In 30 days" },
+            { icon: "📲", label: "+10k followers in 30 days" },
             { icon: "📈", label: "AOV ~€62" },
             { icon: "🎯", label: "CPA ~€14" },
           ]}
@@ -368,19 +345,16 @@ function CaseIndex() {
             { icon: "🎬", label: "40+ assets" },
             { icon: "🎵", label: "10k+ streams" },
           ]}
-          bgColor="#000000"     // ← card nera
-          textOnDark            // ← testi chiari
-          ctaColor="#C60A09"    // ← CTA rossa
+          bgColor="#000000"
+          textOnDark
+          ctaColor="#C60A09"
         />
       </div>
     </Container>
   );
 }
 
-
-
-
-/* ---- Case layout minimo ---- */
+/* ---- Case layout ---- */
 function CaseLayout({ title, eyebrow, children }) {
   const navigate = useNavigate();
   return (
@@ -401,15 +375,27 @@ function CaseLayout({ title, eyebrow, children }) {
   );
 }
 
-function CasePOD() { return <CaseLayout eyebrow="POD / UGC" title="From viral memes to POD sales">
-  <p>Short description of the project.</p>
-</CaseLayout>; }
-function CaseAmongLocals() { return <CaseLayout eyebrow="Travel · Community" title="Among Locals">
-  <p>Short description of the project.</p>
-</CaseLayout>; }
-function CaseZampapazza() { return <CaseLayout eyebrow="Pet brand · DTC" title="Zampapazza">
-  <p>Short description of the project.</p>
-</CaseLayout>; }
+function CasePOD() {
+  return (
+    <CaseLayout eyebrow="POD / UGC" title="From viral memes to POD sales">
+      <p>Short description of the project.</p>
+    </CaseLayout>
+  );
+}
+function CaseAmongLocals() {
+  return (
+    <CaseLayout eyebrow="Travel · Community" title="Among Locals">
+      <p>Short description of the project.</p>
+    </CaseLayout>
+  );
+}
+function CaseZampapazza() {
+  return (
+    <CaseLayout eyebrow="Pet brand · DTC" title="Zampapazza">
+      <p>Short description of the project.</p>
+    </CaseLayout>
+  );
+}
 function CaseBrandingEP() {
   const baseUrl = import.meta.env.BASE_URL || "/";
 
@@ -426,9 +412,7 @@ function CaseBrandingEP() {
 
       {/* === SECTION 1: GETTING STARTED === */}
       <section className="mt-24">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          Getting started
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Getting started</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           My first launch as a marketer
         </h2>
@@ -457,9 +441,7 @@ function CaseBrandingEP() {
 
       {/* === SECTION 2: CONTEXT === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          Context
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Context</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           A growing market, a small team, a big ambition
         </h2>
@@ -487,9 +469,7 @@ function CaseBrandingEP() {
 
       {/* === SECTION 3: THE CHALLENGE === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          The challenge
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">The challenge</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           Budget, alignment, and execution
         </h2>
@@ -503,11 +483,8 @@ function CaseBrandingEP() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* 1 */}
           <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-              1. Multi-stakeholder alignment
-            </h3>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">1. Multi-stakeholder alignment</h3>
             <p className="text-neutral-700 leading-relaxed">
               Coordinating across a fragmented team with different workflows—a graphic designer,
               producer and video makers—required extra effort. Each had unique creative expectations,
@@ -515,11 +492,8 @@ function CaseBrandingEP() {
             </p>
           </div>
 
-          {/* 2 */}
           <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-              2. Budget instability
-            </h3>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">2. Budget instability</h3>
             <p className="text-neutral-700 leading-relaxed">
               The campaign was planned with a modest but workable budget. However, sudden cuts forced
               us to reprioritize assets and channels on the fly. This meant constantly asking:
@@ -527,11 +501,8 @@ function CaseBrandingEP() {
             </p>
           </div>
 
-          {/* 3 */}
           <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm md:col-span-2">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-              3. First-time unknowns
-            </h3>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">3. First-time unknowns</h3>
             <p className="text-neutral-700 leading-relaxed">
               This was my first 360° campaign as a marketer, and Diablo &amp; Ardè’s first professional
               project. Without prior data, every decision—from ad targeting to content pacing—was
@@ -544,9 +515,7 @@ function CaseBrandingEP() {
 
       {/* === SECTION 4: MY ROLE === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          My Role
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">My Role</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           From research to execution
         </h2>
@@ -557,17 +526,10 @@ function CaseBrandingEP() {
         </p>
 
         <div className="not-prose grid gap-10 md:grid-cols-2">
-          {/* 1 */}
           <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
-            <img
-              src={`${baseUrl}ep-role-1-competitor-trend.png`}
-              alt="Competitor & Trend Analysis"
-              className="w-full h-56 object-cover"
-            />
+            <img src={`${baseUrl}ep-role-1-competitor-trend.png`} alt="Competitor & Trend Analysis" className="w-full h-56 object-cover" />
             <div className="p-6 space-y-3">
-              <h3 className="font-bold text-neutral-900 text-xl">
-                1. Competitor & Trend Analysis
-              </h3>
+              <h3 className="font-bold text-neutral-900 text-xl">1. Competitor & Trend Analysis</h3>
               <ul className="list-disc pl-5 text-neutral-700 space-y-1">
                 <li>Benchmarked the Italian trap/urban scene to map positioning of emerging artists.</li>
                 <li>Analyzed TikTok and Instagram trends (lyric reels, POV cuts, lo-fi snippets).</li>
@@ -576,17 +538,10 @@ function CaseBrandingEP() {
             </div>
           </section>
 
-          {/* 2 */}
           <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
-            <img
-              src={`${baseUrl}ep-role-2-strategy.png`}
-              alt="Marketing Strategy"
-              className="w-full h-56 object-cover"
-            />
+            <img src={`${baseUrl}ep-role-2-strategy.png`} alt="Marketing Strategy" className="w-full h-56 object-cover" />
             <div className="p-6 space-y-3">
-              <h3 className="font-bold text-neutral-900 text-xl">
-                2. Marketing Strategy
-              </h3>
+              <h3 className="font-bold text-neutral-900 text-xl">2. Marketing Strategy</h3>
               <ul className="list-disc pl-5 text-neutral-700 space-y-1">
                 <li>Focused on awareness & consideration through organic content boosted with Meta Ads.</li>
                 <li>Used micro native ads to drive listening and gather insights.</li>
@@ -595,17 +550,10 @@ function CaseBrandingEP() {
             </div>
           </section>
 
-          {/* 3 */}
           <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
-            <img
-              src={`${baseUrl}ep-role-3-branding.png`}
-              alt="Art Direction & Branding"
-              className="w-full h-56 object-cover"
-            />
+            <img src={`${baseUrl}ep-role-3-branding.png`} alt="Art Direction & Branding" className="w-full h-56 object-cover" />
             <div className="p-6 space-y-3">
-              <h3 className="font-bold text-neutral-900 text-xl">
-                3. Art Direction & Branding
-              </h3>
+              <h3 className="font-bold text-neutral-900 text-xl">3. Art Direction & Branding</h3>
               <ul className="list-disc pl-5 text-neutral-700 space-y-1">
                 <li>Created a dark, symbolic identity reflecting the EP’s themes (blood pact, street credibility).</li>
                 <li>Developed the palette, cover concept, and visual tone.</li>
@@ -614,17 +562,10 @@ function CaseBrandingEP() {
             </div>
           </section>
 
-          {/* 4 */}
           <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
-            <img
-              src={`${baseUrl}ep-role-4-content.png`}
-              alt="Content Strategy & Production"
-              className="w-full h-56 object-cover"
-            />
+            <img src={`${baseUrl}ep-role-4-content.png`} alt="Content Strategy & Production" className="w-full h-56 object-cover" />
             <div className="p-6 space-y-3">
-              <h3 className="font-bold text-neutral-900 text-xl">
-                4. Content Strategy & Production
-              </h3>
+              <h3 className="font-bold text-neutral-900 text-xl">4. Content Strategy & Production</h3>
               <ul className="list-disc pl-5 text-neutral-700 space-y-1">
                 <li>Planned a content calendar: lyric reels, lo-fi snippets, and narrative carousels.</li>
                 <li>Defined roles for awareness, engagement, and conversion.</li>
@@ -633,17 +574,10 @@ function CaseBrandingEP() {
             </div>
           </section>
 
-          {/* 5 */}
           <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
-            <img
-              src={`${baseUrl}ep-role-5-video.png`}
-              alt="Video Concepting & Direction"
-              className="w-full h-56 object-cover"
-            />
+            <img src={`${baseUrl}ep-role-5-video.png`} alt="Video Concepting & Direction" className="w-full h-56 object-cover" />
             <div className="p-6 space-y-3">
-              <h3 className="font-bold text-neutral-900 text-xl">
-                5. Video Concepting & Direction
-              </h3>
+              <h3 className="font-bold text-neutral-900 text-xl">5. Video Concepting & Direction</h3>
               <ul className="list-disc pl-5 text-neutral-700 space-y-1">
                 <li>Oversaw ideation, scriptwriting, and direction for multiple video formats.</li>
                 <li>Collaborated with editors, 3D artists, and photographers for TikTok and ad content.</li>
@@ -651,17 +585,10 @@ function CaseBrandingEP() {
             </div>
           </section>
 
-          {/* 7 */}
           <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
-            <img
-              src={`${baseUrl}ep-role-7-ads.png`}
-              alt="Advertising Strategy & Execution"
-              className="w-full h-56 object-cover"
-            />
+            <img src={`${baseUrl}ep-role-7-ads.png`} alt="Advertising Strategy & Execution" className="w-full h-56 object-cover" />
             <div className="p-6 space-y-3">
-              <h3 className="font-bold text-neutral-900 text-xl">
-                7. Advertising Strategy & Execution
-              </h3>
+              <h3 className="font-bold text-neutral-900 text-xl">7. Advertising Strategy & Execution</h3>
               <ul className="list-disc pl-5 text-neutral-700 space-y-1">
                 <li>Managed Meta Ads with native video push and iteration on audiences.</li>
                 <li>Achieved ~€0.42 CPC and 400+ qualified clicks.</li>
@@ -670,17 +597,10 @@ function CaseBrandingEP() {
             </div>
           </section>
 
-          {/* 8 */}
           <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
-            <img
-              src={`${baseUrl}ep-role-8-coordination.png`}
-              alt="Cross-team Coordination"
-              className="w-full h-56 object-cover"
-            />
+            <img src={`${baseUrl}ep-role-8-coordination.png`} alt="Cross-team Coordination" className="w-full h-56 object-cover" />
             <div className="p-6 space-y-3">
-              <h3 className="font-bold text-neutral-900 text-xl">
-                8. Cross-team Coordination
-              </h3>
+              <h3 className="font-bold text-neutral-900 text-xl">8. Cross-team Coordination</h3>
               <ul className="list-disc pl-5 text-neutral-700 space-y-1">
                 <li>Connected Dia8lo, Ardè, producers, designers, and videomakers.</li>
                 <li>Directed mixed-skill collaborators, mediating creative differences.</li>
@@ -694,16 +614,15 @@ function CaseBrandingEP() {
   );
 }
 
-
-
-
 /* ---- Home ---- */
 function Home() {
   return (
     <main>
       <Hero />
       <WhatIDo />
-      <section className="bg-neutral-50 border-y"><CaseIndex /></section>
+      <section className="bg-neutral-50 border-y">
+        <CaseIndex />
+      </section>
       <section id="contact" className="py-16 scroll-mt-24">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
@@ -722,44 +641,15 @@ function Home() {
     </main>
   );
 }
-// ===== IMPORTS =====
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import Nav from "./components/Nav";
-import Container from "./components/Container";
-import Home from "./pages/Home";
-import CaseIndex from "./pages/CaseIndex";
-import CasePOD from "./pages/CasePOD";
-import CaseAmongLocals from "./pages/CaseAmongLocals";
-import CaseZampapazza from "./pages/CaseZampapazza";
-import CaseBrandingEP from "./pages/CaseBrandingEP";
-
-// ===== SCROLL TO TOP ON ROUTE CHANGE =====
-function ScrollToTop() {
-  const { pathname, hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      const el = document.querySelector(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: "auto", block: "start" });
-        return;
-      }
-    }
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [pathname, hash]);
-
-  return null;
-}
 
 // ===== APP ROOT =====
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-white text-neutral-900">
         <Nav />
 
-        {/* 👇 Scroll automatico in cima */}
+        {/* Scroll automatico in cima a ogni route */}
         <ScrollToTop />
 
         <Routes>
@@ -782,6 +672,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
-
