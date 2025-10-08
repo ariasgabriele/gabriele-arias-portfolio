@@ -722,6 +722,25 @@ function Home() {
     </main>
   );
 }
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto", block: "start" });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname, hash]);
+
+  return null;
+}
 
 /* ---- APP ROOT (una sola export default!) ---- */
 function App() {
@@ -729,6 +748,10 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-white text-neutral-900">
         <Nav />
+
+        {/* 👇 Aggiungi questa riga qui */}
+        <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cases" element={<CaseIndex />} />
@@ -737,6 +760,7 @@ function App() {
           <Route path="/case/zampapazza" element={<CaseZampapazza />} />
           <Route path="/case/branding-ep" element={<CaseBrandingEP />} />
         </Routes>
+
         <footer className="border-t py-8">
           <Container>
             <div className="text-sm text-neutral-500">
@@ -748,4 +772,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
 export default App;
