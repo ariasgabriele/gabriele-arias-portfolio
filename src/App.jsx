@@ -411,20 +411,25 @@ function CaseZampapazza() { return <CaseLayout eyebrow="Pet brand · DTC" title=
   <p>Short description of the project.</p>
 </CaseLayout>; }
 function CaseBrandingEP() {
+  const baseUrl = import.meta.env.BASE_URL || "/";
+
   return (
-    <CaseLayout eyebrow="Music · Branding" title="Branding & campaign for EP “patto di sangue”">
+    <CaseLayout eyebrow="Music · Branding" title='Branding & Campaign for EP “Patto di Sangue”'>
       {/* HERO IMAGE */}
       <div className="not-prose mb-10">
         <img
-          src={`${import.meta.env.BASE_URL}ep-covers.png`}
+          src={`${baseUrl}ep-covers.png`}
           alt="EP artwork and branding — Patto di Sangue"
           className="w-full h-auto rounded-2xl shadow-md"
         />
       </div>
 
-      {/* GETTING STARTED */}
+      {/* === SECTION 1: GETTING STARTED === */}
       <h3 className="uppercase tracking-wide text-sm text-neutral-500">Getting started</h3>
-      <h2>My first launch as a marketer</h2>
+      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
+        My first launch as a marketer
+      </h2>
+
       <p>
         This was my very first official launch project as a marketer.
         Diablo contacted me to support the release of his debut EP <em>Patto di Sangue</em>,
@@ -445,18 +450,21 @@ function CaseBrandingEP() {
         <li>Learning what works best to scale later</li>
       </ul>
 
-      {/* CONTEXT */}
-      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-10">Context</h3>
-      <h2>A growing market, a small team, a big ambition</h2>
+      {/* === SECTION 2: CONTEXT === */}
+      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-16">Context</h3>
+      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
+        A growing market, a small team, a big ambition
+      </h2>
+
       <p>
         The music industry is expanding and becoming increasingly social. In 2023, the global
         recorded music market kept growing; streaming represented the majority of revenues, and
         short-form video platforms turned into discovery engines for music and artists.
       </p>
       <p>
-        Audience behavior is shifting. Gen Z streams songs and 30+ podcasts a month; in TikTok,
-        60%+ of time is spent on music-centered content. Live-streaming rose; virtual concerts and
-        community-driven fandoms became normal behavior. For an independent debut, this means:
+        Audience behavior is shifting. Gen Z streams songs and 30+ podcasts a month; on TikTok,
+        over 60% of time is spent on music-centered content. Live-streaming rose, and virtual concerts
+        became normal. For an independent debut, this meant:
       </p>
       <ol>
         <li>We needed a clear brand identity and native short-form content to compete.</li>
@@ -467,9 +475,12 @@ function CaseBrandingEP() {
         benchmark to test strategies before scaling.
       </p>
 
-      {/* THE CHALLENGE */}
-      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-10">The challenge</h3>
-      <h2>Budget, alignment, and execution</h2>
+      {/* === SECTION 3: THE CHALLENGE === */}
+      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-16">The challenge</h3>
+      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
+        Budget, alignment, and execution
+      </h2>
+
       <p>
         Launching <em>Patto di Sangue</em> was far from straightforward. As the first professional
         release for both artists, the project came with creative ambition but limited resources.
@@ -509,158 +520,141 @@ function CaseBrandingEP() {
           </p>
         </div>
       </div>
-{/* ==== MY ROLE ==== */}
-<h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-12">My Role</h3>
-<h2>From research to execution</h2>
-<p>
-  As marketing and creative lead, I was responsible for the full strategy and execution.
-  While I collaborated with students and external creatives, all analysis, direction, and
-  advertising were on me.
-</p>
 
-{/* Sezioni con immagine + contenuto */}
-<div className="not-prose grid gap-8 md:gap-10 md:grid-cols-2 mt-8">
-  {/* 1. Competitor & Trend Analysis */}
-  <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}ep-role-1-competitor-trend.png`} // carica questo in /public
-      alt="Competitor & Trend Analysis"
-      className="w-full h-56 object-cover"
-    />
-    <div className="p-6 prose prose-neutral">
-      <h3 className="m-0">
-        <span className="font-extrabold text-neutral-900">1.</span> Competitor &amp; Trend Analysis
-      </h3>
-      <ul>
-        <li>Benchmarked the Italian trap/urban scene to map how other emerging artists positioned themselves.</li>
-        <li>Analyzed TikTok and Instagram trends (lyric reels, POV cuts, lo-fi snippets) to define what could resonate with Gen Z.</li>
-        <li>Set the UVP: brand identity + native content + micro-ads, instead of “just promo.”</li>
-      </ul>
-    </div>
-  </section>
+      {/* === SECTION 4: MY ROLE === */}
+      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-16">My Role</h3>
+      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
+        From research to execution
+      </h2>
+      <p>
+        As marketing and creative lead, I was responsible for the full strategy and execution.
+        While I collaborated with students and external creatives, all analysis, direction, and
+        advertising were on me.
+      </p>
 
-  {/* 2. Marketing Strategy */}
-  <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}ep-role-2-strategy.png`} // carica questo in /public
-      alt="Marketing Strategy"
-      className="w-full h-56 object-cover"
-    />
-    <div className="p-6 prose prose-neutral">
-      <h3 className="m-0">
-        <span className="font-extrabold text-neutral-900">2.</span> Marketing Strategy
-      </h3>
-      <ul>
-        <li><strong>Strategy:</strong> awareness &amp; consideration via organic content <em>boosted</em> with Meta Ads.</li>
-        <li>Used micro native content ads to drive listening and test creative hypotheses.</li>
-        <li>Treated the EP as both a release and a benchmark project to gather data and build a repeatable playbook.</li>
-      </ul>
-    </div>
-  </section>
+      <div className="not-prose grid gap-8 md:gap-10 md:grid-cols-2 mt-8">
+        {/* 1 */}
+        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
+          <img
+            src={`${baseUrl}ep-role-1-competitor-trend.png`}
+            alt="Competitor & Trend Analysis"
+            className="w-full h-56 object-cover"
+          />
+          <div className="p-6 prose prose-neutral">
+            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">1. Competitor & Trend Analysis</h3>
+            <ul>
+              <li>Benchmarked the Italian trap/urban scene to map positioning of emerging artists.</li>
+              <li>Analyzed TikTok and Instagram trends (lyric reels, POV cuts, lo-fi snippets).</li>
+              <li>Set the UVP: brand identity + native content + micro-ads instead of “just promo.”</li>
+            </ul>
+          </div>
+        </section>
 
-  {/* 3. Art Direction & Branding */}
-  <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}ep-role-3-branding.png`} // carica questo in /public
-      alt="Art Direction & Branding"
-      className="w-full h-56 object-cover"
-    />
-    <div className="p-6 prose prose-neutral">
-      <h3 className="m-0">
-        <span className="font-extrabold text-neutral-900">3.</span> Art Direction &amp; Branding
-      </h3>
-      <ul>
-        <li>Built a dark, symbolic identity reflecting the EP’s themes (blood pact, street credibility).</li>
-        <li>Created moodboard, palette, and cover concept.</li>
-        <li>Collaborated with a graphic design student who produced assets under my guidance.</li>
-      </ul>
-    </div>
-  </section>
+        {/* 2 */}
+        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
+          <img
+            src={`${baseUrl}ep-role-2-strategy.png`}
+            alt="Marketing Strategy"
+            className="w-full h-56 object-cover"
+          />
+          <div className="p-6 prose prose-neutral">
+            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">2. Marketing Strategy</h3>
+            <ul>
+              <li>Focused on awareness & consideration through organic content boosted with Meta Ads.</li>
+              <li>Used micro native ads to drive listening and gather insights.</li>
+              <li>Built a repeatable playbook for future releases.</li>
+            </ul>
+          </div>
+        </section>
 
-  {/* 4. Content Strategy & Production */}
-  <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}ep-role-4-content.png`} // carica questo in /public
-      alt="Content Strategy & Production"
-      className="w-full h-56 object-cover"
-    />
-    <div className="p-6 prose prose-neutral">
-      <h3 className="m-0">
-        <span className="font-extrabold text-neutral-900">4.</span> Content Strategy &amp; Production
-      </h3>
-      <ul>
-        <li>Developed the short-form calendar: lyric reels, lo-fi snippets, narrative carousels.</li>
-        <li>Defined content roles: awareness vs engagement vs conversion.</li>
-        <li>Balanced organic posting with paid amplification.</li>
-      </ul>
-    </div>
-  </section>
+        {/* 3 */}
+        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
+          <img
+            src={`${baseUrl}ep-role-3-branding.png`}
+            alt="Art Direction & Branding"
+            className="w-full h-56 object-cover"
+          />
+          <div className="p-6 prose prose-neutral">
+            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">3. Art Direction & Branding</h3>
+            <ul>
+              <li>Created a dark, symbolic identity reflecting the EP’s themes (blood pact, street credibility).</li>
+              <li>Developed the palette, cover concept, and visual tone.</li>
+              <li>Collaborated with a design student to produce all assets.</li>
+            </ul>
+          </div>
+        </section>
 
-  {/* 5. Video Concepting & Direction */}
-  <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}ep-role-5-video.png`} // carica questo in /public
-      alt="Video Concepting & Direction"
-      className="w-full h-56 object-cover"
-    />
-    <div className="p-6 prose prose-neutral">
-      <h3 className="m-0">
-        <span className="font-extrabold text-neutral-900">5.</span> Video Concepting &amp; Direction
-      </h3>
-      <p>Oversaw video ideation and direction. Collaborated with:</p>
-      <ul>
-        <li>A videomaker/editor for TikTok lyric content, trend tests, and ads.</li>
-        <li>A videomaker for three main reels around the lead single.</li>
-        <li>A VFX/3D editor for special effects.</li>
-        <li>Took on scriptwriting, co-directing, and edit reviewing.</li>
-        <li>Organized a shoot with a student photographer for additional visuals.</li>
-      </ul>
-    </div>
-  </section>
+        {/* 4 */}
+        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
+          <img
+            src={`${baseUrl}ep-role-4-content.png`}
+            alt="Content Strategy & Production"
+            className="w-full h-56 object-cover"
+          />
+          <div className="p-6 prose prose-neutral">
+            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">4. Content Strategy & Production</h3>
+            <ul>
+              <li>Planned a content calendar: lyric reels, lo-fi snippets, and narrative carousels.</li>
+              <li>Defined roles for awareness, engagement, and conversion.</li>
+              <li>Balanced organic posting with paid amplification.</li>
+            </ul>
+          </div>
+        </section>
 
-  {/* 7. Advertising Strategy & Execution */}
-  <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}ep-role-7-ads.png`} // carica questo in /public
-      alt="Advertising Strategy & Execution"
-      className="w-full h-56 object-cover"
-    />
-    <div className="p-6 prose prose-neutral">
-      <h3 className="m-0">
-        <span className="font-extrabold text-neutral-900">7.</span> Advertising Strategy &amp; Execution
-      </h3>
-      <ul>
-        <li>Designed and managed Meta Ads with native video push; iterated targeting (prioritized Amore &amp; Advantage, cut underperformers).</li>
-        <li>Achieved ~€0.42 CPC with 400+ qualified clicks.</li>
-        <li>Built a GitHub redirect hack to measure Spotify conversions with Meta Pixel.</li>
-      </ul>
-    </div>
-  </section>
+        {/* 5 */}
+        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
+          <img
+            src={`${baseUrl}ep-role-5-video.png`}
+            alt="Video Concepting & Direction"
+            className="w-full h-56 object-cover"
+          />
+          <div className="p-6 prose prose-neutral">
+            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">5. Video Concepting & Direction</h3>
+            <ul>
+              <li>Oversaw ideation, scriptwriting, and direction for multiple video formats.</li>
+              <li>Collaborated with editors, 3D artists, and photographers for TikTok and ad content.</li>
+            </ul>
+          </div>
+        </section>
 
-  {/* 8. Cross-team Coordination */}
-  <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}ep-role-8-coordination.png`} // carica questo in /public
-      alt="Cross-team Coordination"
-      className="w-full h-56 object-cover"
-    />
-    <div className="p-6 prose prose-neutral">
-      <h3 className="m-0">
-        <span className="font-extrabold text-neutral-900">8.</span> Cross-team Coordination
-      </h3>
-      <ul>
-        <li>Acted as the connector between Dia8lo, Ardè, producer, graphic designer, videomakers, and editors.</li>
-        <li>Directed a team of students and freelancers, ensuring consistency despite mixed skill levels.</li>
-        <li>Mediated creative differences and kept the timeline on track.</li>
-      </ul>
-    </div>
-  </section>
-</div>
+        {/* 7 */}
+        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
+          <img
+            src={`${baseUrl}ep-role-7-ads.png`}
+            alt="Advertising Strategy & Execution"
+            className="w-full h-56 object-cover"
+          />
+          <div className="p-6 prose prose-neutral">
+            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">7. Advertising Strategy & Execution</h3>
+            <ul>
+              <li>Managed Meta Ads with native video push and iteration on audiences.</li>
+              <li>Achieved ~€0.42 CPC and 400+ qualified clicks.</li>
+              <li>Used a custom GitHub redirect to track Spotify conversions with Meta Pixel.</li>
+            </ul>
+          </div>
+        </section>
 
-      {/* (Le sezioni successive possono seguire: Strategy, Creative system, Launch plan, Results, What I learned, ecc.) */}
+        {/* 8 */}
+        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
+          <img
+            src={`${baseUrl}ep-role-8-coordination.png`}
+            alt="Cross-team Coordination"
+            className="w-full h-56 object-cover"
+          />
+          <div className="p-6 prose prose-neutral">
+            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">8. Cross-team Coordination</h3>
+            <ul>
+              <li>Connected Dia8lo, Ardè, producers, designers, and videomakers.</li>
+              <li>Directed mixed-skill collaborators, mediating creative differences.</li>
+              <li>Maintained consistency and respected timelines.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </CaseLayout>
   );
 }
+
 
 
 /* ---- Home ---- */
