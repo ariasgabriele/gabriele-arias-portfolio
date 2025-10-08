@@ -410,9 +410,111 @@ function CaseAmongLocals() { return <CaseLayout eyebrow="Travel · Community" ti
 function CaseZampapazza() { return <CaseLayout eyebrow="Pet brand · DTC" title="Zampapazza">
   <p>Short description of the project.</p>
 </CaseLayout>; }
-function CaseBrandingEP() { return <CaseLayout eyebrow="Music · Branding" title="Branding EP">
-  <p>Short description of the project.</p>
-</CaseLayout>; }
+function CaseBrandingEP() {
+  return (
+    <CaseLayout eyebrow="Music · Branding" title="Branding & campaign for EP “patto di sangue”">
+      {/* HERO IMAGE */}
+      <div className="not-prose mb-10">
+        <img
+          src={`${import.meta.env.BASE_URL}ep-covers.png`}
+          alt="EP artwork and branding — Patto di Sangue"
+          className="w-full h-auto rounded-2xl shadow-md"
+        />
+      </div>
+
+      {/* GETTING STARTED */}
+      <h3 className="uppercase tracking-wide text-sm text-neutral-500">Getting started</h3>
+      <h2>My first launch as a marketer</h2>
+      <p>
+        This was my very first official launch project as a marketer.
+        Diablo contacted me to support the release of his debut EP <em>Patto di Sangue</em>,
+        featuring Ardè. Both artists were at the start of their careers and wanted to approach
+        this release in a professional way, creating something that could stand out and act as
+        a benchmark for future growth.
+      </p>
+      <p>
+        Given the limited budget, I strategically assembled a team of university students
+        (in graphic design, photography, videography) to contribute skills while keeping costs
+        efficient. My role was to direct them, align their work under a consistent brand vision,
+        and ensure professional-level execution despite limited resources.
+      </p>
+      <p>Together, we set the goal of:</p>
+      <ul>
+        <li>Getting noticed</li>
+        <li>Converting early interest into fans</li>
+        <li>Learning what works best to scale later</li>
+      </ul>
+
+      {/* CONTEXT */}
+      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-10">Context</h3>
+      <h2>A growing market, a small team, a big ambition</h2>
+      <p>
+        The music industry is expanding and becoming increasingly social. In 2023, the global
+        recorded music market kept growing; streaming represented the majority of revenues, and
+        short-form video platforms turned into discovery engines for music and artists.
+      </p>
+      <p>
+        Audience behavior is shifting. Gen Z streams songs and 30+ podcasts a month; in TikTok,
+        60%+ of time is spent on music-centered content. Live-streaming rose; virtual concerts and
+        community-driven fandoms became normal behavior. For an independent debut, this means:
+      </p>
+      <ol>
+        <li>We needed a clear brand identity and native short-form content to compete.</li>
+        <li>With a small budget, every move had to maximize reach and engagement.</li>
+      </ol>
+      <p>
+        Diablo and Ardè wanted to treat this project as the launch of their careers, and as a
+        benchmark to test strategies before scaling.
+      </p>
+
+      {/* THE CHALLENGE */}
+      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-10">The challenge</h3>
+      <h2>Budget, alignment, and execution</h2>
+      <p>
+        Launching <em>Patto di Sangue</em> was far from straightforward. As the first professional
+        release for both artists, the project came with creative ambition but limited resources.
+        Unlike established acts, there was basically no pre-existing fanbase, no label infrastructure,
+        and only a small budget. The main challenges I had to overcome included:
+      </p>
+
+      <div className="grid md:grid-cols-2 gap-8 not-prose">
+        {/* 1 */}
+        <div className="prose prose-neutral">
+          <h3 className="text-neutral-900 font-extrabold text-2xl mb-2">1. Multi-stakeholder alignment</h3>
+          <p>
+            Coordinating across a fragmented team with different workflows—a graphic designer,
+            producer and video makers—required extra effort. Each had unique creative expectations,
+            and my role was to align them under a coherent brand vision without losing authenticity.
+          </p>
+        </div>
+
+        {/* 2 */}
+        <div className="prose prose-neutral">
+          <h3 className="text-neutral-900 font-extrabold text-2xl mb-2">2. Budget instability</h3>
+          <p>
+            The campaign was planned with a modest but workable budget. However, sudden cuts forced
+            us to reprioritize assets and channels on the fly. This meant constantly asking:
+            what content delivers the most value for the least spend?
+          </p>
+        </div>
+
+        {/* 3 */}
+        <div className="prose prose-neutral md:col-span-2">
+          <h3 className="text-neutral-900 font-extrabold text-2xl mb-2">3. First-time unknowns</h3>
+          <p>
+            This was my first 360° campaign as a marketer, and Diablo &amp; Ardè’s first professional
+            project. Without prior data, every decision—from ad targeting to content pacing—was
+            experimental but benchmarked on researched best practices. The only path forward was to
+            test, learn, and adapt in real time.
+          </p>
+        </div>
+      </div>
+
+      {/* (Le sezioni successive possono seguire: Strategy, Creative system, Launch plan, Results, What I learned, ecc.) */}
+    </CaseLayout>
+  );
+}
+
 
 /* ---- Home ---- */
 function Home() {
