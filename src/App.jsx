@@ -327,7 +327,7 @@ function CaseIndex() {
   logoSrc="amonglocals-logo.svg"
   title="A bridge between cultures, people, and hidden traditions"
   desc="Built an experiential travel brand from the start to te launch. Check out how a fresh identity, a lean funnel and authentic storytelling generated over 40 qualified leads at £14.76 CPL."
-  imageSrc="amonglocals-website.png"  // immagine a destra su desktop
+  imageSrc="amonglocals-web-ad.png"  // immagine a destra su desktop
   stats={[
     { icon: "📈", label: "17.6% C.R. to the call" },
     { icon: "🌍", label: "40+ leads in 1 month" },
