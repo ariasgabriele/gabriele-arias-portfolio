@@ -722,11 +722,19 @@ function Home() {
     </main>
   );
 }
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// ===== IMPORTS =====
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import Nav from "./components/Nav";
+import Container from "./components/Container";
+import Home from "./pages/Home";
+import CaseIndex from "./pages/CaseIndex";
+import CasePOD from "./pages/CasePOD";
+import CaseAmongLocals from "./pages/CaseAmongLocals";
+import CaseZampapazza from "./pages/CaseZampapazza";
+import CaseBrandingEP from "./pages/CaseBrandingEP";
 
-/* ---- Scroll to top on route change ---- */
+// ===== SCROLL TO TOP ON ROUTE CHANGE =====
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
@@ -744,7 +752,7 @@ function ScrollToTop() {
   return null;
 }
 
-/* ---- APP ROOT (una sola export default!) ---- */
+// ===== APP ROOT =====
 function App() {
   return (
     <BrowserRouter>
@@ -773,6 +781,10 @@ function App() {
       </div>
     </BrowserRouter>
   );
+}
+
+export default App;
+
 }
 
 export default App;
