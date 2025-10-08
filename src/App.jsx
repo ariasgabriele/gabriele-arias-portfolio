@@ -148,6 +148,10 @@ function Card({
   const textSub = textOnDark ? "text-white/80" : "text-neutral-700";
   const borderCol = textOnDark ? "border-white/10" : "border-neutral-200";
   const highlightText = textOnDark ? "text-white" : "text-neutral-800";
+  const isAmongLocalsLogo =
+  typeof logoSrc === "string" &&
+  logoSrc.toLowerCase().includes("amonglocals-logo");
+
 
   return (
     <Link to={to} className="block group">
@@ -167,17 +171,18 @@ function Card({
               />
             )}
 
-           {logoSrc && (
+          {logoSrc && (
   <div className="flex justify-center mb-3">
     <img
       src={`${baseUrl}${logoSrc}`}
       alt=""
       className={`w-auto object-contain ${
-        title.toLowerCase().includes("among locals") ? "max-h-4" : "max-h-8"
+        isAmongLocalsLogo ? "max-h-4" : "max-h-8"
       }`}
     />
   </div>
 )}
+
 
 
             <div className={`text-center ${textMain}`}>
@@ -224,17 +229,18 @@ function Card({
 
           <div className="grid grid-cols-[1.15fr,0.85fr] gap-8 p-10 lg:p-14 relative z-10">
             <div className="flex flex-col justify-center">
-            {logoSrc && (
+           {logoSrc && (
   <div className="flex items-center mb-5">
     <img
       src={`${baseUrl}${logoSrc}`}
       alt=""
       className={`w-auto object-contain ${
-        title.toLowerCase().includes("among locals") ? "max-h-5" : "max-h-10"
+        isAmongLocalsLogo ? "max-h-5" : "max-h-10"
       }`}
     />
   </div>
 )}
+
 
               <h3 className={`text-4xl font-extrabold leading-tight ${textMain}`}>
                 {title}
