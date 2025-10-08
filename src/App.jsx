@@ -415,245 +415,285 @@ function CaseBrandingEP() {
 
   return (
     <CaseLayout eyebrow="Music · Branding" title='Branding & Campaign for EP “Patto di Sangue”'>
-      {/* HERO IMAGE */}
-      <div className="not-prose mb-10">
+      {/* === HERO IMAGE === */}
+      <div className="not-prose mb-16">
         <img
           src={`${baseUrl}ep-covers.png`}
           alt="EP artwork and branding — Patto di Sangue"
-          className="w-full h-auto rounded-2xl shadow-md"
+          className="w-full h-auto rounded-3xl shadow-lg"
         />
       </div>
 
       {/* === SECTION 1: GETTING STARTED === */}
-      <h3 className="uppercase tracking-wide text-sm text-neutral-500">Getting started</h3>
-      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
-        My first launch as a marketer
-      </h2>
-
-      <p>
-        This was my very first official launch project as a marketer.
-        Diablo contacted me to support the release of his debut EP <em>Patto di Sangue</em>,
-        featuring Ardè. Both artists were at the start of their careers and wanted to approach
-        this release in a professional way, creating something that could stand out and act as
-        a benchmark for future growth.
-      </p>
-      <p>
-        Given the limited budget, I strategically assembled a team of university students
-        (in graphic design, photography, videography) to contribute skills while keeping costs
-        efficient. My role was to direct them, align their work under a consistent brand vision,
-        and ensure professional-level execution despite limited resources.
-      </p>
-      <p>Together, we set the goal of:</p>
-      <ul>
-        <li>Getting noticed</li>
-        <li>Converting early interest into fans</li>
-        <li>Learning what works best to scale later</li>
-      </ul>
+      <section className="mt-24">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          Getting started
+        </h3>
+        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
+          My first launch as a marketer
+        </h2>
+        <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+          <p>
+            This was my very first official launch project as a marketer.
+            Diablo contacted me to support the release of his debut EP <em>Patto di Sangue</em>,
+            featuring Ardè. Both artists were at the start of their careers and wanted to approach
+            this release in a professional way, creating something that could stand out and act as
+            a benchmark for future growth.
+          </p>
+          <p>
+            Given the limited budget, I strategically assembled a team of university students
+            (in graphic design, photography, videography) to contribute skills while keeping costs
+            efficient. My role was to direct them, align their work under a consistent brand vision,
+            and ensure professional-level execution despite limited resources.
+          </p>
+          <p>Together, we set the goal of:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Getting noticed</li>
+            <li>Converting early interest into fans</li>
+            <li>Learning what works best to scale later</li>
+          </ul>
+        </div>
+      </section>
 
       {/* === SECTION 2: CONTEXT === */}
-      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-16">Context</h3>
-      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
-        A growing market, a small team, a big ambition
-      </h2>
-
-      <p>
-        The music industry is expanding and becoming increasingly social. In 2023, the global
-        recorded music market kept growing; streaming represented the majority of revenues, and
-        short-form video platforms turned into discovery engines for music and artists.
-      </p>
-      <p>
-        Audience behavior is shifting. Gen Z streams songs and 30+ podcasts a month; on TikTok,
-        over 60% of time is spent on music-centered content. Live-streaming rose, and virtual concerts
-        became normal. For an independent debut, this meant:
-      </p>
-      <ol>
-        <li>We needed a clear brand identity and native short-form content to compete.</li>
-        <li>With a small budget, every move had to maximize reach and engagement.</li>
-      </ol>
-      <p>
-        Diablo and Ardè wanted to treat this project as the launch of their careers, and as a
-        benchmark to test strategies before scaling.
-      </p>
+      <section className="mt-28">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          Context
+        </h3>
+        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
+          A growing market, a small team, a big ambition
+        </h2>
+        <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+          <p>
+            The music industry is expanding and becoming increasingly social. In 2023, the global
+            recorded music market kept growing; streaming represented the majority of revenues, and
+            short-form video platforms turned into discovery engines for music and artists.
+          </p>
+          <p>
+            Audience behavior is shifting. Gen Z streams songs and 30+ podcasts a month; on TikTok,
+            over 60% of time is spent on music-centered content. Live-streaming rose, and virtual concerts
+            became normal. For an independent debut, this meant:
+          </p>
+          <ol className="list-decimal pl-6 space-y-1">
+            <li>We needed a clear brand identity and native short-form content to compete.</li>
+            <li>With a small budget, every move had to maximize reach and engagement.</li>
+          </ol>
+          <p>
+            Diablo and Ardè wanted to treat this project as the launch of their careers, and as a
+            benchmark to test strategies before scaling.
+          </p>
+        </div>
+      </section>
 
       {/* === SECTION 3: THE CHALLENGE === */}
-      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-16">The challenge</h3>
-      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
-        Budget, alignment, and execution
-      </h2>
-
-      <p>
-        Launching <em>Patto di Sangue</em> was far from straightforward. As the first professional
-        release for both artists, the project came with creative ambition but limited resources.
-        Unlike established acts, there was basically no pre-existing fanbase, no label infrastructure,
-        and only a small budget. The main challenges I had to overcome included:
-      </p>
-
-      <div className="grid md:grid-cols-2 gap-8 not-prose">
-        {/* 1 */}
-        <div className="prose prose-neutral">
-          <h3 className="text-neutral-900 font-extrabold text-2xl mb-2">1. Multi-stakeholder alignment</h3>
+      <section className="mt-28">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          The challenge
+        </h3>
+        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
+          Budget, alignment, and execution
+        </h2>
+        <div className="space-y-4 text-lg leading-relaxed text-neutral-700 mb-10">
           <p>
-            Coordinating across a fragmented team with different workflows—a graphic designer,
-            producer and video makers—required extra effort. Each had unique creative expectations,
-            and my role was to align them under a coherent brand vision without losing authenticity.
+            Launching <em>Patto di Sangue</em> was far from straightforward. As the first professional
+            release for both artists, the project came with creative ambition but limited resources.
+            Unlike established acts, there was basically no pre-existing fanbase, no label infrastructure,
+            and only a small budget. The main challenges I had to overcome included:
           </p>
         </div>
 
-        {/* 2 */}
-        <div className="prose prose-neutral">
-          <h3 className="text-neutral-900 font-extrabold text-2xl mb-2">2. Budget instability</h3>
-          <p>
-            The campaign was planned with a modest but workable budget. However, sudden cuts forced
-            us to reprioritize assets and channels on the fly. This meant constantly asking:
-            what content delivers the most value for the least spend?
-          </p>
-        </div>
+        <div className="grid md:grid-cols-2 gap-10">
+          {/* 1 */}
+          <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+              1. Multi-stakeholder alignment
+            </h3>
+            <p className="text-neutral-700 leading-relaxed">
+              Coordinating across a fragmented team with different workflows—a graphic designer,
+              producer and video makers—required extra effort. Each had unique creative expectations,
+              and my role was to align them under a coherent brand vision without losing authenticity.
+            </p>
+          </div>
 
-        {/* 3 */}
-        <div className="prose prose-neutral md:col-span-2">
-          <h3 className="text-neutral-900 font-extrabold text-2xl mb-2">3. First-time unknowns</h3>
-          <p>
-            This was my first 360° campaign as a marketer, and Diablo &amp; Ardè’s first professional
-            project. Without prior data, every decision—from ad targeting to content pacing—was
-            experimental but benchmarked on researched best practices. The only path forward was to
-            test, learn, and adapt in real time.
-          </p>
+          {/* 2 */}
+          <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+              2. Budget instability
+            </h3>
+            <p className="text-neutral-700 leading-relaxed">
+              The campaign was planned with a modest but workable budget. However, sudden cuts forced
+              us to reprioritize assets and channels on the fly. This meant constantly asking:
+              what content delivers the most value for the least spend?
+            </p>
+          </div>
+
+          {/* 3 */}
+          <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm md:col-span-2">
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+              3. First-time unknowns
+            </h3>
+            <p className="text-neutral-700 leading-relaxed">
+              This was my first 360° campaign as a marketer, and Diablo &amp; Ardè’s first professional
+              project. Without prior data, every decision—from ad targeting to content pacing—was
+              experimental but benchmarked on researched best practices. The only path forward was to
+              test, learn, and adapt in real time.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* === SECTION 4: MY ROLE === */}
-      <h3 className="uppercase tracking-wide text-sm text-neutral-500 mt-16">My Role</h3>
-      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mt-3">
-        From research to execution
-      </h2>
-      <p>
-        As marketing and creative lead, I was responsible for the full strategy and execution.
-        While I collaborated with students and external creatives, all analysis, direction, and
-        advertising were on me.
-      </p>
+      <section className="mt-28">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          My Role
+        </h3>
+        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
+          From research to execution
+        </h2>
+        <p className="text-lg text-neutral-700 leading-relaxed mb-10">
+          As marketing and creative lead, I was responsible for the full strategy and execution.
+          While I collaborated with students and external creatives, all analysis, direction, and
+          advertising were on me.
+        </p>
 
-      <div className="not-prose grid gap-8 md:gap-10 md:grid-cols-2 mt-8">
-        {/* 1 */}
-        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-          <img
-            src={`${baseUrl}ep-role-1-competitor-trend.png`}
-            alt="Competitor & Trend Analysis"
-            className="w-full h-56 object-cover"
-          />
-          <div className="p-6 prose prose-neutral">
-            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">1. Competitor & Trend Analysis</h3>
-            <ul>
-              <li>Benchmarked the Italian trap/urban scene to map positioning of emerging artists.</li>
-              <li>Analyzed TikTok and Instagram trends (lyric reels, POV cuts, lo-fi snippets).</li>
-              <li>Set the UVP: brand identity + native content + micro-ads instead of “just promo.”</li>
-            </ul>
-          </div>
-        </section>
+        <div className="not-prose grid gap-10 md:grid-cols-2">
+          {/* 1 */}
+          <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
+            <img
+              src={`${baseUrl}ep-role-1-competitor-trend.png`}
+              alt="Competitor & Trend Analysis"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-neutral-900 text-xl">
+                1. Competitor & Trend Analysis
+              </h3>
+              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                <li>Benchmarked the Italian trap/urban scene to map positioning of emerging artists.</li>
+                <li>Analyzed TikTok and Instagram trends (lyric reels, POV cuts, lo-fi snippets).</li>
+                <li>Set the UVP: brand identity + native content + micro-ads instead of “just promo.”</li>
+              </ul>
+            </div>
+          </section>
 
-        {/* 2 */}
-        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-          <img
-            src={`${baseUrl}ep-role-2-strategy.png`}
-            alt="Marketing Strategy"
-            className="w-full h-56 object-cover"
-          />
-          <div className="p-6 prose prose-neutral">
-            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">2. Marketing Strategy</h3>
-            <ul>
-              <li>Focused on awareness & consideration through organic content boosted with Meta Ads.</li>
-              <li>Used micro native ads to drive listening and gather insights.</li>
-              <li>Built a repeatable playbook for future releases.</li>
-            </ul>
-          </div>
-        </section>
+          {/* 2 */}
+          <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
+            <img
+              src={`${baseUrl}ep-role-2-strategy.png`}
+              alt="Marketing Strategy"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-neutral-900 text-xl">
+                2. Marketing Strategy
+              </h3>
+              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                <li>Focused on awareness & consideration through organic content boosted with Meta Ads.</li>
+                <li>Used micro native ads to drive listening and gather insights.</li>
+                <li>Built a repeatable playbook for future releases.</li>
+              </ul>
+            </div>
+          </section>
 
-        {/* 3 */}
-        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-          <img
-            src={`${baseUrl}ep-role-3-branding.png`}
-            alt="Art Direction & Branding"
-            className="w-full h-56 object-cover"
-          />
-          <div className="p-6 prose prose-neutral">
-            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">3. Art Direction & Branding</h3>
-            <ul>
-              <li>Created a dark, symbolic identity reflecting the EP’s themes (blood pact, street credibility).</li>
-              <li>Developed the palette, cover concept, and visual tone.</li>
-              <li>Collaborated with a design student to produce all assets.</li>
-            </ul>
-          </div>
-        </section>
+          {/* 3 */}
+          <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
+            <img
+              src={`${baseUrl}ep-role-3-branding.png`}
+              alt="Art Direction & Branding"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-neutral-900 text-xl">
+                3. Art Direction & Branding
+              </h3>
+              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                <li>Created a dark, symbolic identity reflecting the EP’s themes (blood pact, street credibility).</li>
+                <li>Developed the palette, cover concept, and visual tone.</li>
+                <li>Collaborated with a design student to produce all assets.</li>
+              </ul>
+            </div>
+          </section>
 
-        {/* 4 */}
-        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-          <img
-            src={`${baseUrl}ep-role-4-content.png`}
-            alt="Content Strategy & Production"
-            className="w-full h-56 object-cover"
-          />
-          <div className="p-6 prose prose-neutral">
-            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">4. Content Strategy & Production</h3>
-            <ul>
-              <li>Planned a content calendar: lyric reels, lo-fi snippets, and narrative carousels.</li>
-              <li>Defined roles for awareness, engagement, and conversion.</li>
-              <li>Balanced organic posting with paid amplification.</li>
-            </ul>
-          </div>
-        </section>
+          {/* 4 */}
+          <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
+            <img
+              src={`${baseUrl}ep-role-4-content.png`}
+              alt="Content Strategy & Production"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-neutral-900 text-xl">
+                4. Content Strategy & Production
+              </h3>
+              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                <li>Planned a content calendar: lyric reels, lo-fi snippets, and narrative carousels.</li>
+                <li>Defined roles for awareness, engagement, and conversion.</li>
+                <li>Balanced organic posting with paid amplification.</li>
+              </ul>
+            </div>
+          </section>
 
-        {/* 5 */}
-        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-          <img
-            src={`${baseUrl}ep-role-5-video.png`}
-            alt="Video Concepting & Direction"
-            className="w-full h-56 object-cover"
-          />
-          <div className="p-6 prose prose-neutral">
-            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">5. Video Concepting & Direction</h3>
-            <ul>
-              <li>Oversaw ideation, scriptwriting, and direction for multiple video formats.</li>
-              <li>Collaborated with editors, 3D artists, and photographers for TikTok and ad content.</li>
-            </ul>
-          </div>
-        </section>
+          {/* 5 */}
+          <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
+            <img
+              src={`${baseUrl}ep-role-5-video.png`}
+              alt="Video Concepting & Direction"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-neutral-900 text-xl">
+                5. Video Concepting & Direction
+              </h3>
+              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                <li>Oversaw ideation, scriptwriting, and direction for multiple video formats.</li>
+                <li>Collaborated with editors, 3D artists, and photographers for TikTok and ad content.</li>
+              </ul>
+            </div>
+          </section>
 
-        {/* 7 */}
-        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-          <img
-            src={`${baseUrl}ep-role-7-ads.png`}
-            alt="Advertising Strategy & Execution"
-            className="w-full h-56 object-cover"
-          />
-          <div className="p-6 prose prose-neutral">
-            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">7. Advertising Strategy & Execution</h3>
-            <ul>
-              <li>Managed Meta Ads with native video push and iteration on audiences.</li>
-              <li>Achieved ~€0.42 CPC and 400+ qualified clicks.</li>
-              <li>Used a custom GitHub redirect to track Spotify conversions with Meta Pixel.</li>
-            </ul>
-          </div>
-        </section>
+          {/* 7 */}
+          <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
+            <img
+              src={`${baseUrl}ep-role-7-ads.png`}
+              alt="Advertising Strategy & Execution"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-neutral-900 text-xl">
+                7. Advertising Strategy & Execution
+              </h3>
+              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                <li>Managed Meta Ads with native video push and iteration on audiences.</li>
+                <li>Achieved ~€0.42 CPC and 400+ qualified clicks.</li>
+                <li>Used a custom GitHub redirect to track Spotify conversions with Meta Pixel.</li>
+              </ul>
+            </div>
+          </section>
 
-        {/* 8 */}
-        <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden">
-          <img
-            src={`${baseUrl}ep-role-8-coordination.png`}
-            alt="Cross-team Coordination"
-            className="w-full h-56 object-cover"
-          />
-          <div className="p-6 prose prose-neutral">
-            <h3 className="m-0 font-extrabold text-neutral-900 text-xl">8. Cross-team Coordination</h3>
-            <ul>
-              <li>Connected Dia8lo, Ardè, producers, designers, and videomakers.</li>
-              <li>Directed mixed-skill collaborators, mediating creative differences.</li>
-              <li>Maintained consistency and respected timelines.</li>
-            </ul>
-          </div>
-        </section>
-      </div>
+          {/* 8 */}
+          <section className="bg-white rounded-2xl ring-1 ring-neutral-200 overflow-hidden shadow-sm">
+            <img
+              src={`${baseUrl}ep-role-8-coordination.png`}
+              alt="Cross-team Coordination"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-neutral-900 text-xl">
+                8. Cross-team Coordination
+              </h3>
+              <ul className="list-disc pl-5 text-neutral-700 space-y-1">
+                <li>Connected Dia8lo, Ardè, producers, designers, and videomakers.</li>
+                <li>Directed mixed-skill collaborators, mediating creative differences.</li>
+                <li>Maintained consistency and respected timelines.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
     </CaseLayout>
   );
 }
+
 
 
 
