@@ -1,9 +1,16 @@
-// ===== IMPORTS (UNA SOLA VOLTA, IN CIMA) =====
-import { HashRouter as BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
+// ===== IMPORTS (una sola volta, in cima) =====
+import {
+  HashRouter as BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-// ===== SCROLL TO TOP ON ROUTE CHANGE =====
+// ===== Scroll to top on route change =====
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
@@ -21,12 +28,12 @@ function ScrollToTop() {
   return null;
 }
 
-/* ---- Utility: container ---- */
+/* ---- Utility: Container ---- */
 function Container({ children }) {
   return <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>;
 }
 
-/* ---- Nav semplice (niente file esterni) ---- */
+/* ---- Nav ---- */
 function Nav() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -58,11 +65,14 @@ function Nav() {
           </a>
 
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link to="/" className="hover:opacity-70">Gabriele Arias</Link>
-            <Link to="/cases" className="hover:opacity-70">Case Studies</Link>
+            <Link to="/" className="hover:opacity-70">
+              Gabriele Arias
+            </Link>
+            <Link to="/cases" className="hover:opacity-70">
+              Case Studies
+            </Link>
           </nav>
 
-          {/* CTA arancione + click handler che scrolla sempre al contact */}
           <button
             onClick={goContact}
             className="inline-flex items-center px-3 py-1.5 rounded-full text-white text-sm shadow-sm"
@@ -76,17 +86,14 @@ function Nav() {
   );
 }
 
-/* ---- Hero: bianca, testi neutral, immagine proporzionata ---- */
+/* ---- Hero ---- */
 function Hero() {
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     show: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 1.1,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
+      transition: { duration: 1.1, ease: [0.25, 0.1, 0.25, 1] },
     },
   };
 
@@ -124,7 +131,7 @@ function Hero() {
   );
 }
 
-/* ---- Sezione nera subito sotto, senza gap ---- */
+/* ---- What I do ---- */
 function WhatIDo() {
   return (
     <section className="relative bg-black text-white rounded-t-3xl -mt-4">
@@ -133,11 +140,11 @@ function WhatIDo() {
           <div className="text-xs uppercase tracking-wider text-white/60">Overview</div>
           <h2 className="text-2xl md:text-3xl font-bold mt-1 text-white">What I do</h2>
           <p className="mt-4 text-white/80 leading-relaxed max-w-3xl">
-            I mix social-first content with analysis-first strategy. From memes and reels to audience
-            research and testing, I connect content, creators, and communities to deliver results:
-            community growth, qualified leads, and purchase intent. I’ve shipped end-to-end projects
-            in e-commerce, travel, and music, balancing speed with data-driven decisions. I’m
-            constantly trying new AI workflows to boost ideation, editing, and distribution.
+            I mix social-first content with analysis-first strategy. From memes and reels to
+            audience research and testing, I connect content, creators, and communities to deliver
+            results: community growth, qualified leads, and purchase intent. I’ve shipped end-to-end
+            projects in e-commerce, travel, and music, balancing speed with data-driven decisions.
+            I’m constantly trying new AI workflows to boost ideation, editing, and distribution.
           </p>
         </div>
       </Container>
@@ -286,11 +293,11 @@ function Card({
   );
 }
 
+/* ---- Case Index ---- */
 function CaseIndex() {
   return (
     <Container>
       <div className="py-12 space-y-8">
-        {/* 1) POD sales – light */}
         <Card
           to="/case/pod-memes"
           logoSrc="heart-logo.png"
@@ -304,7 +311,6 @@ function CaseIndex() {
           ]}
         />
 
-        {/* 2) Among Locals – standard card */}
         <Card
           to="/case/among-locals"
           logoSrc="amonglocals-logo.svg"
@@ -320,7 +326,6 @@ function CaseIndex() {
           ctaColor="#FF723E"
         />
 
-        {/* 3) Zampapazza – light */}
         <Card
           to="/case/zampapazza"
           logoSrc="zampapazza-logo.png"
@@ -334,7 +339,6 @@ function CaseIndex() {
           ]}
         />
 
-        {/* 4) EP – dark card, testi bianchi, CTA rossa */}
         <Card
           to="/case/branding-ep"
           title="Branding & campaign for EP ‘patto di sangue’"
@@ -354,7 +358,7 @@ function CaseIndex() {
   );
 }
 
-/* ---- Case layout ---- */
+/* ---- Case Layout ---- */
 function CaseLayout({ title, eyebrow, children }) {
   const navigate = useNavigate();
   return (
@@ -364,7 +368,9 @@ function CaseLayout({ title, eyebrow, children }) {
           <div className="py-12">
             <div className="text-xs uppercase tracking-wider text-white/60">{eyebrow}</div>
             <h1 className="text-3xl md:text-5xl font-bold mt-2">{title}</h1>
-            <button onClick={() => navigate(-1)} className="mt-6 text-sm underline">← Back</button>
+            <button onClick={() => navigate(-1)} className="mt-6 text-sm underline">
+              ← Back
+            </button>
           </div>
         </Container>
       </section>
@@ -375,6 +381,7 @@ function CaseLayout({ title, eyebrow, children }) {
   );
 }
 
+/* ---- Case pages ---- */
 function CasePOD() {
   return (
     <CaseLayout eyebrow="POD / UGC" title="From viral memes to POD sales">
@@ -439,9 +446,7 @@ function CaseBrandingEP() {
 
       {/* === CONTEXT === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          Context
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Context</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           The first chapter of a journey upward
         </h2>
@@ -467,9 +472,7 @@ function CaseBrandingEP() {
 
       {/* === THE CHALLENGE === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          The challenge
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">The challenge</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           Coherence in chaos
         </h2>
@@ -485,9 +488,7 @@ function CaseBrandingEP() {
               and a 3D editor.
             </li>
             <li>Manage constant budget shifts that forced me to rewrite plans weekly.</li>
-            <li>
-              Write and co-direct music videos myself to maintain coherence and quality despite constraints.
-            </li>
+            <li>Write and co-direct music videos to maintain coherence and quality despite constraints.</li>
           </ul>
           <p>
             The campaign had to look intentional, not improvised — a professional debut that felt alive,
@@ -520,301 +521,203 @@ function CaseBrandingEP() {
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Understanding the artists</h4>
             <p>
-              Through long conversations, I unpacked the core message: this wasn’t an EP about fame or affirmation —
-              it was about the act of walking upward together. To express that symbolically, I built a moodboard
-              rooted in dark, cinematic visuals: blood for the pact, masks for identity, and light as the goal.
+              Long conversations → core message: walk upward together. Moodboard: dark, cinematic — blood (pact),
+              masks (identity), light (goal).
             </p>
             <p className="mt-2 italic">
-              Insight: Even when sound changes track to track, symbolic coherence gives audiences a sense of unity.
+              Insight: symbolic coherence creates unity even when sound changes.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Mapping the fanbase</h4>
             <p>
-              The fanbase was small but vocal. I reached out directly to their most active listeners and then expanded
-              the sample by studying similar trap acts and communities.
+              Small but vocal audience; interviewed early listeners and studied adjacent trap communities.
             </p>
             <p className="mt-2 italic">
-              Insight: Tiny fanbases don’t define demographics — they reveal the emotional language to build from.
+              Insight: tiny fanbases reveal the emotional language to build from.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Benchmarking the scene</h4>
             <p>
-              I analyzed relevant releases to understand what actually drove visibility. A surprising finding:
-              organic content from big names often underperformed — their power came from budget, not storytelling.
+              Big acts often underperform organically; they win with budget more than storytelling.
             </p>
-            <p className="mt-2 italic">
-              Insight: Small acts can stand out by using strategy where others use scale.
-            </p>
+            <p className="mt-2 italic">Insight: strategy beats scale for small acts.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Trend logging &amp; pattern hunting</h4>
+            <h4 className="font-semibold text-neutral-900 mb-2">Trend logging &amp; patterns</h4>
             <p>
-              I built a Google Sheet trend library, saving TikTok/Instagram formats — lyric cuts, POVs, camera moves,
-              hook placements. Rather than reinventing, I repurposed proven structures to fit the artists’ voice.
+              Trend library of TikTok/IG formats (lyric cuts, POVs, hooks) to repurpose what fits identity.
             </p>
-            <p className="mt-2 italic">
-              Insight: Innovation is alignment. The smartest move is fitting culture to identity.
-            </p>
+            <p className="mt-2 italic">Insight: innovation is alignment.</p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">From analysis to brand direction</h4>
             <p>
-              The research led to one conclusion: the EP should look like a cinematic pact — dark but hopeful, chaotic
-              but rising. Blood and light became symbols; lyrics and visual rhythm became tools. From there, every
-              content piece — from the cover to the ad creatives — spoke the same language.
+              Cinematic pact: dark but hopeful, chaotic but rising. Blood & light as symbols; lyrics & visual rhythm
+              as tools. Every asset speaks the same language.
             </p>
-            <p className="mt-2 italic">
-              Insight: Analysis has value only when it transforms into story — not reports, but rhythm.
-            </p>
+            <p className="mt-2 italic">Insight: analysis → story, not reports.</p>
           </div>
         </div>
       </section>
 
       {/* === BRANDING === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          Branding
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Branding</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           Walking together towards the light
         </h2>
         <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            The branding turned the EP’s metaphor into a visible system. Symbols: blood as union, masks as identity
-            in motion, light as the destination. Palette: deep reds fading into pale light. Typography: minimal and
-            sharp. Visual rhythm: tension and direction — the sensation of climbing.
+            Symbols: blood = union; masks = identity in motion; light = destination. Palette: deep reds to pale light.
+            Typography: minimal & sharp. Visual rhythm: tension + direction → sensation of climbing.
           </p>
           <p>
-            Working with a graphic design student, I directed execution to maintain cohesion across outputs. Even with
-            limited means, the brand looked deliberate — professional yet emotional, ambitious but grounded.
+            Directed execution to keep cohesion across outputs. Limited means, deliberate look: professional yet
+            emotional, ambitious but grounded.
           </p>
-          <p className="italic">
-            Insight: Consistency doesn’t come from budget; it comes from belief.
-          </p>
+          <p className="italic">Insight: consistency comes from belief, not budget.</p>
         </div>
       </section>
 
       {/* === STRATEGY === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          Strategy
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Strategy</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           Designing a symbolic launch under real constraints
         </h2>
         <div className="space-y-6 text-lg leading-relaxed text-neutral-700">
           <p>
-            The strategy’s purpose wasn’t to make noise — it was to build momentum that could grow over time. Awareness
-            first, but pointed toward follower conversion, future retargeting, and recognition. The EP was sonically
-            diverse but thematically coherent; the campaign mirrored that duality: start in mystery, rise through
-            repetition, end in light.
+            Momentum over noise: awareness leading to conversion, retargeting, recognition. Mirror the EP’s duality:
+            start in mystery, rise through repetition, end in light.
           </p>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Platform logic</h4>
             <ul className="list-disc pl-6 space-y-1">
-              <li>TikTok as the core testing ground for authentic performance and lyric hooks.</li>
-              <li>Instagram as curated identity; in hindsight, a unified approach would have been stronger.</li>
-              <li>YouTube Shorts briefly tested; low efficiency at this scale.</li>
+              <li>TikTok as core testing ground for authentic performance & lyric hooks.</li>
+              <li>Instagram as curated identity (a unified approach would be stronger).</li>
+              <li>YouTube Shorts tested briefly; low efficiency at this scale.</li>
             </ul>
-            <p className="mt-2 italic">
-              Insight: With limited resources, focus with depth beats spread with hope.
-            </p>
+            <p className="mt-2 italic">Insight: focus with depth &gt; spread with hope.</p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Funnel architecture</h4>
             <ul className="list-disc pl-6 space-y-1">
-              <li>Pre-launch: two short teasers → 3-day build-up (EP announcement → single → snippets).</li>
-              <li>Launch: one reel/day for three days across three accounts, revealing fragments of the lead track.</li>
-              <li>Engagement: carousels & reminders for recognition.</li>
+              <li>Pre-launch: 2 teasers → 3-day build (announce → single → snippets).</li>
+              <li>Launch: 1 reel/day × 3 days across 3 accounts (lead track fragments).</li>
+              <li>Engagement: carousels & reminders.</li>
               <li>Conversion: Meta Ads with in-reel CTAs (“save”, “listen”).</li>
-              <li>Post-launch: planned piano version for emotional retargeting (later delayed).</li>
+              <li>Post-launch: planned piano version for emotional retargeting (delayed).</li>
             </ul>
-            <p className="mt-2 italic">
-              Insight: Frequency builds memory, but rhythm builds connection.
-            </p>
+            <p className="mt-2 italic">Insight: frequency builds memory; rhythm builds connection.</p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Creative choices</h4>
             <p>
-              I isolated resonant lyric lines and cut multiple 10–15s variations, changing pacing and framing only.
-              The natural take — casual intro with singing around second three — consistently drove the highest replays
-              and saves. Every ad shipped in three variants per track to test structure and timing.
+              10–15s variants of strongest lyric lines; natural intro (voice ~3s) performed best. 3 variants/track to
+              test structure & timing before scaling.
             </p>
-            <p className="mt-2 italic">
-              Insight: Real optimization happens in the edit, not the ad manager.
-            </p>
+            <p className="mt-2 italic">Insight: optimization happens in the edit.</p>
           </div>
         </div>
       </section>
 
-      {/* === OPPORTUNITY / TACTICS === */}
+      {/* === EXECUTION HIGHLIGHTS === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          Opportunity Map
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Opportunity Map</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           Testing, learning, and building upward
         </h2>
 
         <div className="space-y-8 text-lg leading-relaxed text-neutral-700">
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Launch — building rhythm through fragments</h4>
-            <p>
-              One reel per day for three days across the artists’ accounts, each revealing a fragment of the lead
-              track. This taught the algorithm the project’s visual and sonic identity.
-            </p>
-            <p className="mt-2 italic">
-              Insight: Repetition with slight variation feels like progress, not fatigue.
-            </p>
+            <h4 className="font-semibold text-neutral-900 mb-2">Launch — building rhythm</h4>
+            <p>1 reel/day for 3 days across accounts; fragments teach the visual/sonic identity.</p>
+            <p className="mt-2 italic">Insight: variation makes repetition feel like progress.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Lyric hook testing — finding the trigger</h4>
-            <p>
-              Multiple 10–15s cuts with different pacing/framing. The natural take (voice in at ~3s) delivered the
-              best replays and saves.
-            </p>
-            <p className="mt-2 italic">
-              Insight: The strongest hook feels spontaneous.
-            </p>
+            <h4 className="font-semibold text-neutral-900 mb-2">Lyric hook testing</h4>
+            <p>Natural takes with vocals ~3s drove replays & saves.</p>
+            <p className="mt-2 italic">Insight: the strongest hook feels spontaneous.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Trend-fit micro ads — borrowing rhythm</h4>
-            <p>
-              Native-looking TikTok-style ads outperformed previous efforts and industry averages, reaching ~€0.42 CPC
-              with high save ratio by matching platform rhythm.
-            </p>
-            <p className="mt-2 italic">
-              Insight: The best ads don’t look like ads.
-            </p>
+            <h4 className="font-semibold text-neutral-900 mb-2">Trend-fit micro ads</h4>
+            <p>Native-looking cuts hit ~€0.42 CPC with high saves by matching platform rhythm.</p>
+            <p className="mt-2 italic">Insight: the best ads don’t look like ads.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Retargeting waves — from glance to gravity</h4>
-            <p>
-              Follow-up posts targeted engagers; same lyric/message, new framing. Even with limited budget, this loop
-              improved engagement and lowered CPMs.
-            </p>
-            <p className="mt-2 italic">
-              Insight: Retargeting is reinforcement, not novelty.
-            </p>
+            <h4 className="font-semibold text-neutral-900 mb-2">Retargeting waves</h4>
+            <p>Same lyric/message, new framing → stronger recall & lower CPMs.</p>
+            <p className="mt-2 italic">Insight: reinforcement beats novelty for memory.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Visual watermark — making faces memorable</h4>
-            <p>
-              Regardless of color or mood shifts, the artists’ faces stayed visible in every edit to grow recognition
-              beyond symbols.
-            </p>
-            <p className="mt-2 italic">
-              Insight: Identity is built through repetition of presence.
-            </p>
+            <h4 className="font-semibold text-neutral-900 mb-2">Visual watermark</h4>
+            <p>Faces remain visible across edits to build recognition beyond symbols.</p>
+            <p className="mt-2 italic">Insight: identity is repetition of presence.</p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">The missed pivot — when opportunity meets limitation</h4>
-            <p>
-              The planned piano-version retargeting was delayed by a month due to budget cuts; by then, organic energy
-              had cooled.
-            </p>
-            <p className="mt-2 italic">
-              Insight: Momentum is emotional capital — once lost, it’s costly to reignite.
-            </p>
+            <h4 className="font-semibold text-neutral-900 mb-2">Missed pivot</h4>
+            <p>Delayed piano-version retargeting → momentum cooled.</p>
+            <p className="mt-2 italic">Insight: momentum is emotional capital.</p>
           </div>
         </div>
       </section>
 
       {/* === LEARNINGS === */}
       <section className="mt-28">
-        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          Learnings
-        </h3>
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Learnings</h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
           Growth beyond the release
         </h2>
         <div className="space-y-6 text-lg leading-relaxed text-neutral-700">
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">1. Structure beats scale</h4>
-            <p>
-              Clarity replaced quantity: hooks ~2s, reveal ~3s, change every ~4s. Simple, repeatable laws.
-            </p>
-            <p className="mt-2 italic">
-              Insight: Discipline creates emotion — structure gives art direction.
-            </p>
+            <p>Hooks ~2s, reveal ~3s, change ~4s — simple laws.</p>
+            <p className="mt-2 italic">Insight: discipline creates emotion.</p>
           </div>
-
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">2. Fit over invention</h4>
-            <p>
-              Smart innovation is adaptation. By reshaping what already worked culturally, we made it feel new without
-              extra budget.
-            </p>
-            <p className="mt-2 italic">
-              Insight: You don’t need new shapes — bend existing ones to fit your story.
-            </p>
+            <p>Adapt culture to identity to feel new without budget.</p>
+            <p className="mt-2 italic">Insight: bend existing shapes.</p>
           </div>
-
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">3. Momentum is currency</h4>
-            <p>
-              Energy fades faster than money. The delay in retargeting proved timing is as strategic as budget.
-            </p>
-            <p className="mt-2 italic">
-              Insight: Momentum is like heat — once lost, it costs double to reignite.
-            </p>
+            <p>Timing matters as much as spend; once heat fades, it costs to reignite.</p>
+            <p className="mt-2 italic">Insight: momentum is like heat.</p>
           </div>
-
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">4. Collaboration through clarity</h4>
-            <p>
-              Leading students and freelancers taught me to direct by translation, not control. Clear direction enabled
-              real creative freedom.
-            </p>
-            <p className="mt-2 italic">
-              Insight: The clearer the vision, the more creative others can be inside it.
-            </p>
+            <p>Lead by translating vision; clarity enables freedom.</p>
+            <p className="mt-2 italic">Insight: clearer vision → more creativity.</p>
           </div>
-
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">5. Strategy as storytelling</h4>
-            <p>
-              I now treat strategy as sequenced storytelling — choosing what to reveal, when, and how.
-            </p>
-            <p className="mt-2 italic">
-              Insight: A campaign isn’t launched; it unfolds in public.
-            </p>
+            <p>Treat the plan as sequenced reveals.</p>
+            <p className="mt-2 italic">Insight: a campaign unfolds in public.</p>
           </div>
-
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">6. Pride in progress</h4>
-            <p>
-              The project wasn’t viral, but it built a system: a brand, a process, and creative laws I now use for
-              every artist launch.
-            </p>
-            <p className="mt-2 italic">
-              Final insight: Growth happens through the campaign — every test, cut, and compromise is part of the walk
-              upward.
-            </p>
+            <p>Not viral, but a repeatable system and creative laws for future launches.</p>
+            <p className="mt-2 italic">Final insight: growth happens through the campaign.</p>
           </div>
         </div>
       </section>
     </CaseLayout>
   );
 }
-
-
-
-
 
 /* ---- Home ---- */
 function Home() {
@@ -834,9 +737,21 @@ function Home() {
           <form className="mx-auto max-w-xl mt-8 grid gap-3" action="https://formsubmit.co/" method="POST">
             <input type="hidden" name="_captcha" value="false" />
             <input className="w-full rounded-xl ring-1 ring-neutral-300 p-3" name="name" placeholder="Name" />
-            <input className="w-full rounded-xl ring-1 ring-neutral-300 p-3" name="email" placeholder="Email address" type="email" />
-            <textarea className="w-full rounded-xl ring-1 ring-neutral-300 p-3" name="message" rows={4} placeholder="Your message" />
-            <button type="submit" className="rounded-xl px-4 py-2 bg-black text-white">Send</button>
+            <input
+              className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
+              name="email"
+              placeholder="Email address"
+              type="email"
+            />
+            <textarea
+              className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
+              name="message"
+              rows={4}
+              placeholder="Your message"
+            />
+            <button type="submit" className="rounded-xl px-4 py-2 bg-black text-white">
+              Send
+            </button>
           </form>
         </Container>
       </section>
@@ -844,16 +759,13 @@ function Home() {
   );
 }
 
-// ===== APP ROOT =====
+/* ---- App Root (una sola export default) ---- */
 export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-white text-neutral-900">
         <Nav />
-
-        {/* Scroll automatico in cima a ogni route */}
         <ScrollToTop />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cases" element={<CaseIndex />} />
@@ -862,7 +774,6 @@ export default function App() {
           <Route path="/case/zampapazza" element={<CaseZampapazza />} />
           <Route path="/case/branding-ep" element={<CaseBrandingEP />} />
         </Routes>
-
         <footer className="border-t py-8">
           <Container>
             <div className="text-sm text-neutral-500">
@@ -874,3 +785,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
