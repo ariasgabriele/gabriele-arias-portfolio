@@ -610,6 +610,334 @@ function CaseBrandingEP() {
           </section>
         </div>
       </section>
+      {/* === SECTION 5: STRATEGY === */}
+<section className="mt-28">
+  {/* immagine sezione (opzionale) */}
+  <div className="not-prose mb-8">
+    <img
+      src={`${baseUrl}ep-strategy-hero.png`}
+      alt="Strategy — symbolic launch"
+      className="w-full h-auto rounded-2xl ring-1 ring-neutral-200"
+    />
+  </div>
+
+  <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+    Strategy
+  </h3>
+  <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
+    Designing a symbolic launch under real constraints
+  </h2>
+
+  <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+    <p>
+      From the start, I knew this campaign couldn’t rely on algorithms or virality alone.
+      Whether you’re an emerging act or a household name, a release needs direction —
+      a structure that connects story, format, and emotion. My goal was to build a symbolic
+      but measurable launch system that could start from awareness and naturally evolve into
+      conversion and follower growth over time.
+    </p>
+    <p>
+      The idea was to build a path, not a spike: create initial reach, then retarget it through
+      future releases and the piano version of the same songs.
+    </p>
+  </div>
+
+  {/* 1. The logic */}
+  <div className="mt-10 grid gap-6">
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">1. The logic — chaos and coherence</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        The EP itself was chaotic by nature — different beats, different energies — but the story had to be coherent.
+        I wanted the marketing to mirror that idea: diverse in tone, unified in message. Visually, everything followed
+        the “walk towards light” metaphor. Strategically, I structured a plan that started with emotion and curiosity,
+        not overexposure.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Coherence isn’t about uniformity — it’s about repetition of meaning. The sound could shift,
+        as long as the story stayed consistent.
+      </p>
+    </div>
+
+    {/* 2. The platforms */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">2. The platforms — function over fashion</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        TikTok was the epicenter. I used it as a testing ground for natural, unscripted content, letting the songs
+        breathe through real performance. Instagram played a more curated role — a visual archive of identity.
+        In hindsight, I’d merge both approaches: fragmentation diluted momentum.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        I briefly tested YouTube Shorts after studying the Raye case at Milano Music Week, but returns were minimal.
+        With tight budgets, <em>focus beats diversification</em>.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Different platforms reward different behaviors, but with small budgets,
+        depth over spread is the only sustainable strategy.
+      </p>
+    </div>
+
+    {/* 3. Funnel design */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">3. Funnel design — from curiosity to community</h3>
+      <ul className="list-disc pl-6 text-neutral-700 space-y-2">
+        <li><strong>Pre-launch:</strong> two core teasers → announce EP → announce lead single within days.</li>
+        <li><strong>Launch:</strong> three Reels/day across accounts, each showing a fragment of the track.</li>
+        <li><strong>Engagement:</strong> reminders and carousels to reinforce the visual story.</li>
+        <li><strong>Conversion:</strong> Meta ads on <em>Stasera</em> to drive streams, saves, followers.</li>
+        <li><strong>Post-launch:</strong> piano version to retarget engagers → convert casual listeners into early fans.</li>
+      </ul>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Rhythm creates memory. Releasing content in waves kept the EP alive, not a single drop.
+      </p>
+    </div>
+
+    {/* 4. Creative & message */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">4. Creative and message — mystery, realism, hope</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        I positioned Dia8lo and Arde as introspective and mysterious, but not distant. The goal wasn’t to explain
+        everything — it was to spark curiosity and leave breadcrumbs. Captions, edits, and lyric highlights
+        felt direct, emotional, and decisive, with an underlying message of hope.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> In trap culture, confidence is common — vulnerability, framed symbolically, creates stronger connection.
+      </p>
+    </div>
+
+    {/* 5. Execution */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">5. Execution — iteration as a method</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Every ad was shot in three variants per track to test structure, intro length, and pacing. Natural intros
+        with beat drop and reveal at ~second 3 consistently outperformed polished edits. This became a rule:
+        change something visual or rhythmic every 3–4 seconds to maintain attention.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Optimization doesn’t happen in the media dashboard — it happens in the timeline.
+      </p>
+    </div>
+
+    {/* 6. Trade-offs */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">6. Trade-offs and takeaways</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Budget cuts delayed the post-launch phase; retargeting lost momentum. Despite that, the campaign
+        generated buzz in the local scene and strong save-to-listen ratios on Spotify.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        Looking back, I’d concentrate resources on a single platform (likely Instagram) and release one song
+        at a time with heavier interaction campaigns.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> The biggest enemy of a small campaign is dispersion. Focused storytelling wins.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* === SECTION 6: OPPORTUNITY MAP === */}
+<section className="mt-28">
+  <div className="not-prose mb-8">
+    <img
+      src={`${baseUrl}ep-oppmap-hero.png`}
+      alt="Opportunity Map — testing & learning"
+      className="w-full h-auto rounded-2xl ring-1 ring-neutral-200"
+    />
+  </div>
+
+  <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+    Opportunity Map
+  </h3>
+  <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
+    Testing, learning, and building upward
+  </h2>
+
+  <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+    <p>
+      With limited time and budget, I couldn’t afford randomness. Every move had to be a calculated bet:
+      <em>High impact/low effort → first</em>, <em>High effort/high value → after validation</em>, everything else → ignore.
+      This turned the campaign into a learning system, not a one-off release.
+    </p>
+  </div>
+
+  <div className="mt-10 grid gap-6">
+    {/* 1. Lyric-hook testing */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">1. Lyric-hook testing — Finding the emotional trigger</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Multiple 10–15s cuts per track, changing only first two seconds, reveal timing, and on-beat text style.
+        Natural intros + beat drop around second 3 won consistently.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> The strongest hook isn’t the loudest — it’s the one that feels mid-truth.
+      </p>
+    </div>
+
+    {/* 2. Hero reels */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">2. Hero reels — Owning the visual narrative</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Three core scenes carried the message: <em>The Pact</em>, <em>The Climb</em>, <em>The Light</em>. Everything else echoed
+        these symbols to build recognition (tones, angles, mask).
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> In a short-form world, continuity is the new familiarity.
+      </p>
+    </div>
+
+    {/* 3. Trend-fit micro ads */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">3. Trend-fit micro ads — Borrowing rhythm, not identity</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Tested native-feed vs cinematic edits for <em>Stasera</em>. Native won: lower CPC (~€0.42), higher watch time, stronger saves.
+        The difference wasn’t quality — it was familiarity.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> The best-performing ad doesn’t feel like one.
+      </p>
+    </div>
+
+    {/* 4. Retargeting waves */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">4. Retargeting waves — From glance to gravity</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Retargeting on viewers/engagers using alternative cuts of the same ideas. Short cycle, clear efficiency:
+        higher CTRs at lower CPMs.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Retargeting isn’t about newness — it’s about resonance.
+      </p>
+    </div>
+
+    {/* 5. Visual identity watermark */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">5. Visual identity watermark — Consistency at a glance</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Introduced a small blood-red glyph watermark across reels and stills as a subtle signature.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Symbols don’t sell directly — they build memory that compounds.
+      </p>
+    </div>
+
+    {/* 6. The pivot that never happened */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">6. The pivot that never happened — When opportunity meets limitation</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Piano-version retargeting was delayed; momentum cooled down. In music campaigns, momentum is currency.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Lifespan is about energy continuity more than content volume.
+      </p>
+    </div>
+
+    {/* 7. Consolidation */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">7. Consolidation — From testing to a playbook</h3>
+      <ul className="list-disc pl-6 text-neutral-700 space-y-1">
+        <li>Hooks front-loaded in the first 2s.</li>
+        <li>Beat drops/reveals by second 3.</li>
+        <li>Motion/novelty every 3–4s to sustain watch time.</li>
+      </ul>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Creative intuition scales when measured — patterns become systems.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* === SECTION 7: LEARNINGS === */}
+<section className="mt-28">
+  <div className="not-prose mb-8">
+    <img
+      src={`${baseUrl}ep-learnings-hero.png`}
+      alt="Learnings — beyond the release"
+      className="w-full h-auto rounded-2xl ring-1 ring-neutral-200"
+    />
+  </div>
+
+  <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">Learnings</h3>
+  <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-6">
+    Growth beyond the release
+  </h2>
+
+  <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+    <p>
+      The project was a lab where identity, storytelling, and digital rhythm met under constraints.
+      Limited resources pushed me to design systems, not just assets.
+    </p>
+  </div>
+
+  <div className="mt-10 grid gap-6">
+    {/* 1 */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">1. Structure beats scale</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        With small budgets, clarity replaces volume: hooks in first 2s, reveals at 3s, movement every 4s —
+        a “rhythm spine” for emotional storytelling.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Emotion travels faster when form is disciplined.
+      </p>
+    </div>
+
+    {/* 2 */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">2. Fit is stronger than invention</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Trend formats aren’t shortcuts — they’re languages. Speak the dialect, then bend it to your story.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Innovation is often adapting known shapes to a true narrative.
+      </p>
+    </div>
+
+    {/* 3 */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">3. Momentum is a resource</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Timing is emotional, not logistical. Miss the follow-up window and efficiency collapses.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Momentum behaves like heat — if you don’t feed it, it fades.
+      </p>
+    </div>
+
+    {/* 4 */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">4. Collaboration is a skill</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Directing mixed-skill collaborators required turning vision into executable steps.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> Direction isn’t control — clarity creates freedom.
+      </p>
+    </div>
+
+    {/* 5 */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">5. Strategy is storytelling</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Strategy is story sequencing: what to say and when. Even metrics are part of the narrative.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Insight:</strong> A campaign should reveal itself piece by piece.
+      </p>
+    </div>
+
+    {/* 6 */}
+    <div className="bg-white p-6 rounded-2xl ring-1 ring-neutral-200 shadow-sm">
+      <h3 className="text-2xl font-bold text-neutral-900 mb-2">6. Pride, perspective, and progress</h3>
+      <p className="text-neutral-700 leading-relaxed">
+        Not a viral spike, but a foundation: visual identity, narrative structure, analytical framework.
+      </p>
+      <p className="mt-3 text-neutral-700 leading-relaxed">
+        <strong>Final insight:</strong> Growth happens inside the campaign — limitation and iteration are the climb.
+      </p>
+    </div>
+  </div>
+</section>
+
     </CaseLayout>
   );
 }
