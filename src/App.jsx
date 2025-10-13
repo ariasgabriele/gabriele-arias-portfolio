@@ -514,9 +514,6 @@ Dia8lo reached out to me to support the release of his debut EP <em>Patto di San
  Patto di Sangue wasn’t about fame or self-affirmation — it was about two voices united by a shared climb toward light.
  We built a moodboard rooted in symbolism: blood for unity, black & white for mistery, and light for rebirth.
             </p>
-            <p className="mt-2 italic">
-           
-            </p>
           </div>
 
           <div>
@@ -536,7 +533,6 @@ Dia8lo reached out to me to support the release of his debut EP <em>Patto di San
             I studied recent releases by Slings, Jake La Furia, and Emis Killa.
  Their success came from ad spend and ifluencer marketing.
             </p>
-            <p className="mt-2 italic"></p>
           </div>
 
           <div>
@@ -544,9 +540,7 @@ Dia8lo reached out to me to support the release of his debut EP <em>Patto di San
             <p>
              I built a Google Sheet trend library, cataloguing over 40 TikTok and Instagram formats by pacing, rhythm, and structure.
  Instead of reinventing the wheel, I adapted proven content logics to fit the artists’ sound and personality.
-
             </p>
-            <p className="mt-2 italic"></p>
           </div>
 
          
@@ -563,19 +557,11 @@ Dia8lo reached out to me to support the release of his debut EP <em>Patto di San
  Every element expressed the same upward motion — a climb from chaos to clarity.
           </p>
           <p>
-          Symbols: blood as bond, masks as self-evolution, light as destination
-
-
-Palette: deep reds fading into pale light
-
-
-Typography: minimal, sharp, cinematic
-
-
-Motion: continuous ascent
-
+          - Symbols: blood as bond, masks as self-evolution, light as destination - Palette: deep reds fading into pale light - Typography: minimal, sharp, cinematic - Motion: continuous ascent
           </p>
-          <p className="italic">Working with a graphic design student, I directed every asset — ensuring that the cover, lyric videos, and ads all felt like parts of the same cinematic world.</p>
+          <p>
+Working with a graphic design student, I directed every asset — ensuring that the cover, lyric videos, and ads all felt like parts of the same cinematic world.
+            </p>
         </div>
       </section>
 
@@ -624,8 +610,9 @@ Motion: continuous ascent
         <div className="space-y-8 text-lg leading-relaxed text-neutral-700">
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Launch — building rhythm</h4>
-            <p>One reel per day for three days across the artists’ accounts, each revealing a fragment of NXV.
-This gave the release a pulse: short, controlled, rhythmic.</p>
+            <p>
+              One reel per day for three days across the artists’ accounts, each revealing a fragment of NXV. This gave the release a pulse: short, controlled, rhythmic.
+            </p>
           </div>
 
           <div>
