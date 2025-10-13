@@ -427,19 +427,15 @@ function CaseBrandingEP() {
         </h2>
         <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            This was my first official music launch as a marketer. Dia8lo reached out to me to support
-            the release of his debut EP <em>Patto di Sangue</em>, featuring Ardè — a project that aimed
-            to stand out in the trap scene while symbolizing a new beginning for both artists.
+            This project marked my first official music launch as a marketer.
+Dia8lo reached out to me to support the release of his debut EP <em>Patto di Sangue</em>, featuring Arde, a project born from ambition, friendship, and the desire to take their art seriously for the first time.
           </p>
           <p>
-            With a small budget, I assembled a lean team of university students in graphic design,
-            photography, and videography. My role was to lead them under one coherent vision — ensuring
-            professional execution with limited resources while keeping the story authentic and grounded
-            in who the artists really were.
+            With a minimal budget, I assembled a small team of university students in design, photography, and videography. I led the creative direction, branding, and marketing strategy ensuring professional consistency with limited resources.
+
           </p>
           <p>
-            From the start, the goal was clear: not to chase virality, but to build something meaningful
-            enough to grow from — a foundation for future releases, retargeting, and community.
+           The goal wasn’t to chase virality. It was to build a repeatable launch system, a foundation for testing, growth, and future retargeting.
           </p>
         </div>
       </section>
@@ -452,20 +448,13 @@ function CaseBrandingEP() {
         </h2>
         <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            <em>Patto di Sangue</em> wasn’t just another trap release. It told the story of two young artists
-            walking together through darkness toward light, using sound and symbolism to represent growth,
-            loyalty, and transformation.
+            <em>Patto di Sangue</em> told the story of two artists walking together from darkness toward light, exploring identity, brotherhood, and rebirth through sound and symbolism.
           </p>
           <p>
-            The EP blended melodic trap with different beats and atmospheres — intentionally chaotic at first
-            listen, but united by a single emotional thread. My challenge was to make that duality work:
-            turning musical diversity into a visually coherent narrative that felt like one story told in
-            multiple voices.
+            The EP blended melodic trap and introspective moods, intentionally chaotic in sound by choice.
           </p>
           <p>
-            The main video embodied that message — filmed in an abandoned villa, following the artists as they
-            climbed upward through decay. It became the project’s visual metaphor: you rise by walking through
-            your own ruins.
+          The main music video, filmed in an abandoned villa, embodied that metaphor:artists climbing upward through ruin — a visual representation of transformation.
           </p>
         </div>
       </section>
@@ -508,63 +497,59 @@ function CaseBrandingEP() {
         <div className="space-y-6 text-lg leading-relaxed text-neutral-700">
           <div>
             <p className="mb-3">
-              Before producing anything, I slowed down to analyze. I needed clarity before movement. The logic:
+              Before production began, I slowed down to study. I needed to understand how to position the project, not just how to promote it.
             </p>
             <ul className="list-disc pl-6 space-y-1">
               <li>Understand what the artists wanted to communicate.</li>
-              <li>Decode how similar acts positioned themselves.</li>
-              <li>Identify repeatable short-form patterns.</li>
-              <li>Build a flexible, testable brand system.</li>
+              <li>Decode how similar artist positioned themselves.</li>
+              <li>Identify repeatable short-form content patterns.</li>
+              <li>Build a brand system.</li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Understanding the artists</h4>
             <p>
-              Long conversations → core message: walk upward together. Moodboard: dark, cinematic — blood (pact),
-              masks (identity), light (goal).
+             Through long creative sessions, I helped the artists articulate their vision.
+ Patto di Sangue wasn’t about fame or self-affirmation — it was about two voices united by a shared climb toward light.
+ We built a moodboard rooted in symbolism: blood for unity, black & white for mistery, and light for rebirth.
             </p>
             <p className="mt-2 italic">
-              Insight: symbolic coherence creates unity even when sound changes.
+           
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Mapping the fanbase</h4>
             <p>
-              Small but vocal audience; interviewed early listeners and studied adjacent trap communities.
+              With only a handful of active fans, data was scarce — so I went qualitative.
+ I reached out directly to early listeners, then extended research to similar artists and communities to find emotional patterns.
             </p>
             <p className="mt-2 italic">
-              Insight: tiny fanbases reveal the emotional language to build from.
+              Insight: Early fans reveal emotional language, not demographics and that defines tone more than numbers ever will.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Benchmarking the scene</h4>
             <p>
-              Big acts often underperform organically; they win with budget more than storytelling.
+            I studied recent releases by Slings, Jake La Furia, and Emis Killa.
+ Their success came from ad spend and ifluencer marketing.
             </p>
-            <p className="mt-2 italic">Insight: strategy beats scale for small acts.</p>
+            <p className="mt-2 italic"></p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Trend logging &amp; patterns</h4>
             <p>
-              Trend library of TikTok/IG formats (lyric cuts, POVs, hooks) to repurpose what fits identity.
+             I built a Google Sheet trend library, cataloguing over 40 TikTok and Instagram formats by pacing, rhythm, and structure.
+ Instead of reinventing the wheel, I adapted proven content logics to fit the artists’ sound and personality.
+
             </p>
-            <p className="mt-2 italic">Insight: innovation is alignment.</p>
+            <p className="mt-2 italic"></p>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">From analysis to brand direction</h4>
-            <p>
-              Cinematic pact: dark but hopeful, chaotic but rising. Blood & light as symbols; lyrics & visual rhythm
-              as tools. Every asset speaks the same language.
-            </p>
-            <p className="mt-2 italic">Insight: analysis → story, not reports.</p>
-          </div>
-        </div>
-      </section>
+         
 
       {/* === BRANDING === */}
       <section className="mt-28">
@@ -574,14 +559,23 @@ function CaseBrandingEP() {
         </h2>
         <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            Symbols: blood = union; masks = identity in motion; light = destination. Palette: deep reds to pale light.
-            Typography: minimal & sharp. Visual rhythm: tension + direction → sensation of climbing.
+            The branding translated the EP’s story into a cohesive visual language.
+ Every element expressed the same upward motion — a climb from chaos to clarity.
           </p>
           <p>
-            Directed execution to keep cohesion across outputs. Limited means, deliberate look: professional yet
-            emotional, ambitious but grounded.
+          Symbols: blood as bond, masks as self-evolution, light as destination
+
+
+Palette: deep reds fading into pale light
+
+
+Typography: minimal, sharp, cinematic
+
+
+Motion: continuous ascent
+
           </p>
-          <p className="italic">Insight: consistency comes from belief, not budget.</p>
+          <p className="italic">Working with a graphic design student, I directed every asset — ensuring that the cover, lyric videos, and ads all felt like parts of the same cinematic world.</p>
         </div>
       </section>
 
@@ -593,39 +587,29 @@ function CaseBrandingEP() {
         </h2>
         <div className="space-y-6 text-lg leading-relaxed text-neutral-700">
           <p>
-            Momentum over noise: awareness leading to conversion, retargeting, recognition. Mirror the EP’s duality:
-            start in mystery, rise through repetition, end in light.
+           The strategy mirrored the EP’s emotional arc: from mystery, to revelation, to light.
           </p>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Platform logic</h4>
             <ul className="list-disc pl-6 space-y-1">
               <li>TikTok as core testing ground for authentic performance & lyric hooks.</li>
-              <li>Instagram as curated identity (a unified approach would be stronger).</li>
+              <li>Instagram as curated identity.</li>
               <li>YouTube Shorts tested briefly; low efficiency at this scale.</li>
             </ul>
-            <p className="mt-2 italic">Insight: focus with depth &gt; spread with hope.</p>
+            <p className="mt-2 italic">Insight: With tight budgets, is better to choose a single channel and objective.</p>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Funnel architecture</h4>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>Pre-launch: 2 teasers → 3-day build (announce → single → snippets).</li>
-              <li>Launch: 1 reel/day × 3 days across 3 accounts (lead track fragments).</li>
-              <li>Engagement: carousels & reminders.</li>
-              <li>Conversion: Meta Ads with in-reel CTAs (“save”, “listen”).</li>
-              <li>Post-launch: planned piano version for emotional retargeting (delayed).</li>
-            </ul>
-            <p className="mt-2 italic">Insight: frequency builds memory; rhythm builds connection.</p>
-          </div>
+          
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Creative choices</h4>
             <p>
-              10–15s variants of strongest lyric lines; natural intro (voice ~3s) performed best. 3 variants/track to
-              test structure & timing before scaling.
+             10-15s variations of key lyric hooks, changing pacing and framing.
+ The most effective formula: a trend base opening with singing starting at second 3 — generating the highest replay and save rates.
+ Each track had three ad variations, tested before scaling spend.
             </p>
-            <p className="mt-2 italic">Insight: optimization happens in the edit.</p>
+            <p className="mt-2 italic">Insight: the same video can have differnt impact changing the hook.</p>
           </div>
         </div>
       </section>
@@ -640,41 +624,115 @@ function CaseBrandingEP() {
         <div className="space-y-8 text-lg leading-relaxed text-neutral-700">
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Launch — building rhythm</h4>
-            <p>1 reel/day for 3 days across accounts; fragments teach the visual/sonic identity.</p>
-            <p className="mt-2 italic">Insight: variation makes repetition feel like progress.</p>
+            <p>One reel per day for three days across the artists’ accounts, each revealing a fragment of NXV.
+This gave the release a pulse: short, controlled, rhythmic.</p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Lyric hook testing</h4>
-            <p>Natural takes with vocals ~3s drove replays & saves.</p>
-            <p className="mt-2 italic">Insight: the strongest hook feels spontaneous.</p>
+            <p>The “native content” takes consistently outperformed lyrics ones.</p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Trend-fit micro ads</h4>
-            <p>Native-looking cuts hit ~€0.42 CPC with high saves by matching platform rhythm.</p>
-            <p className="mt-2 italic">Insight: the best ads don’t look like ads.</p>
+            <p>Adapting native TikTok pacing to Stasera produced a CPC of €0.42, outperforming both the artist’s past campaigns and common industry benchmarks.</p>
+            <p className="mt-2 italic">The best ads don’t look like ads — they blend into the rhythm of the platform.</p>
           </div>
 
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Retargeting waves</h4>
-            <p>Same lyric/message, new framing → stronger recall & lower CPMs.</p>
-            <p className="mt-2 italic">Insight: reinforcement beats novelty for memory.</p>
+            <p>Follow-up ads reused the same lyrics but reframed the visuals, lowering CPM and improving engagement.</p>
+            <p className="mt-2 italic">Insight: Retargeting isn’t about novelty, it’s about resonance</p>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Visual watermark</h4>
-            <p>Faces remain visible across edits to build recognition beyond symbols.</p>
-            <p className="mt-2 italic">Insight: identity is repetition of presence.</p>
-          </div>
+          {/* === RESULTS & IMPACT === */}
+<section className="mt-28">
+  <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+    Results &amp; Impact
+  </h3>
+  <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900 mb-8">
+    Proof Through Pattern
+  </h2>
 
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">Missed pivot</h4>
-            <p>Delayed piano-version retargeting → momentum cooled.</p>
-            <p className="mt-2 italic">Insight: momentum is emotional capital.</p>
-          </div>
-        </div>
-      </section>
+  <p className="text-lg leading-relaxed text-neutral-700 mb-8">
+    Even with a lean spend, <em>Patto di Sangue</em> proved that story and structure can outperform scale.
+  </p>
+
+  {/* Block title */}
+  <h4 className="text-xl md:text-2xl font-bold text-neutral-900 mb-4">
+    Spotify Push — “Stasera” (Lead Single)
+  </h4>
+
+  {/* KPI grid */}
+  <div className="not-prose grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">Budget</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">€169.51</div>
+    </div>
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">Reach</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">30,837</div>
+    </div>
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">Impressions</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">108,051</div>
+      <div className="text-xs text-neutral-500 mt-1">Frequency ~ 3.5</div>
+    </div>
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">Clicks</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">403</div>
+    </div>
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">CPC (avg)</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">€0.42</div>
+    </div>
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">CTR (est.)</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">0.37%</div>
+    </div>
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">Engagements (Meta)</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">10,074</div>
+    </div>
+    <div className="rounded-2xl ring-1 ring-neutral-200 bg-white p-4">
+      <div className="text-xs uppercase tracking-wide text-neutral-500">EP Streams (Month 1)</div>
+      <div className="text-xl font-bold text-neutral-900 mt-1">~10,000</div>
+    </div>
+  </div>
+
+  {/* Top Ad Sets */}
+  <div className="mb-8">
+    <h4 className="text-lg md:text-xl font-semibold text-neutral-900 mb-3">
+      Top Ad Sets
+    </h4>
+    <ul className="space-y-2 text-neutral-800">
+      <li>🎯 <strong>Amore</strong> → 71,979 impr | 258 clicks | CPC €0.41</li>
+      <li>⚡ <strong>Advantage+</strong> → 34,755 impr | 141 clicks | CPC €0.43</li>
+      <li>🎵 <strong>Pop</strong> → 1,237 impr | 4 clicks | CPC €0.81</li>
+    </ul>
+  </div>
+
+  {/* Notes */}
+  <div className="space-y-3 text-neutral-700">
+    <p>
+      All clicks were directed to Spotify. The <strong>Amore</strong> audience delivered the best CPC and
+      engagement-to-save ratio.
+    </p>
+    <p>
+      🧮 <strong>Save-to-Listen Ratio:</strong> 1 save every ~20 streams — above average for new acts.
+    </p>
+    <p>
+      💬 <strong>Qualitative feedback:</strong> local reposts, direct messages, and regional traction confirmed
+      emotional resonance.
+    </p>
+  </div>
+
+  {/* Closing line */}
+  <p className="mt-6 text-lg leading-relaxed text-neutral-800">
+    Emotionally coherent storytelling drove real performance — not exposure, but connection.
+  </p>
+</section>
+
 
       {/* === LEARNINGS === */}
       <section className="mt-28">
