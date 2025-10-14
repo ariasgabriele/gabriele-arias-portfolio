@@ -749,7 +749,7 @@ They were also the only ads in the campaign with a full storytelling arc, and un
         {/* Top Ad Sets */}
         <div className="mb-8">
           <h4 className="text-lg md:text-xl font-semibold text-neutral-900 mb-3">Top Ad Sets</h4>
-
+</div>
         {/* Notes */}
         <div className="space-y-3 text-neutral-700">
           <p>Patto di Sangue” didn’t trigger a viral explosion — and that was never the goal.
