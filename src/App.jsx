@@ -558,7 +558,7 @@ function CaseBrandingEP() {
           <img
             src={`${baseUrl}branding-music.png`}
             alt="Branding — visual system for the EP"
-            className="w-full h-auto"
+            className="w-full h-[60vh]"
           />
         </div>
 
