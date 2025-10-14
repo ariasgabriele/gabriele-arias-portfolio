@@ -749,23 +749,19 @@ They were also the only ads in the campaign with a full storytelling arc, and un
         {/* Top Ad Sets */}
         <div className="mb-8">
           <h4 className="text-lg md:text-xl font-semibold text-neutral-900 mb-3">Top Ad Sets</h4>
-          <ul className="space-y-2 text-neutral-800">
-            <li>🎯 <strong>Amore</strong> → 71,979 impr | 258 clicks | CPC €0.41</li>
-            <li>⚡ <strong>Advantage+</strong> → 34,755 impr | 141 clicks | CPC €0.43</li>
-            <li>🎵 <strong>Pop</strong> → 1,237 impr | 4 clicks | CPC €0.81</li>
-          </ul>
-        </div>
 
         {/* Notes */}
         <div className="space-y-3 text-neutral-700">
-          <p>All clicks were directed to Spotify. The <strong>Amore</strong> audience delivered the best CPC and engagement-to-save ratio.</p>
-          <p>Save-to-Listen Ratio: 1 save every ~20 streams — above average for new acts.</p>
-          <p>Qualitative feedback: local reposts, direct messages, and regional traction confirmed emotional resonance.</p>
+          <p>Patto di Sangue” didn’t trigger a viral explosion — and that was never the goal.
+The campaign acted as a controlled test, measuring how far emotional storytelling could push a debut project with limited budget and no pre-existing fanbase.</p>
+          <p>Post-release data confirmed what mattered most: people didn’t just listen once — they remembered. Save rates, repeat streams, and qualitative messages showed that the content reached the right people, even if not the masses.</p>
+          <p>QRather than scaling prematurely, the artist used this phase to build narrative literacy — learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
+
+The campaign’s true growth wasn’t numerical, but strategic:
+it turned abstract ideas about “story-driven marketing” into a repeatable framework — a proof of concept to grow smarter, not louder.</p>
         </div>
 
-        <p className="mt-6 text-lg leading-relaxed text-neutral-800">
-          Emotionally coherent storytelling drove real performance — not exposure, but connection.
-        </p>
+        
       </section>
 
       {/* === LEARNINGS === */}
