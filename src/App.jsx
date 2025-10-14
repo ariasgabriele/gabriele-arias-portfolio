@@ -413,7 +413,7 @@ function CaseBrandingEP() {
         <img
           src={`${baseUrl}patto-di-sangue-campaign-hero.png`}
           alt="Patto di Sangue — campaign hero"
-          className="w-full h-auto rounded-3xl shadow-lg"
+          className="w-full h-auto"
         />
       </div>
 
@@ -558,7 +558,7 @@ function CaseBrandingEP() {
           <img
             src={`${baseUrl}branding-music.png`}
             alt="Branding — visual system for the EP"
-            className="w-full h-auto rounded-2xl shadow"
+            className="w-full h-auto"
           />
         </div>
 
@@ -602,14 +602,14 @@ function CaseBrandingEP() {
 
           {/* DUE GIF affiancate subito sopra "Creative choices" */}
           <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+            <div className=" ring-1 ring-neutral-200 bg-white">
               <img
                 src={`${baseUrl}video-variation-a.gif`}
                 alt="Video variation A"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+            <div className="ring-1 ring-neutral-200 bg-white">
               <img
                 src={`${baseUrl}video-variation-b.gif`}
                 alt="Video variation B"
@@ -723,14 +723,14 @@ function CaseBrandingEP() {
 
         {/* DUE GIF affiancate subito sopra "Top Ad Sets" */}
         <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+          <div className=" ring-1 ring-neutral-200 bg-white">
             <img
               src={`${baseUrl}adv-dia8lo.gif`}
               alt="Ad preview — Dia8lo"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+          <div className=" ring-1 ring-neutral-200 bg-white">
             <img
               src={`${baseUrl}adv-arde.gif`}
               alt="Ad preview — Arde"
