@@ -413,7 +413,7 @@ function CaseBrandingEP() {
         <img
           src={`${baseUrl}patto-di-sangue-campaign-hero.png`}
           alt="Patto di Sangue — campaign hero"
-          className="w-full h-auto"
+          className="w-full h-[60vh] object-cover"
         />
       </div>
 
@@ -606,14 +606,14 @@ function CaseBrandingEP() {
               <img
                 src={`${baseUrl}video-variation-a.gif`}
                 alt="Video variation A"
-                className="w-full h-full object-cover"
+                className="w-full h-[60vh] object-cover"
               />
             </div>
             <div className="ring-1 ring-neutral-200 bg-white">
               <img
                 src={`${baseUrl}video-variation-b.gif`}
                 alt="Video variation B"
-                className="w-full h-full object-cover"
+                className="w-full h-[60vh] object-cover"
               />
             </div>
           </div>
@@ -727,14 +727,14 @@ function CaseBrandingEP() {
             <img
               src={`${baseUrl}adv-dia8lo.gif`}
               alt="Ad preview — Dia8lo"
-              className="w-full h-full object-cover"
+              className="w-full h-[60vh] object-cover"
             />
           </div>
           <div className=" ring-1 ring-neutral-200 bg-white">
             <img
               src={`${baseUrl}adv-arde.gif`}
               alt="Ad preview — Arde"
-              className="w-full h-full object-cover"
+              className="w-full h-[60vh] object-cover"
             />
           </div>
         </div>
