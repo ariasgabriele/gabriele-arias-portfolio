@@ -558,7 +558,7 @@ function CaseBrandingEP() {
           <img
             src={`${baseUrl}branding-music.png`}
             alt="Branding — visual system for the EP"
-            className="w-full h-[60vh] object-cover"
+            className="hidden md:block w-full h-[60vh] object-cover"
           />
         </div>
 
@@ -601,7 +601,7 @@ function CaseBrandingEP() {
           </div>
 
           {/* DUE GIF affiancate subito sopra "Creative choices" */}
-          <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="hidden md:grid grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className=" ring-1 ring-neutral-200 bg-white">
               <img
                 src={`${baseUrl}video-variation-a.gif`}
@@ -729,7 +729,7 @@ They were also the only ads in the campaign with a full storytelling arc, and un
         </div>
 
         {/* DUE GIF affiancate subito sopra "Top Ad Sets" */}
-        <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <div className=" ring-1 ring-neutral-200 bg-white">
             <img
               src={`${baseUrl}adv-dia8lo.gif`}
