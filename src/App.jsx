@@ -621,9 +621,16 @@ function CaseBrandingEP() {
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Creative choices</h4>
             <p>
-              10–15s variations of key lyric hooks, changing pacing and framing. The most effective formula:
-              a native-feeling opening with singing around second 3 — generating the highest replay and save rates.
-              Each track had three ad variations, tested before scaling spend.
+              For “Stasera”, we tested two main creatives — both built on the same logic of the 3-second rhythm, the storytelling rule that shaped the whole campaign.
+
+Both videos opened with nearly identical setups: a raw, cinematic first second that established atmosphere and authenticity. The difference emerged at the third second — the key emotional trigger point:
+
+In the first version, the singing began immediately, pulling the viewer into the sound and creating instant musical immersion.
+
+In the second version, the story continued visually for a few more seconds, enhanced by 3D overlay messages that sustained attention and guided emotion through text.
+
+Despite their different executions, both followed the same structural spine — clarity, rhythm, and emotional pacing.
+They were also the only ads in the campaign with a full storytelling arc, and unsurprisingly, they were the top performers in terms of engagement, saves, and cost efficiency.
             </p>
           </div>
         </div>
@@ -769,28 +776,22 @@ function CaseBrandingEP() {
         </h2>
         <div className="space-y-6 text-lg leading-relaxed text-neutral-700">
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">1. Structure beats scale</h4>
-            <p>Hooks ~2s, reveal ~3s, change ~4s — simple, repeatable laws.</p>
+            <h4 className="font-semibold text-neutral-900 mb-2">Learning Through Pattern</h4>
+            <p>Post-release data confirmed what mattered most: people didn’t just listen once — they remembered.
+Save rates, repeat streams, and qualitative messages showed that the content reached the right people, even if not the masses.
+
+Rather than scaling prematurely, the artist used this phase to build narrative literacy — learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
+
+The campaign’s true growth wasn’t numerical, but strategic:
+it turned abstract ideas about “story-driven marketing” into a repeatable framework — a proof of concept to grow smarter, not louder.*</p>
           </div>
           <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">2. Fit over invention</h4>
-            <p>Adapt what already works culturally to fit identity and make it feel new without extra budget.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">3. Momentum is currency</h4>
-            <p>Timing matters as much as spend; once the heat fades, it costs more to reignite.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">4. Collaboration through clarity</h4>
-            <p>Lead by translating vision; clarity enables real creative freedom.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">5. Strategy as storytelling</h4>
-            <p>Treat the plan as sequenced reveals that unfold in public.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-neutral-900 mb-2">6. Pride in progress</h4>
-            <p>A repeatable system and a set of creative laws for future launches — even without virality.</p>
+            <h4 className="font-semibold text-neutral-900 mb-2">What I’d Do Differently</h4>
+            <p>If I were to relaunch the campaign today, I’d simplify the battlefield.
+I’d focus exclusively on Instagram, treating it as the narrative core — not just a posting channel but a storytelling environment. All paid media would be dedicated to Instagram engagement, optimizing for interaction, retention, and save-to-follow conversion instead of reach.
+
+On the release side, I’d drop one song at a time, turning each track into a self-contained moment — a chapter rather than a compilation.
+That cadence would give each story room to breathe, while keeping the audience in a constant state of anticipation rather than saturation.</p>
           </div>
         </div>
       </section>
