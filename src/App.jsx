@@ -413,7 +413,7 @@ function CaseBrandingEP() {
         <img
           src={`${baseUrl}patto-di-sangue-campaign-hero.png`}
           alt="Patto di Sangue — campaign hero"
-          className="w-full h-auto rounded-3xl shadow-lg"
+          className="w-full h-auto rounded-3xl"  /* ← niente shadow/border */
         />
       </div>
 
@@ -553,12 +553,12 @@ function CaseBrandingEP() {
           Walking together towards the light
         </h2>
 
-        {/* IMG sotto il titolo Branding */}
+        {/* IMG sotto il titolo Branding (senza contorni/ombra) */}
         <div className="not-prose mb-8">
           <img
             src={`${baseUrl}branding-music.png`}
             alt="Branding — visual system for the EP"
-            className="w-full h-auto rounded-2xl shadow"
+            className="w-full h-auto rounded-2xl"  /* ← niente ring/shadow/bg */
           />
         </div>
 
@@ -600,16 +600,16 @@ function CaseBrandingEP() {
             </ul>
           </div>
 
-          {/* DUE GIF affiancate subito sopra "Creative choices" */}
+          {/* DUE GIF affiancate subito sopra "Creative choices" (senza contorni/ombra) */}
           <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+            <div className="rounded-2xl overflow-hidden">
               <img
                 src={`${baseUrl}video-variation-a.gif`}
                 alt="Video variation A"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+            <div className="rounded-2xl overflow-hidden">
               <img
                 src={`${baseUrl}video-variation-b.gif`}
                 alt="Video variation B"
@@ -721,16 +721,16 @@ function CaseBrandingEP() {
           </div>
         </div>
 
-        {/* DUE GIF affiancate subito sopra "Top Ad Sets" */}
+        {/* DUE GIF affiancate subito sopra "Top Ad Sets" (senza contorni/ombra) */}
         <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+          <div className="rounded-2xl overflow-hidden">
             <img
               src={`${baseUrl}adv-dia8lo.gif`}
               alt="Ad preview — Dia8lo"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
+          <div className="rounded-2xl overflow-hidden">
             <img
               src={`${baseUrl}adv-arde.gif`}
               alt="Ad preview — Arde"
@@ -798,47 +798,6 @@ function CaseBrandingEP() {
   );
 }
 
-
-
-/* ---- Home ---- */
-function Home() {
-  return (
-    <main>
-      <Hero />
-      <WhatIDo />
-      <section className="bg-neutral-50 border-y">
-        <CaseIndex />
-      </section>
-      <section id="contact" className="py-16 scroll-mt-24">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl md:text-3xl font-bold">Want to get in touch?</h2>
-            <p className="mt-2 text-neutral-600">Drop me a message — I usually reply quickly.</p>
-          </div>
-          <form className="mx-auto max-w-xl mt-8 grid gap-3" action="https://formsubmit.co/" method="POST">
-            <input type="hidden" name="_captcha" value="false" />
-            <input className="w-full rounded-xl ring-1 ring-neutral-300 p-3" name="name" placeholder="Name" />
-            <input
-              className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
-              name="email"
-              placeholder="Email address"
-              type="email"
-            />
-            <textarea
-              className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
-              name="message"
-              rows={4}
-              placeholder="Your message"
-            />
-            <button type="submit" className="rounded-xl px-4 py-2 bg-black text-white">
-              Send
-            </button>
-          </form>
-        </Container>
-      </section>
-    </main>
-  );
-}
 
 /* ---- App Root (una sola export default) ---- */
 export default function App() {
