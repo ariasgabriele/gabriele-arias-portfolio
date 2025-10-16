@@ -383,12 +383,285 @@ function CaseLayout({ title, eyebrow, children }) {
 
 /* ---- Case pages ---- */
 function CasePOD() {
+  const baseUrl = import.meta.env.BASE_URL || "/";
+
   return (
-    <CaseLayout eyebrow="POD / UGC" title="From viral memes to POD sales">
-      <p>Short description of the project.</p>
+    <CaseLayout
+      eyebrow="POD / UGC"
+      title="Shop di Coppia — Turning Meme Culture into Commerce"
+    >
+      {/* Visual #1 */}
+      <div className="not-prose mb-10">
+        <img
+          src={`${baseUrl}pod-memes-phones.png`}
+          alt="Mobile mockups — Shop di Coppia"
+          className="w-full h-auto rounded-3xl"
+        />
+      </div>
+
+      {/* Intro meta */}
+      <div className="not-prose grid gap-3 sm:grid-cols-3 mb-12">
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Role</div>
+          <div className="font-medium mt-1">
+            Creative Director · Digital Marketer · Content Strategist
+          </div>
+        </div>
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Timeline</div>
+          <div className="font-medium mt-1">2023 – 2025</div>
+        </div>
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Platforms</div>
+          <div className="font-medium mt-1">TikTok · Instagram · Shopify</div>
+        </div>
+      </div>
+
+      {/* 1. Overview */}
+      <section className="mt-20">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          1. Overview
+        </h3>
+        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900">
+          From Meme Page to Emotion-Driven Brand
+        </h2>
+        <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
+          <p>
+            Shop di Coppia started as a experiment: a meme page about relationships that
+            unexpectedly grew into a 30,000-follower community across TikTok and Instagram.
+          </p>
+          <p>
+            What began as Meme di Coppia — a Gen Z humor page testing TikTok — evolved into
+            Shop di Coppia, an emotional shop for couples. The goal was simple but ambitious:
+            to prove that cultural relevance and humor could convert into sales without relying
+            on paid ads.
+          </p>
+          <p><em>What if a meme page could become a love brand?</em></p>
+        </div>
+      </section>
+
+      {/* 2. Objective & Role */}
+      <section className="mt-24">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          2. Objective &amp; Role
+        </h3>
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
+          Building Proof of Concept
+        </h2>
+        <div className="mt-6 grid gap-8 md:grid-cols-[1.1fr,0.9fr] items-start">
+          <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+            <p>
+              The project began as a creative proof of concept, testing if a highly engaged meme
+              audience could be monetized through an authentic product line.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Creative Direction</strong> – defining tone, colors, and emotional identity</li>
+              <li><strong>Content Strategy</strong> – transforming viral humor into product storytelling</li>
+              <li><strong>E-commerce Setup</strong> – launching a Shopify store and basic automation</li>
+              <li><strong>Community Management</strong> – maintaining engagement and interaction</li>
+              <li><strong>Performance Tracking</strong> – testing what formats led to sales</li>
+            </ul>
+            <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+              <div className="text-xs uppercase tracking-wider text-neutral-500">Goal</div>
+              <p className="mt-1">
+                Validate whether organic social storytelling could drive measurable e-commerce revenue with zero ad spend.
+              </p>
+            </div>
+          </div>
+          <figure className="not-prose">
+            <img
+              src={`${baseUrl}social-memedicoppia.png`}
+              alt="Social growth — Meme di Coppia"
+              className="w-full h-auto rounded-2xl"
+            />
+            <figcaption className="mt-2 text-sm text-neutral-500">
+              “From test account to 30K followers in under a year.”
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* 3. Strategy */}
+      <section className="mt-24">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          3. Strategy
+        </h3>
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
+          From Virality to Emotional Commerce
+        </h2>
+        <div className="mt-6 grid gap-8 md:grid-cols-3">
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Audience</h4>
+            <p className="text-neutral-700">
+              Couples aged 25–40, Italian, emotionally expressive. They enjoyed relatable humor
+              but responded most to authentic, sentimental storytelling.
+            </p>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Tone of Voice</h4>
+            <p className="text-neutral-700">
+              Warm, ironic, and honest. Content shifted from random couple memes to emotionally
+              driven humor — building empathy while maintaining shareability.
+            </p>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Content Funnel</h4>
+            <ul className="text-neutral-700 space-y-2">
+              <li><strong>Top</strong> — Reels/TikToks with meme-style humor</li>
+              <li>
+                <strong>Mid/Bottom</strong> — emotionally charged couple reels with the most liked
+                characters → endings around mugs and gifts tied to those characters
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Creative Execution */}
+      <section className="mt-24">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          4. Creative Execution
+        </h3>
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
+          Giving the Brand a Heart
+        </h2>
+
+        <div className="mt-6 space-y-6 text-lg leading-relaxed text-neutral-700">
+          <p>
+            To unify the content and products, I used a set of mascots — <strong>Bubu &amp; Dudu</strong>, the
+            best-selling ones. Their dynamic became the visual and emotional core of the brand — featured
+            across Reels and physical products like mugs and books.
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+              <h4 className="font-semibold text-neutral-900 mb-2">Visual Direction</h4>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Palette: pinks, creams, and pastels</li>
+                <li>Typography: rounded, minimal, modern</li>
+                <li>Aesthetic: clean meme format, white space, warm filters</li>
+              </ul>
+            </div>
+            <figure className="not-prose">
+              <img
+                src={`${baseUrl}artwork-bubududu.svg`}
+                alt="Bubu & Dudu artwork"
+                className="w-full h-auto rounded-2xl"
+              />
+              <figcaption className="mt-2 text-sm text-neutral-500">
+                “Turning relatability into recognition.”
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Content System</h4>
+            <p>
+              All content was video-based (Reels/TikToks). Each video told a mini-story using humor and relatable
+              couple scenarios, often ending with the characters or products as emotional anchors. The goal: make
+              people see themselves in the mascots — and then buy a piece of that feeling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Performance */}
+      <section className="mt-24">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          5. Performance
+        </h3>
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
+          What Virality Converted Into
+        </h2>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <ul className="space-y-2 text-neutral-700">
+              <li><strong>Follower growth:</strong> 0 → 30K</li>
+              <li><strong>Top video:</strong> 6M views</li>
+              <li><strong>Avg Reel views:</strong> 50–500k</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <ul className="space-y-2 text-neutral-700">
+              <li><strong>Conversion rate:</strong> ~10%</li>
+              <li><strong>Main product:</strong> mugs (Valentine’s peak)</li>
+              <li><strong>Revenue source:</strong> ~95% organic via IG</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <p className="text-neutral-700">
+              Most customers were first-time buyers, but the campaign validated the potential of emotional
+              storytelling commerce — showing that relatability could directly drive conversions.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-6 text-neutral-800">
+          🧠 <strong>Insight:</strong> Authentic content can outperform ads when community trust is high.
+        </p>
+      </section>
+
+      {/* 6. Impact & Learnings */}
+      <section className="mt-24">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          6. Impact &amp; Learnings
+        </h3>
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
+          Beyond the Experiment
+        </h2>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <ul className="list-disc pl-6 space-y-2 text-neutral-700">
+              <li><strong>Emotion scales better than jokes.</strong> Humor drives virality; emotion drives trust and purchase intent.</li>
+              <li><strong>Characters humanize the brand.</strong> Bubu &amp; Dudu created identification and recall.</li>
+              <li><strong>Organic communities can sell.</strong> A meme page can generate meaningful revenue with zero ads.</li>
+              <li><strong>Creative testing matters.</strong> Each post acted as a live A/B test on sentiment and conversion.</li>
+            </ul>
+          </div>
+          <figure className="not-prose">
+            <img
+              src={`${baseUrl}proof-memedicoppia.png`}
+              alt="Proof of performance — Meme di Coppia"
+              className="w-full h-auto rounded-2xl"
+            />
+          </figure>
+        </div>
+
+        <p className="mt-6 text-lg leading-relaxed text-neutral-700">
+          It wasn’t a marketing campaign — it was a cultural experiment that turned feelings into sales.
+        </p>
+      </section>
+
+      {/* 7. Next Steps */}
+      <section className="mt-24">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
+          7. Next Steps
+        </h3>
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
+          A Creative Lab, Not an Endpoint
+        </h2>
+        <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
+          <p>
+            Shop di Coppia fulfilled its purpose as a creative lab. It proved the viability of meme-driven
+            commerce and taught me how emotional design, storytelling, and organic content could move
+            audiences to action.
+          </p>
+          <p>
+            While the brand may pause here, the insights it generated — about relatability, tone, and
+            conversion through narrative — now influence every e-commerce and creative project I work on.
+          </p>
+          <p className="mt-2">
+            🧠 <strong>Final Insight:</strong> Community is the new marketing channel. The stronger the bond,
+            the lower the cost of conversion.
+          </p>
+        </div>
+      </section>
     </CaseLayout>
   );
 }
+
 function CaseAmongLocals() {
   return (
     <CaseLayout eyebrow="Travel · Community" title="Among Locals">
