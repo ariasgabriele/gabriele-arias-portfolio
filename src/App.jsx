@@ -663,12 +663,275 @@ function CasePOD() {
 }
 
 function CaseAmongLocals() {
+  const baseUrl = import.meta.env.BASE_URL || "/";
+
   return (
-    <CaseLayout eyebrow="Travel · Community" title="Among Locals">
-      <p>Short description of the project.</p>
+    <CaseLayout
+      eyebrow="Travel · Community"
+      title="Among Locals — Building Trust for Experiential Travel"
+    >
+      {/* Meta */}
+      <div className="not-prose grid gap-3 sm:grid-cols-4 mb-10">
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Role</div>
+          <div className="font-medium mt-1">Freelance Digital Marketer</div>
+        </div>
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Timeline</div>
+          <div className="font-medium mt-1">Jan – May 2025</div>
+        </div>
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Location</div>
+          <div className="font-medium mt-1">UK · London → Bosa, Sardinia</div>
+        </div>
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Stack</div>
+          <div className="font-medium mt-1">Meta Ads · IG/FB Organic · Wix · Canva · Figma · Adobe PS/AI</div>
+        </div>
+      </div>
+
+      {/* Visual #1 */}
+      <div className="not-prose mb-12">
+        <img
+          src={`${baseUrl}hero-group-amonglocals.png`}
+          alt="Among Locals — small-group cultural travel"
+          className="w-full h-auto rounded-3xl"
+        />
+      </div>
+
+      {/* 1. Overview */}
+      <section className="mt-16">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">1. Overview</h3>
+        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
+          A Brand for Authentic Connections
+        </h2>
+        <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
+          <p>
+            Among Locals is a boutique travel agency curating small-group cultural trips led by locals.
+            Each journey focuses on human connection, not tourism — a way to meet real people and traditions
+            rather than tick destinations off a list.
+          </p>
+          <p>
+            In 2025, the brand aimed to validate demand from UK travellers for Sardinia’s hidden festivals
+            and launch its first two offers — <em>Sea Festival</em> and <em>Regnos Altos</em>. With a two-person
+            team, a lean budget, and limited operational readiness, the challenge was to make the first campaigns count.
+          </p>
+          <p className="italic">“Travel like a local, not a tourist.” became the guiding principle across copy, design, and tone.</p>
+        </div>
+      </section>
+
+      {/* 2. Objective & Role */}
+      <section className="mt-20">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">2. Objective &amp; Role</h3>
+        <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-neutral-900">
+          From Zero Brand to Qualified Leads
+        </h2>
+
+        <div className="mt-6 grid gap-8 md:grid-cols-2">
+          <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
+            <p>
+              My mission was to build the brand and generate the first qualified leads for experiential group trips — from
+              identity to funnel execution.
+            </p>
+            <div className="rounded-2xl ring-1 ring-neutral-200 p-5">
+              <h4 className="font-semibold text-neutral-900 mb-2">Core Responsibilities</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Designed full brand identity (palette, logo, tone of voice, visual system).</li>
+                <li>Built the website on Wix; optimised basic SEO for branded searches.</li>
+                <li>Managed and optimised Meta Ads for lead generation.</li>
+                <li>Designed the funnel: Meta lead form → auto-message → WhatsApp follow-up → sales call.</li>
+                <li>Wrote all copy (ads, site, emails).</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Visual #2 */}
+          <figure className="not-prose">
+            <img
+              src={`${baseUrl}branding-amonglocals.png`}
+              alt="Among Locals — branding system"
+              className="w-full h-auto rounded-3xl"
+            />
+          </figure>
+        </div>
+      </section>
+
+      {/* 3. Market Challenge */}
+      <section className="mt-20">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">3. Market Challenge</h3>
+        <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-neutral-900">
+          High Consideration, Low Trust
+        </h2>
+        <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
+          <p>
+            Launching a new travel brand with limited social proof meant starting from a trust deficit. Unlike low-ticket
+            products, travel bookings require strong reassurance — credibility, clear pricing, and visible proof of safety.
+          </p>
+          <p>
+            Additional operational hurdles — delayed insurance approval and single trip dates — created friction that
+            advertising alone couldn’t fix.
+          </p>
+          <p className="font-medium">Insight: When a product demands trust, communication must deliver it before conversion even begins.</p>
+        </div>
+      </section>
+
+      {/* 4. Strategy */}
+      <section className="mt-20">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">4. Strategy</h3>
+        <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-neutral-900">
+          Educate First, Convert Later
+        </h2>
+
+        <div className="mt-6 grid gap-8 md:grid-cols-3">
+          {/* Tone & Positioning */}
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Tone &amp; Positioning</h4>
+            <p className="text-neutral-700">
+              Emotional and educational — blending curiosity and reliability. Visuals used neutral earthy tones, authentic
+              human photos, and typography evoking calm exploration.
+            </p>
+          </div>
+
+          {/* Targeting */}
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Targeting Approach</h4>
+            <ul className="list-disc pl-6 space-y-1 text-neutral-700">
+              <li>Started narrow (1–2M) → expanded to ~10M after learning phase.</li>
+              <li>Avoided broad to retain relevance for a cold account.</li>
+            </ul>
+          </div>
+
+          {/* Creative testing */}
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-3">Creative Testing</h4>
+            <div className="text-sm">
+              <div className="grid grid-cols-3 gap-2 font-medium text-neutral-600">
+                <div>Variant</div><div>Change</div><div>Observed Impact</div>
+              </div>
+              <div className="grid grid-cols-3 gap-2 mt-2">
+                <div className="font-medium">V1</div>
+                <div>Info-dense carousel + form too specific</div>
+                <div>High education · CPL £18.67</div>
+              </div>
+              <div className="grid grid-cols-3 gap-2 mt-2">
+                <div className="font-medium">V2</div>
+                <div>Simplified CTA · vibrant colors · clear price</div>
+                <div>CPL ↓ to £13.50 · ≥1 lead/day</div>
+              </div>
+            </div>
+            <p className="mt-3 text-neutral-700">
+              Best performers mirrored top UK travel ads: bright imagery, concise benefits, curiosity CTAs
+              (“Discover authentic Sardinia beyond the resorts”).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Performance */}
+      <section className="mt-20">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">6. Performance</h3>
+        <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-neutral-900">
+          Data That Validated the Concept
+        </h2>
+
+        <div className="mt-6 not-prose grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">Period</div>
+            <div className="text-xl font-bold mt-1">1 Apr – 1 May 2025</div>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">Qualified Leads</div>
+            <div className="text-xl font-bold mt-1">40</div>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">Avg. CPL</div>
+            <div className="text-xl font-bold mt-1">£14.76</div>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">CTR</div>
+            <div className="text-xl font-bold mt-1">1.35%</div>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">Click → Lead</div>
+            <div className="text-xl font-bold mt-1">17.6%</div>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">Sales Calls</div>
+            <div className="text-xl font-bold mt-1">≈ 5</div>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">Bookings</div>
+            <div className="text-xl font-bold mt-1">0</div>
+            <div className="text-xs text-neutral-500 mt-1">insurance delays · pricing freeze</div>
+          </div>
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+            <div className="text-xs uppercase tracking-wide text-neutral-500">Prospect Feedback</div>
+            <div className="text-sm font-medium mt-1 text-neutral-800">
+              3 requested future dates → brand resonance
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-6 text-neutral-800">
+          Insight: Authentic messaging can attract high-intent audiences even without trust assets or heavy budgets.
+        </p>
+      </section>
+
+      {/* 7. Diagnosis */}
+      <section className="mt-20">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">7. Diagnosis</h3>
+        <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-neutral-900">
+          Why Conversion Stalled
+        </h2>
+        <div className="mt-6 grid md:grid-cols-2 gap-4">
+          <ul className="list-disc pl-6 space-y-2 text-neutral-700">
+            <li>Insurance liability delayed official pricing → trust drop post-lead.</li>
+            <li>Low brand footprint (no UGC, press, reviews).</li>
+            <li>Slow follow-up outside my scope.</li>
+          </ul>
+          <ul className="list-disc pl-6 space-y-2 text-neutral-700">
+            <li>Double travel date limited flexibility for interested leads.</li>
+            <li>Infrequent trip schedule blocked retargeting & nurturing continuity.</li>
+            <li>Ads sparked interest; operations needed to sustain conversion.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 8. Learnings & Next Steps */}
+      <section className="mt-20">
+        <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">8. Learnings &amp; Strategic Next Steps</h3>
+        <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-neutral-900">
+          Trust and Consistency Before Sales
+        </h2>
+
+        <div className="mt-6 grid gap-8 md:grid-cols-2">
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Key Learnings</h4>
+            <ul className="list-disc pl-6 space-y-2 text-neutral-700">
+              <li>Emotional storytelling builds interest; trust closes sales.</li>
+              <li>Clear pricing and dates reduce friction.</li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
+            <h4 className="font-semibold text-neutral-900 mb-2">Recommended Next Steps</h4>
+            <ul className="list-disc pl-6 space-y-2 text-neutral-700">
+              <li><strong>Trust Engine:</strong> build a social community based on travelling among locals.</li>
+              <li><strong>Always-On Funnel:</strong> run awareness & engagement ads year-round.</li>
+              <li><strong>Search Intent:</strong> expand into Google Ads + SEO with a travel blog.</li>
+              <li><strong>Community Validation:</strong> poll users on dates/activities to guide roadmap.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p className="mt-6 font-medium text-neutral-800">
+          Final Insight: For experiential brands, authenticity isn’t a hook — it’s a system.
+        </p>
+      </section>
     </CaseLayout>
   );
 }
+
 function CaseZampapazza() {
   const baseUrl = import.meta.env.BASE_URL || "/";
 
