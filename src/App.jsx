@@ -672,15 +672,15 @@ function CaseAmongLocals() {
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
           <div className="text-xs uppercase tracking-wider text-neutral-500">Timeline</div>
-          <div className="font-medium mt-1">Jan – May 2025</div>
+          <div className="font-medium mt-1">may 2024 – May 2025</div>
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
-          <div className="text-xs uppercase tracking-wider text-neutral-500">Location</div>
-          <div className="font-medium mt-1">UK · London → Bosa, Sardinia</div>
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Market</div>
+          <div className="font-medium mt-1">UK</div>
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
           <div className="text-xs uppercase tracking-wider text-neutral-500">Stack</div>
-          <div className="font-medium mt-1">Meta Ads · IG/FB Organic · Wix · Canva · Figma · Adobe PS/AI</div>
+          <div className="font-medium mt-1">Meta Ads · Wix · Canva · Figma · Adobe PS/AI</div>
         </div>
       </div>
 
@@ -701,8 +701,8 @@ function CaseAmongLocals() {
         </h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            Among Locals is a boutique travel agency curating small-group cultural trips led by locals.
-            Each journey focuses on human connection, not tourism — a way to meet real people and traditions
+            Among Locals is a boutique travel agency curating small group cultural trips led by locals.
+            Each journey focuses on human connection, not tourism, a way to meet real people and traditions
             rather than tick destinations off a list.
           </p>
           <p>
@@ -724,7 +724,7 @@ function CaseAmongLocals() {
         <div className="mt-6 grid gap-8 md:grid-cols-2">
           <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
             <p>
-              My mission was to build the brand and generate the first qualified leads for experiential group trips — from
+              My mission was to build the brand and generate the first qualified leads for experiential group trips, from
               identity to funnel execution.
             </p>
             <div className="rounded-2xl ring-1 ring-neutral-200 p-5">
@@ -758,14 +758,13 @@ function CaseAmongLocals() {
         </h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            Launching a new travel brand with limited social proof meant starting from a trust deficit. Unlike low-ticket
-            products, travel bookings require strong reassurance — credibility, clear pricing, and visible proof of safety.
+            Launching a new travel brand with limited social proof meant starting from a trust deficit. Unlike low ticket
+            products, travel bookings require strong reassurance like: credibility, clear pricing, and visible proof of safety.
           </p>
           <p>
-            Additional operational hurdles — delayed insurance approval and single trip dates — created friction that
-            advertising alone couldn’t fix.
+           Additional operational hurdles included delayed insurance approval and late confirmation of the festival dates caused by administrative delays from the local town hall in Sardinia.
           </p>
-          <p className="font-medium">Insight: When a product demands trust, communication must deliver it before conversion even begins.</p>
+          <p className="font-medium"> <strong>🧠Insight</strong>: When a product demands trust, communication must deliver it before conversion even begins.</p>
         </div>
       </section>
 
@@ -851,7 +850,7 @@ function CaseAmongLocals() {
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
             <div className="text-xs uppercase tracking-wide text-neutral-500">Sales Calls</div>
-            <div className="text-xl font-bold mt-1">≈ 5</div>
+            <div className="text-xl font-bold mt-1"> 5</div>
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
             <div className="text-xs uppercase tracking-wide text-neutral-500">Bookings</div>
@@ -881,12 +880,10 @@ function CaseAmongLocals() {
           <ul className="list-disc pl-6 space-y-2 text-neutral-700">
             <li>Insurance liability delayed official pricing → trust drop post-lead.</li>
             <li>Low brand footprint (no UGC, press, reviews).</li>
-            <li>Slow follow-up outside my scope.</li>
           </ul>
           <ul className="list-disc pl-6 space-y-2 text-neutral-700">
             <li>Double travel date limited flexibility for interested leads.</li>
             <li>Infrequent trip schedule blocked retargeting & nurturing continuity.</li>
-            <li>Ads sparked interest; operations needed to sustain conversion.</li>
           </ul>
         </div>
       </section>
@@ -919,7 +916,7 @@ function CaseAmongLocals() {
         </div>
 
         <p className="mt-6 font-medium text-neutral-800">
-          Final Insight: For experiential brands, authenticity isn’t a hook — it’s a system.
+          🧠 Final Insight: For experiential brands, it’s essential to build a community before aiming for sales.
         </p>
       </section>
     </CaseLayout>
