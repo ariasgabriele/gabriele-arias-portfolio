@@ -1222,6 +1222,21 @@ function CaseBrandingEP() {
 
   return (
     <CaseLayout eyebrow="Music · Branding" title='Branding & Campaign for EP “Patto di Sangue”'>
+       {/* Meta */}
+      <div className="not-prose grid gap-3 sm:grid-cols-4 mb-10">
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Role</div>
+          <div className="font-medium mt-1">Executive Digital Marketer</div>
+        </div>
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Timeline</div>
+          <div className="font-medium mt-1">2023-2024</div>
+        </div>
+        <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Stack</div>
+          <div className="font-medium mt-1">Meta Ads · Github · Canva · Figma · Adobe PS/AI · Instagram · Tiktok · Spotify for Artist </div>
+        </div>
+      </div>
       {/* === HERO IMAGE === */}
       <div className="not-prose mb-16">
         <img
@@ -1249,7 +1264,7 @@ function CaseBrandingEP() {
             professional consistency with limited resources.
           </p>
           <p>
-            The goal wasn’t to chase virality. It was to build a repeatable launch system — a foundation
+            The goal wasn’t to chase virality. It was to build a repeatable launch system, a foundation
             for testing, growth, and future retargeting.
           </p>
         </div>
@@ -1271,7 +1286,7 @@ function CaseBrandingEP() {
           </p>
           <p>
             The main music video, filmed in an abandoned villa, embodied that metaphor: artists climbing upward
-            through ruin — a visual representation of transformation.
+            through ruin, a visual representation of transformation.
           </p>
         </div>
       </section>
@@ -1294,7 +1309,7 @@ function CaseBrandingEP() {
             <li>Write and co-direct music videos to maintain coherence and quality despite constraints.</li>
           </ul>
           <p>
-            The campaign had to look intentional, not improvised — a professional debut that felt alive,
+            The campaign had to look intentional, not improvised, a professional debut that felt alive,
             personal, and symbolic.
           </p>
         </div>
@@ -1327,7 +1342,7 @@ function CaseBrandingEP() {
             <h4 className="font-semibold text-neutral-900 mb-2">Understanding the artists</h4>
             <p>
               Through long creative sessions, I helped the artists articulate their vision.
-              <em> Patto di Sangue</em> wasn’t about fame or self-affirmation — it was about two voices united
+              <em> Patto di Sangue</em> wasn’t about fame or self-affirmation, it was about two voices united
               by a shared climb toward light. We built a moodboard rooted in symbolism: blood for unity,
               black &amp; white for mystery, and light for rebirth.
             </p>
@@ -1336,7 +1351,7 @@ function CaseBrandingEP() {
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Mapping the fanbase</h4>
             <p>
-              With only a handful of active fans, data was scarce — so I went qualitative. I reached out directly
+              With only a handful of active fans, data was scarce, so I went qualitative. I reached out directly
               to early listeners, then extended research to similar artists and communities to find emotional patterns.
             </p>
           </div>
@@ -1379,7 +1394,7 @@ function CaseBrandingEP() {
         <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
             The branding translated the EP’s story into a cohesive visual language. Every element expressed the
-            same upward motion — a climb from chaos to clarity.
+            same upward motion, a climb from chaos to clarity.
           </p>
           <p>
             <span className="block">• Symbols: blood as bond, masks as self-evolution, light as destination</span>
@@ -1388,7 +1403,7 @@ function CaseBrandingEP() {
             <span className="block">• Motion: continuous ascent</span>
           </p>
           <p>
-            Working with a graphic design student, I directed every asset — ensuring that the cover, lyric videos,
+            Working with a graphic design student, I directed every asset, ensuring that the cover, lyric videos,
             and ads all felt like parts of the same cinematic world.
           </p>
         </div>
@@ -1435,15 +1450,15 @@ function CaseBrandingEP() {
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Creative choices</h4>
             <p>
-              For “Stasera”, we tested two main creatives — both built on the same logic of the 3-second rhythm, the storytelling rule that shaped the whole campaign.
+              For “Stasera”, we tested two main creatives, both built on the same logic of the 3-second rhythm, the storytelling rule that shaped the whole campaign.
 
-Both videos opened with nearly identical setups: a raw, cinematic first second that established atmosphere and authenticity. The difference emerged at the third second — the key emotional trigger point:
+Both videos opened with nearly identical setups: a raw, cinematic first second that established atmosphere and authenticity. The difference emerged at the third second, the key emotional trigger point:
 
 In the first version, the singing began immediately, pulling the viewer into the sound and creating instant musical immersion.
 
 In the second version, the story continued visually for a few more seconds, enhanced by 3D overlay messages that sustained attention and guided emotion through text.
 
-Despite their different executions, both followed the same structural spine — clarity, rhythm, and emotional pacing.
+Despite their different executions, both followed the same structural spine: clarity, rhythm, and emotional pacing.
 They were also the only ads in the campaign with a full storytelling arc, and unsurprisingly, they were the top performers in terms of engagement, saves, and cost efficiency.
             </p>
           </div>
@@ -1484,7 +1499,7 @@ They were also the only ads in the campaign with a full storytelling arc, and un
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Retargeting waves</h4>
             <p>
-              Follow-up ads reused the same lyrics but reframed the visuals, lowering CPM and improving engagement.
+              Follow up ads reused the same lyrics but reframed the visuals, lowering CPM and improving engagement.
             </p>
           </div>
         </div>
@@ -1566,10 +1581,10 @@ They were also the only ads in the campaign with a full storytelling arc, and un
 </div>
         {/* Notes */}
         <div className="space-y-3 text-neutral-700">
-          <p>Patto di Sangue” didn’t trigger a viral explosion — and that was never the goal. The campaign acted as a controlled test, measuring how far emotional storytelling could push a debut project with limited budget and no pre-existing fanbase.</p>
-          <p>Post-release data confirmed what mattered most: people didn’t just listen once — they remembered. Save rates, repeat streams, and qualitative messages showed that the content reached the right people, even if not the masses.</p>
-          <p>QRather than scaling prematurely, the artist used this phase to build narrative literacy — learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
-The campaign’s true growth wasn’t numerical, but strategic: it turned abstract ideas about “story-driven marketing” into a repeatable framework — a proof of concept to grow smarter, not louder.</p>
+          <p>Patto di Sangue” didn’t trigger a viral explosion, and that was never the goal. The campaign acted as a controlled test, measuring how far emotional storytelling could push a debut project with limited budget and no pre-existing fanbase.</p>
+          <p>Post-release data confirmed what mattered most: people didn’t just listen once, they remembered. Save rates, repeat streams, and qualitative messages showed that the content reached the right people, even if not the masses.</p>
+          <p>QRather than scaling prematurely, the artist used this phase to build narrative literacy, learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
+The campaign’s true growth wasn’t numerical, but strategic: it turned abstract ideas about “story-driven marketing” into a repeatable framework, a proof of concept to grow smarter, not louder.</p>
         </div>
 
         
@@ -1584,20 +1599,20 @@ The campaign’s true growth wasn’t numerical, but strategic: it turned abstra
         <div className="space-y-6 text-lg leading-relaxed text-neutral-700">
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">Learning Through Pattern</h4>
-            <p>Post-release data confirmed what mattered most: people didn’t just listen once — they remembered.
+            <p>Post release data confirmed what mattered most: people didn’t just listen once, they remembered.
 Save rates, repeat streams, and qualitative messages showed that the content reached the right people, even if not the masses.
 
-Rather than scaling prematurely, the artist used this phase to build narrative literacy — learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
+Rather than scaling prematurely, the artist used this phase to build narrative literacy, learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
 
 The campaign’s true growth wasn’t numerical, but strategic:
-it turned abstract ideas about “story-driven marketing” into a repeatable framework — a proof of concept to grow smarter, not louder.*</p>
+it turned abstract ideas about “story-driven marketing” into a repeatable framework, a proof of concept to grow smarter, not louder.*</p>
           </div>
           <div>
             <h4 className="font-semibold text-neutral-900 mb-2">What I’d Do Differently</h4>
             <p>If I were to relaunch the campaign today, I’d simplify the battlefield.
-I’d focus exclusively on Instagram, treating it as the narrative core — not just a posting channel but a storytelling environment. All paid media would be dedicated to Instagram engagement, optimizing for interaction, retention, and save-to-follow conversion instead of reach.
+I’d focus exclusively on Instagram, treating it as the narrative core, not just a posting channel but a storytelling environment. All paid media would be dedicated to Instagram engagement, optimizing for interaction, retention, and save-to-follow conversion instead of reach.
 
-On the release side, I’d drop one song at a time, turning each track into a self-contained moment — a chapter rather than a compilation.
+On the release side, I’d drop one song at a time, turning each track into a self-contained moment, a chapter rather than a compilation.
 That cadence would give each story room to breathe, while keeping the audience in a constant state of anticipation rather than saturation.</p>
           </div>
         </div>
