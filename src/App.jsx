@@ -142,7 +142,7 @@ function WhatIDo() {
           <p className="mt-4 text-white/80 leading-relaxed max-w-3xl">
             I mix social-first content with analysis-first strategy. From memes and reels to
             audience research and testing, I connect content, creators, and communities to deliver
-            results: community growth, qualified leads, and purchase intent. I’ve shipped end-to-end
+            results: community growth, qualified leads, and purchase intent. I’ve shipped end to end
             projects in e-commerce, travel, and music, balancing speed with data-driven decisions.
             I’m constantly trying new AI workflows to boost ideation, editing, and distribution.
           </p>
@@ -390,14 +390,7 @@ function CasePOD() {
       eyebrow="POD / UGC"
       title="Shop di Coppia — Turning Meme Culture into Commerce"
     >
-      {/* Visual #1 */}
-      <div className="not-prose mb-10">
-        <img
-          src={`${baseUrl}pod-memes-phones.png`}
-          alt="Mobile mockups — Shop di Coppia"
-          className="w-full h-auto rounded-3xl"
-        />
-      </div>
+      
 
       {/* Intro meta */}
       <div className="not-prose grid gap-3 sm:grid-cols-3 mb-12">
@@ -412,26 +405,35 @@ function CasePOD() {
           <div className="font-medium mt-1">2023 – 2025</div>
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
-          <div className="text-xs uppercase tracking-wider text-neutral-500">Platforms</div>
-          <div className="font-medium mt-1">TikTok · Instagram · Shopify</div>
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Stacks</div>
+          <div className="font-medium mt-1">TikTok · Instagram · Shopify · Manychat · Adobe AI · Canva · Capcut </div>
         </div>
       </div>
-
+      
+{/* Visual #1 */}
+      <div className="not-prose mb-10">
+        <img
+          src={`${baseUrl}pod-memes-phones.png`}
+          alt="Mobile mockups — Shop di Coppia"
+          className="w-full h-auto rounded-3xl"
+        />
+      </div>
+      
       {/* 1. Overview */}
       <section className="mt-20">
         <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
           1. Overview
         </h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900">
-          From Meme Page to Emotion-Driven Brand
+          From Meme Page to Emotion Driven Brand
         </h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
             Shop di Coppia started as a experiment: a meme page about relationships that
-            unexpectedly grew into a 30,000-follower community across TikTok and Instagram.
+            unexpectedly grew into a 30,000 follower community across TikTok and Instagram.
           </p>
           <p>
-            What began as Meme di Coppia — a Gen Z humor page testing TikTok — evolved into
+            What began as Meme di Coppia, a Gen Z humor page testing TikTok, evolved into
             Shop di Coppia, an emotional shop for couples. The goal was simple but ambitious:
             to prove that cultural relevance and humor could convert into sales without relying
             on paid ads.
@@ -501,7 +503,7 @@ function CasePOD() {
             <h4 className="font-semibold text-neutral-900 mb-2">Tone of Voice</h4>
             <p className="text-neutral-700">
               Warm, ironic, and honest. Content shifted from random couple memes to emotionally
-              driven humor — building empathy while maintaining shareability.
+              driven humor, building empathy while maintaining shareability.
             </p>
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
@@ -528,8 +530,7 @@ function CasePOD() {
 
         <div className="mt-6 space-y-6 text-lg leading-relaxed text-neutral-700">
           <p>
-            To unify the content and products, I used a set of mascots — <strong>Bubu &amp; Dudu</strong>, the
-            best-selling ones. Their dynamic became the visual and emotional core of the brand — featured
+            To unify the content and products, I used a set of mascots. Their dynamic became the visual and emotional core of the brand, featured
             across Reels and physical products like mugs and books.
           </p>
 
@@ -548,18 +549,15 @@ function CasePOD() {
                 alt="Bubu & Dudu artwork"
                 className="w-full h-auto rounded-2xl"
               />
-              <figcaption className="mt-2 text-sm text-neutral-500">
-                “Turning relatability into recognition.”
-              </figcaption>
             </figure>
           </div>
 
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <h4 className="font-semibold text-neutral-900 mb-2">Content System</h4>
             <p>
-              All content was video-based (Reels/TikToks). Each video told a mini-story using humor and relatable
+              All content was video based (Reels/TikToks). Each video told a mini story using humor and relatable
               couple scenarios, often ending with the characters or products as emotional anchors. The goal: make
-              people see themselves in the mascots — and then buy a piece of that feeling.
+              people see themselves in the mascots, and then buy a piece of that feeling.
             </p>
           </div>
         </div>
@@ -584,22 +582,18 @@ function CasePOD() {
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <ul className="space-y-2 text-neutral-700">
-              <li><strong>Conversion rate:</strong> ~10%</li>
-              <li><strong>Main product:</strong> mugs (Valentine’s peak)</li>
+              <li><strong>Conversion rate (sale):</strong> ~10%</li>
+              <li><strong>Main product:</strong> mugs </li>
               <li><strong>Revenue source:</strong> ~95% organic via IG</li>
             </ul>
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <p className="text-neutral-700">
-              Most customers were first-time buyers, but the campaign validated the potential of emotional
-              storytelling commerce — showing that relatability could directly drive conversions.
+              Most customers were first time buyers, but the campaign validated the potential of emotional
+              storytelling commerce, showing that relatability could directly drive conversions.
             </p>
           </div>
         </div>
-
-        <p className="mt-6 text-neutral-800">
-          🧠 <strong>Insight:</strong> Authentic content can outperform ads when community trust is high.
-        </p>
       </section>
 
       {/* 6. Impact & Learnings */}
@@ -615,7 +609,7 @@ function CasePOD() {
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <ul className="list-disc pl-6 space-y-2 text-neutral-700">
               <li><strong>Emotion scales better than jokes.</strong> Humor drives virality; emotion drives trust and purchase intent.</li>
-              <li><strong>Characters humanize the brand.</strong> Bubu &amp; Dudu created identification and recall.</li>
+              <li><strong>Characters humanize the brand.</strong> Mascots created identification and recall.</li>
               <li><strong>Organic communities can sell.</strong> A meme page can generate meaningful revenue with zero ads.</li>
               <li><strong>Creative testing matters.</strong> Each post acted as a live A/B test on sentiment and conversion.</li>
             </ul>
@@ -649,11 +643,11 @@ function CasePOD() {
             audiences to action.
           </p>
           <p>
-            While the brand may pause here, the insights it generated — about relatability, tone, and
-            conversion through narrative — now influence every e-commerce and creative project I work on.
+            While the brand may pause here, the insights it generated about relatability, tone, and
+            conversion through narrative - now influence every e-commerce and creative project I work on.
           </p>
           <p className="mt-2">
-            🧠 <strong>Final Insight:</strong> Community is the new marketing channel. The stronger the bond,
+            🧠 <strong>Final Insight:</strong> Community is the best marketing channel. The stronger the bond,
             the lower the cost of conversion.
           </p>
         </div>
