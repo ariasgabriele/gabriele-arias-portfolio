@@ -942,8 +942,8 @@ function CaseZampapazza() {
           <div className="font-medium mt-1">2025</div>
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
-          <div className="text-xs uppercase tracking-wider text-neutral-500">Platforms</div>
-          <div className="font-medium mt-1">Meta · Instagram · Shopify</div>
+          <div className="text-xs uppercase tracking-wider text-neutral-500">Stacks</div>
+          <div className="font-medium mt-1">Meta ads · Instagram · Shopify · Canva · Sora · Meta ads library · Adobe PS</div>
         </div>
       </div>
 
@@ -971,11 +971,11 @@ function CaseZampapazza() {
             then convert via print on demand.
           </p>
           <p>
-            But Zampapazza quickly evolved beyond novelty. It became a laboratory for emotional
+            What start as an experiment quickly evolved beyond novelty. It became a laboratory for emotional
             marketing, where empathy, copywriting, and community-building met measurable performance.
           </p>
           <p>
-            The goal wasn’t just to sell pet products — it was to test how storytelling could
+            The goal wasn’t just to sell pet products, it was to test how storytelling could
             create trust and conversions in a competitive market.
           </p>
         </div>
@@ -999,7 +999,7 @@ function CaseZampapazza() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Brand Strategy</strong> — defining tone, archetype, and emotional positioning</li>
               <li><strong>Creative Direction</strong> — art direction and content guidelines</li>
-              <li><strong>Copywriting</strong> — long-form storytelling ads written in the first person</li>
+              <li><strong>Copywriting</strong> — long form storytelling ads written in the first person</li>
               <li><strong>Performance Marketing</strong> — building, testing, and optimising Meta campaigns</li>
             </ul>
             <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
@@ -1031,20 +1031,19 @@ function CaseZampapazza() {
         </h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            The pet niche is one of the most competitive in e-commerce. Between POD shops, Amazon
-            listings, and viral gadgets, brands fight for attention — often using the same recycled
+            The pet niche is one of the most competitive in e-commerce. Between online shops, Amazon
+            listings, and viral gadgets, brands fight for attention, often using the same recycled
             product videos and salesy language.
           </p>
           <p>
             Zampapazza needed to prove that a validated product could be sold using different angles,
-            based on the desires of the personas. Rather than emphasising “filters”, “materials”, or
-            “USB motors”, the focus was on the human fear of doing too little for your pet — the
+            based on the desires of the personas. Rather than emphasising “filters”, “materials”, ecc..., the focus was on the human fear of doing too little for their pet, the
             emotional pain point behind every purchase.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="rounded-2xl ring-1 ring-neutral-200 p-5">
               <div className="text-sm font-semibold text-neutral-900 mb-1">🧩 Key Challenge</div>
-              <p>Competing with dropshipped products by making customers feel instead of just compare.</p>
+              <p>Competing with  bigger dropshipper by making customers feel instead of just outshow the product.</p>
             </div>
             <div className="rounded-2xl ring-1 ring-neutral-200 p-5">
               <div className="text-sm font-semibold text-neutral-900 mb-1">🧠 Insight</div>
@@ -1078,7 +1077,7 @@ function CaseZampapazza() {
             <h4 className="font-semibold text-neutral-900 mb-2">2) Emotional Positioning</h4>
             <p>
               Identify distinct desires this product fulfils and create a customer avatar for each.
-              Decide on a coherent tone of voice — e.g., “the pet lover who understands you perfectly.”
+              Decide on a coherent tone of voice “the pet lover who understands you perfectly.”
             </p>
           </div>
 
@@ -1097,7 +1096,7 @@ function CaseZampapazza() {
 
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <p className="font-medium">
-              People don’t buy pet products — they buy reassurance that they’re doing right by those they love.
+              People don’t buy pet products, they buy reassurance that they’re doing right by those they love.
             </p>
           </div>
         </div>
@@ -1114,7 +1113,7 @@ function CaseZampapazza() {
 
         <div className="mt-6 space-y-6 text-lg leading-relaxed text-neutral-700">
           <p>
-            Unlike the usual hyper-edited videos common in pet marketing, Zampapazza’s best-performing
+            Unlike the usual edited videos common in pet marketing, Zampapazza’s best-performing
             creatives were static images paired with long copy, formatted to feel like authentic
             Facebook posts.
           </p>
@@ -1139,13 +1138,10 @@ function CaseZampapazza() {
             </div>
             <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
               <p>
-                These ads were supported by community-oriented Reels to grow followers organically — each
-                Reel sharing small, funny stories about pets’ quirks. When the algorithm shows your ad
-                to real pet owners, authenticity converts better than aesthetics.
+                These ads were supported by community oriented Reels to grow followers organically, each
+                Reel sharing small, funny stories about pets.
               </p>
-              <p className="mt-2 font-medium">
-                Native language and emotional realism outperform polished creatives.
-              </p>
+            
             </div>
           </div>
         </div>
@@ -1178,15 +1174,13 @@ function CaseZampapazza() {
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <p className="text-neutral-700">
               Even with a modest €160 test budget, the campaign generated three direct sales in four
-              days — all from cold audiences. Although small in volume, the test validated the
-              hypothesis: Emotional storytelling drives action.
+              days all from cold audiences. Although small in volume, the test validated the
+              goal: Emotional storytelling drives cold sales.
             </p>
           </div>
         </div>
 
-        <p className="mt-6 text-neutral-800">
-          🧠 <strong>Insight:</strong> With the right message, Meta’s algorithm finds empathy faster than data.
-        </p>
+        
       </section>
 
       {/* 7. Impact & Learnings */}
@@ -1200,10 +1194,10 @@ function CaseZampapazza() {
 
         <div className="mt-6 space-y-6 text-lg leading-relaxed text-neutral-700">
           <p>
-            Zampapazza became more than a brand — it became a template for emotional DTC storytelling.
+            Zampapazza became more than a brand, it became a template for emotional DTC storytelling.
             It proved that audiences in saturated niches still respond to humanity, and that the smallest
             budgets can yield meaningful learnings when structure and insight are strong. With a bigger
-            budget, I would have tested other angles and images for that specific mass desire.
+            budget, I would have tested other angles and images for that specific proved mass desire.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -1211,15 +1205,10 @@ function CaseZampapazza() {
               <h4 className="font-semibold text-neutral-900 mb-2">Key Learnings</h4>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Emotion builds trust faster than discounts.</strong></li>
-                <li><strong>Long-copy storytelling isn’t dead</strong> — it needs authenticity.</li>
+                <li><strong>Long-copy storytelling isn’t dead</strong>, it needs authenticity.</li>
                 <li><strong>Native design &gt; perfect design.</strong> People stop for stories, not polish.</li>
                 <li><strong>Algorithms reward relatability.</strong> The content sounded like real pet owners.</li>
               </ul>
-            </div>
-            <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
-              <p>
-                In a world of generic ads, emotion was the only competitive edge that couldn’t be copied.
-              </p>
             </div>
           </div>
         </div>
