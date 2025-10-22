@@ -7,7 +7,7 @@ import {
   useNavigate,
   useLocation,
 } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 // ===== Scroll to top on route change =====
@@ -1625,6 +1625,37 @@ That cadence would give each story room to breathe, while keeping the audience i
 
 /* ---- Home ---- */
 function Home() {
+ const [sent, setSent] = useState(false);
+const [sending, setSending] = useState(false);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setSending(true);
+  setSent(false);
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch("https://formsubmit.co/ajax/ariasgabriele24.7@gmail.com", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data,
+    });
+    if (res.ok) {
+      form.reset();
+      setSent(true);
+    } else {
+      alert("There was a problem sending your message. Please try again.");
+    }
+  } catch {
+    alert("Network error. Please try again.");
+  } finally {
+    setSending(false);
+  }
+};
+
+
   return (
     <main>
       <Hero />
@@ -1638,25 +1669,55 @@ function Home() {
             <h2 className="text-2xl md:text-3xl font-bold">Want to get in touch?</h2>
             <p className="mt-2 text-neutral-600">Drop me a message — I usually reply quickly.</p>
           </div>
-          <form className="mx-auto max-w-xl mt-8 grid gap-3" action="https://formsubmit.co/" method="POST">
-            <input type="hidden" name="_captcha" value="false" />
-            <input className="w-full rounded-xl ring-1 ring-neutral-300 p-3" name="name" placeholder="Name" />
-            <input
-              className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
-              name="email"
-              placeholder="Email address"
-              type="email"
-            />
-            <textarea
-              className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
-              name="message"
-              rows={4}
-              placeholder="Your message"
-            />
-            <button type="submit" className="rounded-xl px-4 py-2 bg-black text-white">
-              Send
-            </button>
-          </form>
+          {/* banner conferma */}
+{sent && (
+  <div className="mx-auto max-w-xl mt-6 rounded-xl bg-green-50 text-green-800 ring-1 ring-green-200 p-4 text-sm text-center">
+    Thank you for getting in touch — I’ll reply as soon as I see the message.
+  </div>
+)}
+
+<form onSubmit={handleSubmit} className="mx-auto max-w-xl mt-8 grid gap-3">
+  {/* honeypot anti-spam */}
+  <input type="text" name="_honey" className="hidden" tabIndex="-1" autoComplete="off" />
+  {/* opzioni FormSubmit */}
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_subject" value="New message from gabriele-arias-portfolio" />
+  <input type="hidden" name="_template" value="table" />
+  <input
+    type="hidden"
+    name="_autoresponse"
+    value="Thanks for your message! I’ll get back to you as soon as I can."
+  />
+
+  <input
+    className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
+    name="name"
+    placeholder="Name"
+    required
+  />
+  <input
+    className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
+    name="email"
+    placeholder="Email address"
+    type="email"
+    required
+  />
+  <textarea
+    className="w-full rounded-xl ring-1 ring-neutral-300 p-3"
+    name="message"
+    rows={4}
+    placeholder="Your message"
+    required
+  />
+  <button
+    type="submit"
+    disabled={sending}
+    className="rounded-xl px-4 py-2 bg-black text-white disabled:opacity-60"
+  >
+    {sending ? "Sending..." : "Send"}
+  </button>
+</form>
+
         </Container>
       </section>
     </main>
