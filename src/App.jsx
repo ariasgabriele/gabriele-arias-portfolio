@@ -1637,7 +1637,7 @@ const handleSubmit = async (e) => {
   const data = new FormData(form);
 
   try {
-    const res = await fetch("https://formsubmit.co/ajax/ariasgabriele24.7@gmail.com", {
+    const res = await fetch("https://formsubmit.co/ajax/a1be43700285a11e1583375857eee9f8", {
       method: "POST",
       headers: { Accept: "application/json" },
       body: data,
