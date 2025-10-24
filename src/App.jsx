@@ -1577,7 +1577,7 @@ They were also the only ads in the campaign with a full storytelling arc, and un
         <div className="space-y-3 text-neutral-700">
           <p>Patto di Sangue” didn’t trigger a viral explosion, and that was never the goal. The campaign acted as a controlled test, measuring how far emotional storytelling could push a debut project with limited budget and no pre-existing fanbase.</p>
           <p>Post-release data confirmed what mattered most: people didn’t just listen once, they remembered. Save rates, repeat streams, and qualitative messages showed that the content reached the right people, even if not the masses.</p>
-          <p>QRather than scaling prematurely, the artist used this phase to build narrative literacy, learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
+          <p>Rather than scaling prematurely, the artist used this phase to build narrative literacy, learning what structures, visuals, and emotions generated resonance. Those insights became the foundation for future rollouts: shorter forms, stronger hooks, and a clearer identity.
 The campaign’s true growth wasn’t numerical, but strategic: it turned abstract ideas about “story-driven marketing” into a repeatable framework, a proof of concept to grow smarter, not louder.</p>
         </div>
 
