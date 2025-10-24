@@ -967,11 +967,11 @@ function CaseZampapazza() {
             then convert via print on demand.
           </p>
           <p>
-            What start as an experiment quickly evolved beyond novelty. It became a laboratory for emotional
+            What started as an experiment quickly evolved beyond novelty. It became a laboratory for emotional
             marketing, where empathy, copywriting, and community-building met measurable performance.
           </p>
           <p>
-            The goal wasn’t just to sell pet products, it was to test how storytelling could
+            The goal wasn’t just to sell pet products; it was to test how storytelling could
             create trust and conversions in a competitive market.
           </p>
         </div>
@@ -1039,7 +1039,7 @@ function CaseZampapazza() {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="rounded-2xl ring-1 ring-neutral-200 p-5">
               <div className="text-sm font-semibold text-neutral-900 mb-1">🧩 Key Challenge</div>
-              <p>Competing with  bigger dropshipper by making customers feel instead of just outshow the product.</p>
+              <p>Competing with bigger dropshippers by making customers feel, instead of just showing off the product.</p>
             </div>
             <div className="rounded-2xl ring-1 ring-neutral-200 p-5">
               <div className="text-sm font-semibold text-neutral-900 mb-1">🧠 Insight</div>
@@ -1080,8 +1080,7 @@ function CaseZampapazza() {
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <h4 className="font-semibold text-neutral-900 mb-2">3) Copywriting Framework</h4>
             <p>
-              Each ad used the <strong>PAIN–DESIRE–RELIEF</strong> model, written in language authentic
-              to the target audience.
+              Each ad used the <strong>PAIN–DESIRE–RELIEF</strong> model, written in language that felt authentic to the target audience.
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
               <li>Pain: “I never realised how little Felix drank…”</li>
@@ -1169,8 +1168,7 @@ function CaseZampapazza() {
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <p className="text-neutral-700">
-              Even with a modest €160 test budget, the campaign generated three direct sales in four
-              days all from cold audiences. Although small in volume, the test validated the
+              Even with a modest €160 test budget, the campaign generated three direct sales in four days, all from cold audiences. Although small in volume, the test validated the
               goal: Emotional storytelling drives cold sales.
             </p>
           </div>
@@ -1193,7 +1191,7 @@ function CaseZampapazza() {
             Zampapazza became more than a brand, it became a template for emotional DTC storytelling.
             It proved that audiences in saturated niches still respond to humanity, and that the smallest
             budgets can yield meaningful learnings when structure and insight are strong. With a bigger
-            budget, I would have tested other angles and images for that specific proved mass desire.
+            budget, I would have tested other angles and images for that specific proven mass desire.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
