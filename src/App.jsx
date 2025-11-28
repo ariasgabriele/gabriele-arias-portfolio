@@ -301,7 +301,7 @@ function CaseIndex() {
           desc="From relatable memes to brand-based products, we turned viral content into real sales. See the content loop that generated 150+ orders at 10%+ CVR."
           imageSrc="pod-memes-phones.png"
           stats={[
-            { icon: "🛍️", label: "10.2% C.R. on Shopify" },
+            { icon: "🛍️", label: "4% C.R. on Shopify" },
             { icon: "👀", label: "20M+ organic views" },
             { icon: "🧾", label: "150+ orders" },
           ]}
@@ -578,7 +578,7 @@ function CasePOD() {
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <ul className="space-y-2 text-neutral-700">
-              <li><strong>Conversion rate (sale):</strong> ~10%</li>
+              <li><strong>Conversion rate (sale):</strong> ~4%</li>
               <li><strong>Main product:</strong> mugs </li>
               <li><strong>Revenue source:</strong> ~95% organic via IG</li>
             </ul>
