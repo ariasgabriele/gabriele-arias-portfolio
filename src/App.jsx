@@ -298,7 +298,7 @@ function CaseIndex() {
           to="/case/pod-memes"
           logoSrc="heart-logo.png"
           title="From Viral Memes to POD Sales"
-          desc="From relatable memes to brand-based products, we turned viral content into real sales. See the content loop that generated 250+ orders at 5% CVR."
+          desc="From relatable memes to brand-based products, we turned viral content into real sales. See the content loop that generated 250+ orders at 5% CVR. "
           imageSrc="pod-memes-phones.png"
           stats={[
             { icon: "🛍️", label: "5% C.R. on Shopify" },
