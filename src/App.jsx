@@ -301,9 +301,9 @@ function CaseIndex() {
           desc="From relatable memes to brand-based products, we turned viral content into real sales. See the content loop that generated 250+ orders at 5% CVR."
           imageSrc="pod-memes-phones.png"
           stats={[
-            { icon: "🛍️", label: "4% C.R. on Shopify" },
+            { icon: "🛍️", label: "5% C.R. on Shopify" },
             { icon: "👀", label: "20M+ organic views" },
-            { icon: "🧾", label: "150+ orders" },
+            { icon: "🧾", label: "250+ orders" },
           ]}
         />
 
