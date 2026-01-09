@@ -304,12 +304,13 @@ function CaseIndex() {
           to="/case/pod-memes"
           logoSrc="heart-logo.png"
           title="From Viral Memes to POD Sales"
-          desc="From relatable memes to brand-based products, we turned viral content into real sales. See the content loop that generated 250+ orders at 5% CVR. "
+          desc="What started as an organic meme page evolved into a performance-driven e-commerce brand.
+By combining social-first content with structured Meta Ads, I turned emotion into consistent sales — starting in Italy and now expanding into the UK "
           imageSrc="pod-memes-phones.png"
           stats={[
             { icon: "🛍️", label: "5% C.R. on Shopify" },
             { icon: "👀", label: "20M+ organic views" },
-            { icon: "🧾", label: "250+ orders" },
+            { icon: "🧾", label: "400+ orders" },
           ]}
         />
 
