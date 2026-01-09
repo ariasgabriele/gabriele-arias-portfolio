@@ -390,17 +390,16 @@ function CasePOD() {
 
   return (
     <CaseLayout
-      eyebrow="POD / UGC"
-      title="Shop di Coppia — Turning Meme Culture into Commerce"
+      eyebrow="E-COMMERCE / PAID SOCIAL"
+      title="Shop di Coppia — From Meme Culture to Scalable Commerce"
     >
       
-
       {/* Intro meta */}
       <div className="not-prose grid gap-3 sm:grid-cols-3 mb-12">
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
           <div className="text-xs uppercase tracking-wider text-neutral-500">Role</div>
           <div className="font-medium mt-1">
-            Creative Director · Digital Marketer · Content Strategist
+            Performance Marketer · E-commerce Operator · Creative Strategist
           </div>
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
@@ -409,11 +408,13 @@ function CasePOD() {
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
           <div className="text-xs uppercase tracking-wider text-neutral-500">Stacks</div>
-          <div className="font-medium mt-1">TikTok · Instagram · Shopify · Manychat · Adobe AI · Canva · Capcut </div>
+          <div className="font-medium mt-1">
+            Meta Ads · TikTok · Instagram · Shopify · Manychat · Canva · CapCut
+          </div>
         </div>
       </div>
       
-{/* Visual #1 */}
+      {/* Visual #1 */}
       <div className="not-prose mb-10">
         <img
           src={`${baseUrl}pod-memes-phones.png`}
@@ -428,20 +429,20 @@ function CasePOD() {
           1. Overview
         </h3>
         <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-neutral-900">
-          From Meme Page to Emotion Driven Brand
+          From Cultural Relevance to Performance Marketing
         </h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            Shop di Coppia started as a experiment: a meme page about relationships that
-            unexpectedly grew into a 30,000 follower community across TikTok and Instagram.
+            Shop di Coppia began as a cultural experiment: a relationship meme page that grew into a
+            30,000-follower community across TikTok and Instagram.
           </p>
           <p>
-            What began as Meme di Coppia, a Gen Z humor page testing TikTok, evolved into
-            Shop di Coppia, an emotional shop for couples. The goal was simple but ambitious:
-            to prove that cultural relevance and humor could convert into sales without relying
-            on paid ads.
+            What started as Meme di Coppia evolved into a fully operational e-commerce brand,
+            combining organic community growth, emotional storytelling, and Meta Ads performance
+            marketing. The project became a live testing environment to validate how culture,
+            seasonality, and creative angles translate into real sales.
           </p>
-          <p><em>What if a meme page could become a love brand?</em></p>
+          <p><em>Could a meme-driven brand scale through structured paid acquisition?</em></p>
         </div>
       </section>
 
@@ -451,25 +452,26 @@ function CasePOD() {
           2. Objective &amp; Role
         </h3>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
-          Building Proof of Concept
+          From Proof of Concept to Revenue Validation
         </h2>
         <div className="mt-6 grid gap-8 md:grid-cols-[1.1fr,0.9fr] items-start">
           <div className="space-y-4 text-lg leading-relaxed text-neutral-700">
             <p>
-              The project began as a creative proof of concept, testing if a highly engaged meme
-              audience could be monetized through an authentic product line.
+              The project evolved from an organic proof of concept into a full e-commerce operation,
+              testing both unpaid and paid acquisition across multiple markets.
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Creative Direction</strong> – defining tone, colors, and emotional identity</li>
-              <li><strong>Content Strategy</strong> – transforming viral humor into product storytelling</li>
-              <li><strong>E-commerce Setup</strong> – launching a Shopify store and basic automation</li>
-              <li><strong>Community Management</strong> – maintaining engagement and interaction</li>
-              <li><strong>Performance Tracking</strong> – testing what formats led to sales</li>
+              <li><strong>Brand & Positioning</strong> – emotional identity, tone and storytelling</li>
+              <li><strong>Content & Creative Strategy</strong> – angles, hooks and narrative testing</li>
+              <li><strong>E-commerce Operations</strong> – Shopify setup, DS + POD products</li>
+              <li><strong>Meta Ads</strong> – testing frameworks, CBO scaling, market expansion</li>
+              <li><strong>Performance Analysis</strong> – creative-led optimisation and iteration</li>
             </ul>
             <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
               <div className="text-xs uppercase tracking-wider text-neutral-500">Goal</div>
               <p className="mt-1">
-                Validate whether organic social storytelling could drive measurable e-commerce revenue with zero ad spend.
+                Validate a repeatable system where emotion, creative testing and structured Meta Ads
+                drive measurable e-commerce revenue.
               </p>
             </div>
           </div>
@@ -480,7 +482,7 @@ function CasePOD() {
               className="w-full h-auto rounded-2xl"
             />
             <figcaption className="mt-2 text-sm text-neutral-500">
-              “From test account to 30K followers in under a year.”
+              “Organic growth used as creative and market validation.”
             </figcaption>
           </figure>
         </div>
@@ -492,31 +494,28 @@ function CasePOD() {
           3. Strategy
         </h3>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
-          From Virality to Emotional Commerce
+          From Virality to Structured Scaling
         </h2>
         <div className="mt-6 grid gap-8 md:grid-cols-3">
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <h4 className="font-semibold text-neutral-900 mb-2">Audience</h4>
             <p className="text-neutral-700">
-              Couples aged 25–40, Italian, emotionally expressive. They enjoyed relatable humor
-              but responded most to authentic, sentimental storytelling.
+              Couples aged 25–40, emotionally expressive and highly responsive to relatable,
+              sentimental storytelling.
             </p>
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
-            <h4 className="font-semibold text-neutral-900 mb-2">Tone of Voice</h4>
+            <h4 className="font-semibold text-neutral-900 mb-2">Creative Angle</h4>
             <p className="text-neutral-700">
-              Warm, ironic, and honest. Content shifted from random couple memes to emotionally
-              driven humor, building empathy while maintaining shareability.
+              Emotion-first narratives outperformed pure humor, especially during key seasonal
+              moments (Valentine’s Day).
             </p>
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
-            <h4 className="font-semibold text-neutral-900 mb-2">Content Funnel</h4>
+            <h4 className="font-semibold text-neutral-900 mb-2">Acquisition Framework</h4>
             <ul className="text-neutral-700 space-y-2">
-              <li><strong>Top</strong> — Reels/TikToks with meme-style humor</li>
-              <li>
-                <strong>Mid/Bottom</strong> — emotionally charged couple reels with the most liked
-                characters → endings around mugs and gifts tied to those characters
-              </li>
+              <li><strong>Testing</strong> — separate campaigns per market (IT / UK)</li>
+              <li><strong>Scaling</strong> — CBO campaigns using validated creatives</li>
             </ul>
           </div>
         </div>
@@ -528,22 +527,22 @@ function CasePOD() {
           4. Creative Execution
         </h3>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
-          Giving the Brand a Heart
+          Emotion as a Conversion Lever
         </h2>
 
         <div className="mt-6 space-y-6 text-lg leading-relaxed text-neutral-700">
           <p>
-            To unify the content and products, I used a set of mascots. Their dynamic became the visual and emotional core of the brand, featured
-            across Reels and physical products like mugs and books.
+            Mascots became the emotional anchors of the brand, creating recognition,
+            identification, and continuity across content and products.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
               <h4 className="font-semibold text-neutral-900 mb-2">Visual Direction</h4>
               <ul className="list-disc pl-6 space-y-1">
-                <li>Palette: pinks, creams, and pastels</li>
-                <li>Typography: rounded, minimal, modern</li>
-                <li>Aesthetic: clean meme format, white space, warm filters</li>
+                <li>Warm, emotional color palette</li>
+                <li>Clean layouts optimized for social feeds</li>
+                <li>Consistency between ads, content and PDPs</li>
               </ul>
             </div>
             <figure className="not-prose">
@@ -558,9 +557,8 @@ function CasePOD() {
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <h4 className="font-semibold text-neutral-900 mb-2">Content System</h4>
             <p>
-              All content was video based (Reels/TikToks). Each video told a mini story using humor and relatable
-              couple scenarios, often ending with the characters or products as emotional anchors. The goal: make
-              people see themselves in the mascots, and then buy a piece of that feeling.
+              Every video functioned as both storytelling and live creative testing, informing
+              which emotions, hooks and formats converted best in paid campaigns.
             </p>
           </div>
         </div>
@@ -572,28 +570,28 @@ function CasePOD() {
           5. Performance
         </h3>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
-          What Virality Converted Into
+          From Community to Revenue
         </h2>
 
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <ul className="space-y-2 text-neutral-700">
-              <li><strong>Follower growth:</strong> 0 → 30K</li>
+              <li><strong>Followers:</strong> 0 → 30K</li>
               <li><strong>Top video:</strong> 6M views</li>
-              <li><strong>Avg Reel views:</strong> 50–500k</li>
+              <li><strong>Avg views:</strong> 50K–500K</li>
             </ul>
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <ul className="space-y-2 text-neutral-700">
-              <li><strong>Conversion rate (sale):</strong> ~4%</li>
-              <li><strong>Main product:</strong> mugs </li>
-              <li><strong>Revenue source:</strong> ~95% organic via IG</li>
+              <li><strong>Ad spend:</strong> ~€1,750</li>
+              <li><strong>Revenue:</strong> ~€7,500</li>
+              <li><strong>Markets:</strong> Italy → UK (16 sales in 48h)</li>
             </ul>
           </div>
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <p className="text-neutral-700">
-              Most customers were first time buyers, but the campaign validated the potential of emotional
-              storytelling commerce, showing that relatability could directly drive conversions.
+              The project validated a scalable Meta Ads framework driven by creative testing,
+              emotional positioning, and market expansion.
             </p>
           </div>
         </div>
@@ -605,16 +603,16 @@ function CasePOD() {
           6. Impact &amp; Learnings
         </h3>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
-          Beyond the Experiment
+          From Experiment to System
         </h2>
 
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl ring-1 ring-neutral-200 p-6">
             <ul className="list-disc pl-6 space-y-2 text-neutral-700">
-              <li><strong>Emotion scales better than jokes.</strong> Humor drives virality; emotion drives trust and purchase intent.</li>
-              <li><strong>Characters humanize the brand.</strong> Mascots created identification and recall.</li>
-              <li><strong>Organic communities can sell.</strong> A meme page can generate meaningful revenue with zero ads.</li>
-              <li><strong>Creative testing matters.</strong> Each post acted as a live A/B test on sentiment and conversion.</li>
+              <li><strong>Creative beats audience tricks</strong> post-Andromeda</li>
+              <li><strong>Emotion drives ROAS</strong> more than humor alone</li>
+              <li><strong>Organic insights reduce paid risk</strong></li>
+              <li><strong>Seasonality requires fast creative shifts</strong></li>
             </ul>
           </div>
           <figure className="not-prose">
@@ -627,37 +625,34 @@ function CasePOD() {
         </div>
 
         <p className="mt-6 text-lg leading-relaxed text-neutral-700">
-          It wasn’t a marketing campaign — it was a cultural experiment that turned feelings into sales.
+          Shop di Coppia became a real-world performance lab, shaping how I approach Meta Ads,
+          e-commerce strategy and creative testing today.
         </p>
       </section>
 
       {/* 7. Next Steps */}
       <section className="mt-24">
         <h3 className="uppercase tracking-wider text-sm text-neutral-500 mb-3">
-          7. Next Steps
+          7. Outcome
         </h3>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-neutral-900">
-          A Creative Lab, Not an Endpoint
+          A Scalable Framework, Not Just a Brand
         </h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-neutral-700">
           <p>
-            Shop di Coppia fulfilled its purpose as a creative lab. It proved the viability of meme-driven
-            commerce and taught me how emotional design, storytelling, and organic content could move
-            audiences to action.
-          </p>
-          <p>
-            While the brand may pause here, the insights it generated about relatability, tone, and
-            conversion through narrative - now influence every e-commerce and creative project I work on.
+            Shop di Coppia fulfilled its role as a live testing environment. The frameworks
+            developed here now guide every paid social and e-commerce project I work on.
           </p>
           <p className="mt-2">
-            🧠 <strong>Final Insight:</strong> Community is the best marketing channel. The stronger the bond,
-            the lower the cost of conversion.
+            🧠 <strong>Final Insight:</strong> Strong emotion + structured testing turns culture
+            into predictable revenue.
           </p>
         </div>
       </section>
     </CaseLayout>
   );
 }
+
 
 function CaseAmongLocals() {
   const baseUrl = import.meta.env.BASE_URL || "/";
