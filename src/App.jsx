@@ -303,9 +303,9 @@ function CaseIndex() {
         <Card
           to="/case/pod-memes"
           logoSrc="heart-logo.png"
-          title="From Viral Memes to POD Sales"
-          desc="What started as an organic meme page evolved into a performance-driven e-commerce brand.
-By combining social-first content with structured Meta Ads, I turned emotion into consistent sales — starting in Italy and now expanding into the UK "
+          title="From Viral Memes to Scalable E-commerce"
+          desc="What started as an organic meme page evolved into a performance driven e-commerce brand.
+By combining Ai generated content with structured Meta Ads, I turned emotion into consistent sales — starting in Italy and now expanding into the UK "
           imageSrc="pod-memes-phones.png"
           stats={[
             { icon: "🛍️", label: "5% C.R. on Shopify" },
