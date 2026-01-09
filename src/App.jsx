@@ -404,7 +404,7 @@ function CasePOD() {
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
           <div className="text-xs uppercase tracking-wider text-neutral-500">Timeline</div>
-          <div className="font-medium mt-1">2023 – 2025</div>
+          <div className="font-medium mt-1">2023 – 2026</div>
         </div>
         <div className="rounded-2xl ring-1 ring-neutral-200 p-4">
           <div className="text-xs uppercase tracking-wider text-neutral-500">Stacks</div>
