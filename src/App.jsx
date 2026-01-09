@@ -140,7 +140,13 @@ function WhatIDo() {
           <div className="text-xs uppercase tracking-wider text-white/60">Overview</div>
           <h2 className="text-2xl md:text-3xl font-bold mt-1 text-white">What I do</h2>
           <p className="mt-4 text-white/80 leading-relaxed max-w-3xl">
-            I combine social-first content with an analysis-driven strategy. From memes and reels to audience research and testing, I connect content, creators, and communities to deliver measurable results — community growth, qualified leads, and purchase intent. I’ve managed end-to-end projects in e-commerce, travel, and music, balancing speed with data-driven decisions. I’m constantly experimenting with new AI workflows to boost ideation, editing, and distribution.
+            I combine social first content with performance driven strategy.
+From memes and short-form video to audience research and testing, I connect creativity and data to drive measurable results.
+
+Since December, I’ve managed multiple Meta Ads campaigns for my e-commerce brand, investing ~€2,000 and generating ~€7,500 in revenue, navigating real market cycles post-Christmas decline, creative repositioning, and recovery through a Valentine’s Day angle, now scaling into the UK Market.
+
+I worked end-to-end across e-commerce, travel, and music, focusing on what actually moves people: strong hooks, clear positioning, and continuous testing.
+I actively use AI workflows to speed up ideation, editing, and distribution, learning faster than the market changes.
           </p>
         </div>
       </Container>
